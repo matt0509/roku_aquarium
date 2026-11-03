@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="700" viewBox="0 0 560 700">
+  <defs>
+    <linearGradient id="gIn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A152C"/>
+      <stop offset="0.35" stop-color="#2A2140"/>
+      <stop offset="1" stop-color="#3A2E50"/>
+    </linearGradient>
+    <linearGradient id="gWin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A152C"/>
+      <stop offset="0.45" stop-color="#271F3C"/>
+      <stop offset="1" stop-color="#34294A"/>
+    </linearGradient>
+    <linearGradient id="gBeyond" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#132741"/>
+      <stop offset="1" stop-color="#1D4262"/>
+    </linearGradient>
+    <clipPath id="cTL"><rect x="146" y="296" width="48" height="180"/></clipPath>
+    <clipPath id="cRL"><path d="M138 302Q160 290 168 222L172 222Q180 290 202 302Q170 316 138 302Z"/></clipPath>
+    <clipPath id="cTR"><rect x="368" y="314" width="46" height="162"/></clipPath>
+    <clipPath id="cRR"><path d="M360 320Q382 308 389 244L393 244Q400 308 422 320Q391 334 360 320Z"/></clipPath>
+    <path id="sc" fill="none" d="M0 0a6 6 0 0 0 12 0a6 6 0 0 0 12 0a6 6 0 0 0 12 0a6 6 0 0 0 12 0a6 6 0 0 0 12 0a6 6 0 0 0 12 0a6 6 0 0 0 12 0"/>
+  </defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- ===== Rear left turret (farther back, dusk tones) ===== -->
+    <rect x="146" y="296" width="48" height="180" fill="#9891CB"/>
+    <g clip-path="url(#cTL)">
+      <rect x="154" y="296" width="7" height="180" fill="#ADA8D9"/>
+      <rect x="180" y="296" width="14" height="180" fill="#7670AA"/>
+      <rect x="146" y="296" width="48" height="18" fill="#7670AA"/>
+    </g>
+    <rect x="165" y="330" width="10" height="24" rx="5" fill="#2A2140" stroke="#2A2745" stroke-width="2.5"/>
+    <rect x="146" y="296" width="48" height="180" fill="none" stroke="#2A2745" stroke-width="4"/>
+    <path d="M138 302Q160 290 168 222L172 222Q180 290 202 302Q170 316 138 302Z" fill="#33509E"/>
+    <g clip-path="url(#cRL)">
+      <path d="M169 222Q158 270 148 312L160 312Q166 270 171 222Z" fill="#4767B4"/>
+      <path d="M171 222Q180 270 186 312L210 312L210 220Z" fill="#273C7E"/>
+      <g stroke="#2D4690" stroke-width="1.5">
+        <use href="#sc" x="132" y="252"/>
+        <use href="#sc" x="138" y="264"/>
+        <use href="#sc" x="132" y="276"/>
+        <use href="#sc" x="138" y="288"/>
+      </g>
+      <path d="M138 302Q170 316 202 302" fill="none" stroke="#273C7E" stroke-width="10"/>
+    </g>
+    <path d="M138 302Q160 290 168 222L172 222Q180 290 202 302Q170 316 138 302Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+    <path d="M170 226V196" fill="none" stroke="#2A2745" stroke-width="6"/>
+    <path d="M170 226V196" fill="none" stroke="#E0B23A" stroke-width="2.5"/>
+    <path d="M172 199C181 196 190 203 202 205C190 209 181 214 172 216Z" fill="#EBC42A"/>
+    <path d="M173 210C182 209 190 207 200 205C190 210 182 214 173 215Z" fill="#C8942E"/>
+    <path d="M172 199C181 196 190 203 202 205C190 209 181 214 172 216Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+    <circle cx="170" cy="194" r="4" fill="#E0B23A" stroke="#2A2745" stroke-width="2.5"/>
+
+    <!-- ===== Rear right turret ===== -->
+    <rect x="368" y="314" width="46" height="162" fill="#9891CB"/>
+    <g clip-path="url(#cTR)">
+      <rect x="376" y="314" width="7" height="162" fill="#ADA8D9"/>
+      <rect x="401" y="314" width="13" height="162" fill="#7670AA"/>
+      <rect x="368" y="314" width="46" height="18" fill="#7670AA"/>
+    </g>
+    <rect x="386" y="346" width="10" height="24" rx="5" fill="#2A2140" stroke="#2A2745" stroke-width="2.5"/>
+    <rect x="368" y="314" width="46" height="162" fill="none" stroke="#2A2745" stroke-width="4"/>
+    <path d="M360 320Q382 308 389 244L393 244Q400 308 422 320Q391 334 360 320Z" fill="#33509E"/>
+    <g clip-path="url(#cRR)">
+      <path d="M390 244Q380 290 370 330L382 330Q388 290 392 244Z" fill="#4767B4"/>
+      <path d="M392 244Q400 290 406 330L430 330L430 240Z" fill="#273C7E"/>
+      <g stroke="#2D4690" stroke-width="1.5">
+        <use href="#sc" x="352" y="272"/>
+        <use href="#sc" x="358" y="284"/>
+        <use href="#sc" x="352" y="296"/>
+        <use href="#sc" x="358" y="308"/>
+      </g>
+      <path d="M360 320Q391 334 422 320" fill="none" stroke="#273C7E" stroke-width="10"/>
+    </g>
+    <path d="M360 320Q382 308 389 244L393 244Q400 308 422 320Q391 334 360 320Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+    <path d="M391 248V218" fill="none" stroke="#2A2745" stroke-width="6"/>
+    <path d="M391 248V218" fill="none" stroke="#E0B23A" stroke-width="2.5"/>
+    <path d="M393 221C402 218 411 225 423 227C411 231 402 236 393 238Z" fill="#EBC42A"/>
+    <path d="M394 232C403 231 411 229 421 227C411 232 403 236 394 237Z" fill="#C8942E"/>
+    <path d="M393 221C402 218 411 225 423 227C411 231 402 236 393 238Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+    <circle cx="391" cy="216" r="4" fill="#E0B23A" stroke="#2A2745" stroke-width="2.5"/>
+
+    <!-- ===== Dim interior behind the doorway ===== -->
+    <rect x="150" y="430" width="260" height="264" fill="url(#gIn)"/>
+    <g fill="none" stroke="#3E3256" stroke-width="2">
+      <rect x="244" y="486" width="30" height="14" rx="3"/>
+      <rect x="290" y="482" width="34" height="14" rx="3"/>
+      <rect x="198" y="514" width="32" height="14" rx="3"/>
+      <rect x="334" y="508" width="30" height="14" rx="3"/>
+      <rect x="186" y="556" width="26" height="14" rx="3"/>
+      <rect x="350" y="552" width="24" height="14" rx="3"/>
+      <rect x="194" y="604" width="22" height="14" rx="3"/>
+      <rect x="352" y="600" width="24" height="14" rx="3"/>
+      <rect x="186" y="640" width="28" height="14" rx="3"/>
+      <rect x="348" y="638" width="30" height="14" rx="3"/>
+    </g>
+    <!-- back archway: water beyond the far side of the castle -->
+    <path d="M228 692V600A52 52 0 0 1 332 600V692Z" fill="url(#gBeyond)"/>
+    <path fill-rule="evenodd" d="M216 692V600A64 64 0 0 1 344 600V692H332V600A52 52 0 0 0 228 600V692Z" fill="#44375C"/>
+    <path d="M325 574L335.4 568 M306 555L312 544.6 M280 548V536 M254 555L248 544.6 M235 574L224.6 568 M216 626H228 M332 626H344 M216 656H228 M332 656H344" fill="none" stroke="#33284A" stroke-width="2"/>
+    <path d="M216 692V600A64 64 0 0 1 344 600V692 M228 692V600A52 52 0 0 1 332 600V692" fill="none" stroke="#2A2745" stroke-width="3"/>
+    <!-- floor -->
+    <rect x="150" y="664" width="260" height="30" fill="#43375A"/>
+    <path d="M150 664H410" fill="none" stroke="#4E4166" stroke-width="2"/>
+
+    <!-- ===== Dim interior behind the windows ===== -->
+    <rect x="24" y="370" width="92" height="150" fill="url(#gWin)"/>
+    <g fill="none" stroke="#3A2F52" stroke-width="2">
+      <rect x="40" y="474" width="24" height="12" rx="3"/>
+      <rect x="40" y="430" width="20" height="12" rx="3"/>
+    </g>
+    <!-- far slit window on the tower's back wall -->
+    <path d="M76 492V452A9 9 0 0 1 94 452V492Z" fill="url(#gBeyond)" stroke="#2A2745" stroke-width="2.5"/>
+    <rect x="444" y="390" width="92" height="150" fill="url(#gWin)"/>
+    <g fill="none" stroke="#3A2F52" stroke-width="2">
+      <rect x="490" y="494" width="24" height="12" rx="3"/>
+      <rect x="494" y="450" width="20" height="12" rx="3"/>
+    </g>
+    <path d="M462 512V472A9 9 0 0 1 480 472V512Z" fill="url(#gBeyond)" stroke="#2A2745" stroke-width="2.5"/>
+    <rect x="246" y="306" width="68" height="68" fill="url(#gWin)"/>
+  </g>
+</svg>

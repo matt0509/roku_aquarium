@@ -88,7 +88,8 @@ for x, y, tint, fl in [(520, 420, "#EBD23A", False), (1360, 650, "#8E5BD8", True
                        (4700, 690, "#EB8A3A", True), (2260, 330, "#EBD23A", True), (1000, 230, "#3F8EE6", False)]:
     mid.append(sp("fish_tang_base", x, y, anchor="center", tint=tint, flip=fl))
 # a tang passing through the castle doorway (between castle back and front)
-mid.append(sp("fish_tang_base", CASTLE["x"] + 210, CASTLE["bottom"] - 150, anchor="center", tint="#EB8A3A"))
+# doorway is x 180-380, y 470-690 inside the 560x700 castle; the fish's head is hidden by the wall at x=380
+mid.append(sp("fish_tang_base", CASTLE["x"] + 340, CASTLE["bottom"] - 700 + 600, anchor="center", tint="#EB8A3A"))
 # a clownfish half inside the grotto mouth, shaded
 mid.append(sp("fish_clownfish", GROTTO["x"] + 250, GROTTO["bottom"] - 170, anchor="center", flip=True, tint="#8C96A8"))
 mid += school(1150, 340, 12)
@@ -124,7 +125,7 @@ layers.append({"id": "light", "parallax": 0.9, "items": [
 layout = {
     "views": {"left": 0, "middle": 1920, "right": 3840},
     "bubble_streams": [
-        {"id": "castle", "layer": "main_back", "x": CASTLE["x"] + 280, "y": CASTLE["bottom"] - 640, "height": 600, "count": 14, "seed": 3},
+        {"id": "castle", "layer": "main_back", "x": CASTLE["x"] + 280, "y": CASTLE["bottom"] - 700 + 14, "height": 600, "count": 14, "seed": 3},
         {"id": "chest", "layer": "main_front", "x": 2535, "y": 860, "height": 300, "count": 7, "seed": 5},
         {"id": "bubbler", "layer": "main_back", "x": 1260, "y": 940, "height": 900, "count": 22, "seed": 9},
     ],

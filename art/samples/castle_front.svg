@@ -13,6 +13,11 @@
     <clipPath id="cKeep"><path d="M118 652V394H162V414H178V394H206V414H222V394H250V414H266V394H294V414H310V394H338V414H354V394H382V414H398V394H442V652Z"/></clipPath>
     <clipPath id="cRing"><path d="M160 644V570A120 120 0 0 1 400 570V644H382V570A102 102 0 0 0 178 570V644Z"/></clipPath>
     <clipPath id="cFoot"><path d="M8 692V650Q8 644 14 644H546Q552 644 552 650V692Z"/></clipPath>
+    <!-- subtle top-to-bottom darkening for walls (light from the surface) -->
+    <linearGradient id="gShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2745" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2A2745" stop-opacity="0.16"/>
+    </linearGradient>
     <!-- one row of roof shingles (scallops), 192 px wide -->
     <path id="sc" fill="none" d="M0 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0"/>
     <!-- moss clump, about 40 x 15, origin at bottom-left -->
@@ -100,19 +105,17 @@
         <rect x="126" y="394" width="18" height="258" fill="#8C78BE"/>
         <path d="M118 414H442" fill="none" stroke="#9A86CA" stroke-width="2"/>
         <g fill="none" stroke="#9A86CA" stroke-width="2">
-          <rect x="150" y="440" width="24" height="12" rx="3"/>
-          <rect x="152" y="484" width="22" height="12" rx="3"/>
-          <rect x="190" y="434" width="26" height="11" rx="3"/>
+          <rect x="190" y="436" width="26" height="11" rx="3"/>
           <rect x="342" y="436" width="26" height="12" rx="3"/>
-          <rect x="394" y="456" width="26" height="12" rx="3"/>
-          <rect x="398" y="500" width="24" height="12" rx="3"/>
-          <rect x="408" y="560" width="20" height="12" rx="3"/>
-          <rect x="406" y="610" width="22" height="12" rx="3"/>
+          <rect x="150" y="510" width="20" height="12" rx="3"/>
+          <rect x="396" y="512" width="24" height="12" rx="3"/>
+          <rect x="406" y="600" width="22" height="12" rx="3"/>
         </g>
         <g fill="none" stroke="#7866A8" stroke-width="2">
           <rect x="128" y="540" width="14" height="12" rx="3"/>
           <rect x="128" y="600" width="14" height="12" rx="3"/>
         </g>
+        <rect x="118" y="430" width="324" height="222" fill="url(#gShade)"/>
       </g>
       <path d="M118 652V394H162V414H178V394H206V414H222V394H250V414H266V394H294V414H310V394H338V414H354V394H382V414H398V394H442V652Z" fill="none" stroke="#2A2745" stroke-width="4"/>
 
@@ -127,8 +130,28 @@
       <path d="M160 644V570A120 120 0 0 1 400 570V644" fill="none" stroke="#2A2745" stroke-width="4"/>
       <!-- keystone -->
       <path d="M264 470Q280 466 296 470L301 437L259 437Z" fill="#E0B23A"/>
-      <path d="M261 441H299" fill="none" stroke="#EBD27A" stroke-width="4"/>
+      <path d="M259 437L268 437L270 468L264 470Z" fill="#EBD27A"/>
+      <path d="M292 437L301 437L296 470L290 468Z" fill="#B8892A"/>
+      <path d="M261 441H299" fill="none" stroke="#EBD27A" stroke-width="3"/>
       <path d="M264 470Q280 466 296 470L301 437L259 437Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+
+      <!-- hanging banners on the keep -->
+      <path d="M147 434V490L159 480L171 490V434Z" fill="#3F5FC4"/>
+      <path d="M147 434H153V485L147 490Z" fill="#6B86D8"/>
+      <path d="M165 434H171V490L165 485Z" fill="#2E4296"/>
+      <path d="M147 434H171V441H147Z" fill="#2E4296"/>
+      <path d="M147 470H171V476H147Z" fill="#EBC42A"/>
+      <path d="M147 434V490L159 480L171 490V434Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+      <path d="M142 433H176" fill="none" stroke="#2A2745" stroke-width="7"/>
+      <path d="M142 433H176" fill="none" stroke="#E0B23A" stroke-width="3"/>
+      <path d="M389 434V490L401 480L413 490V434Z" fill="#3F5FC4"/>
+      <path d="M389 434H395V485L389 490Z" fill="#6B86D8"/>
+      <path d="M407 434H413V490L407 485Z" fill="#2E4296"/>
+      <path d="M389 434H413V441H389Z" fill="#2E4296"/>
+      <path d="M389 470H413V476H389Z" fill="#EBC42A"/>
+      <path d="M389 434V490L401 480L413 490V434Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+      <path d="M384 433H418" fill="none" stroke="#2A2745" stroke-width="7"/>
+      <path d="M384 433H418" fill="none" stroke="#E0B23A" stroke-width="3"/>
 
       <!-- ===== Left tower (mint, magenta roof) ===== -->
       <rect x="14" y="334" width="112" height="318" fill="#9ED9C0"/>
@@ -149,6 +172,7 @@
           <rect x="102" y="546" width="20" height="13" rx="3"/>
           <rect x="104" y="596" width="18" height="13" rx="3"/>
         </g>
+        <rect x="14" y="350" width="112" height="302" fill="url(#gShade)"/>
       </g>
       <rect x="14" y="334" width="112" height="318" fill="none" stroke="#2A2745" stroke-width="4"/>
       <!-- left window trim + sill -->
@@ -207,6 +231,7 @@
           <rect x="524" y="608" width="18" height="13" rx="3"/>
           <rect x="522" y="396" width="20" height="11" rx="3"/>
         </g>
+        <rect x="434" y="388" width="112" height="264" fill="url(#gShade)"/>
       </g>
       <rect x="434" y="372" width="112" height="280" fill="none" stroke="#2A2745" stroke-width="4"/>
       <!-- right window trim + sill -->
@@ -257,33 +282,40 @@
       <path d="M8 692V650Q8 644 14 644H546Q552 644 552 650V692H8" fill="none" stroke="#2A2745" stroke-width="4"/>
 
       <!-- ===== Climbing ivy, moss and seaweed ===== -->
-      <path d="M24 646C14 620 34 602 24 578C16 558 30 542 26 522" fill="none" stroke="#2A2745" stroke-width="6"/>
-      <path d="M24 646C14 620 34 602 24 578C16 558 30 542 26 522" fill="none" stroke="#2E7A3A" stroke-width="2.5"/>
-      <use href="#leaf" transform="translate(19 630) rotate(-55)"/>
-      <use href="#leaf" transform="translate(27 606) rotate(45)"/>
-      <use href="#leaf" transform="translate(20 584) rotate(-45)"/>
-      <use href="#leaf" transform="translate(25 560) rotate(40)"/>
-      <use href="#leaf" transform="translate(22 540) rotate(-35)"/>
-      <use href="#leaf" transform="translate(26 524) rotate(10)"/>
+      <!-- ivy up the left tower -->
+      <path d="M22 646C12 622 34 606 24 582C16 562 32 548 27 530C25 524 27 520 31 518" fill="none" stroke="#2A2745" stroke-width="5.5"/>
+      <path d="M22 646C12 622 34 606 24 582C16 562 32 548 27 530C25 524 27 520 31 518" fill="none" stroke="#2E7A3A" stroke-width="2.5"/>
+      <use href="#leaf" transform="translate(18 634) rotate(-35)"/>
+      <use href="#leaf" transform="translate(27 616) rotate(52) scale(1.05)"/>
+      <use href="#leaf" transform="translate(20 594) rotate(-38)"/>
+      <use href="#leaf" transform="translate(27 576) rotate(40) scale(0.9)"/>
+      <use href="#leaf" transform="translate(21 554) rotate(-42) scale(0.85)"/>
+      <use href="#leaf" transform="translate(28 538) rotate(38) scale(0.75)"/>
+      <use href="#leaf" transform="translate(31 519) rotate(70) scale(0.6)"/>
 
-      <path d="M424 646C434 622 414 604 424 582C430 566 420 552 424 536" fill="none" stroke="#2A2745" stroke-width="6"/>
-      <path d="M424 646C434 622 414 604 424 582C430 566 420 552 424 536" fill="none" stroke="#2E7A3A" stroke-width="2.5"/>
-      <use href="#leaf" transform="translate(429 628) rotate(50)"/>
-      <use href="#leaf" transform="translate(420 608) rotate(-45)"/>
-      <use href="#leaf" transform="translate(425 586) rotate(40)"/>
-      <use href="#leaf" transform="translate(424 564) rotate(-40)"/>
-      <use href="#leaf" transform="translate(424 540) rotate(15)"/>
+      <!-- ivy up the keep, right of the door -->
+      <path d="M424 646C434 622 414 604 424 582C430 566 420 552 424 536C426 526 422 518 416 514" fill="none" stroke="#2A2745" stroke-width="5.5"/>
+      <path d="M424 646C434 622 414 604 424 582C430 566 420 552 424 536C426 526 422 518 416 514" fill="none" stroke="#2E7A3A" stroke-width="2.5"/>
+      <use href="#leaf" transform="translate(430 630) rotate(58) scale(1.05)"/>
+      <use href="#leaf" transform="translate(421 612) rotate(-50)"/>
+      <use href="#leaf" transform="translate(426 588) rotate(44) scale(0.95)"/>
+      <use href="#leaf" transform="translate(423 566) rotate(-40) scale(0.9)"/>
+      <use href="#leaf" transform="translate(425 545) rotate(38) scale(0.8)"/>
+      <use href="#leaf" transform="translate(423 527) rotate(-35) scale(0.7)"/>
+      <use href="#leaf" transform="translate(416 514) rotate(-75) scale(0.6)"/>
 
-      <use href="#moss" transform="translate(40 647)"/>
-      <use href="#moss" transform="translate(112 647) scale(0.8)"/>
-      <use href="#moss" transform="translate(440 647) scale(0.9)"/>
-      <use href="#moss" transform="translate(500 647) scale(0.7)"/>
-      <use href="#moss" transform="translate(70 503) scale(0.6)"/>
+      <!-- moss on the footing ledge, a drape under the left sill -->
+      <use href="#moss" transform="translate(44 647)"/>
+      <use href="#moss" transform="translate(106 647) scale(0.75)"/>
+      <use href="#moss" transform="translate(438 647) scale(0.9)"/>
+      <use href="#moss" transform="translate(498 647) scale(0.7)"/>
 
+      <!-- seaweed at the base -->
       <path d="M538 692C528 664 546 646 534 616C528 600 536 588 540 578C548 594 542 606 546 620C554 646 540 664 550 692Z" fill="#4FA83D" stroke="#2A2745" stroke-width="3"/>
       <path d="M540 584C538 600 544 610 542 630" fill="none" stroke="#9CD43A" stroke-width="1.75"/>
       <path d="M524 692C518 672 530 660 524 640C534 654 530 670 536 692Z" fill="#2E7A3A" stroke="#2A2745" stroke-width="3"/>
-      <path d="M150 692C142 670 156 656 148 632C160 648 156 668 162 692Z" fill="#4FA83D" stroke="#2A2745" stroke-width="3"/>
+      <path d="M136 692C128 672 142 656 134 634C146 648 142 668 148 692Z" fill="#4FA83D" stroke="#2A2745" stroke-width="3"/>
+      <path d="M137 642C140 654 136 664 139 676" fill="none" stroke="#9CD43A" stroke-width="1.5"/>
     </g>
 
     <!-- outlines of the openings (on top, 2 px of each falls inside the hole) -->

@@ -1,34 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="220" height="620" viewBox="0 0 220 620">
-  <!-- Vallisneria clump: 8 ribbon leaves from one base, back to front.
+  <!-- Vallisneria clump: 8 ribbon leaves from one base, drawn back to front.
        Each frond is a top-level group that sways around its base pivot.
-       Bottom ~25 px sits under the gravel. -->
+       Bottom ~25 px sits under the gravel. Highlight runs on the upper/outer
+       edge of each ribbon, shadow on the lower/inner edge. -->
   <defs>
-    <!-- Base fills: lighter toward the water surface -->
+    <!-- Base fills: a touch lighter toward the water surface -->
     <linearGradient id="g-deep" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="612">
-      <stop offset="0" stop-color="#388846"/>
-      <stop offset="1" stop-color="#286B37"/>
+      <stop offset="0" stop-color="#38884A"/>
+      <stop offset="1" stop-color="#286A38"/>
     </linearGradient>
-    <linearGradient id="g-leaf" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="0" y2="612">
-      <stop offset="0" stop-color="#5BB444"/>
-      <stop offset="1" stop-color="#43943A"/>
+    <linearGradient id="g-leaf" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="0" y2="612">
+      <stop offset="0" stop-color="#5CB646"/>
+      <stop offset="1" stop-color="#44943A"/>
     </linearGradient>
     <linearGradient id="g-mid" gradientUnits="userSpaceOnUse" x1="0" y1="150" x2="0" y2="612">
-      <stop offset="0" stop-color="#80C642"/>
-      <stop offset="1" stop-color="#63AB3A"/>
+      <stop offset="0" stop-color="#82C844"/>
+      <stop offset="1" stop-color="#62AA3A"/>
     </linearGradient>
-    <linearGradient id="g-lime" gradientUnits="userSpaceOnUse" x1="0" y1="170" x2="0" y2="612">
-      <stop offset="0" stop-color="#A8DA45"/>
-      <stop offset="1" stop-color="#8AC238"/>
+    <linearGradient id="g-lime" gradientUnits="userSpaceOnUse" x1="0" y1="250" x2="0" y2="612">
+      <stop offset="0" stop-color="#A9DB46"/>
+      <stop offset="1" stop-color="#88C038"/>
     </linearGradient>
 
-    <path id="v1" d="M94,612 C94,500 88,410 78,330 C68,250 41.5,140 26.1,70.9 C24.5,64.1 32.3,62.3 33.9,69.1 C50.5,140 80,250 90,330 C100,410 106,500 106,612 Z"/>
-    <path id="v2" d="M110,612 C110,510 120,430 128,360 C136,290 167.5,170 186.2,108.9 C188.2,102.2 195.8,104.4 193.8,111.1 C176.5,170 148,290 140,360 C132,430 122,510 122,612 Z"/>
-    <path id="v3" d="M99,612 C99,480 89,380 91,300 C93,220 114.5,64 131.7,18.4 C134.2,11.4 142.9,14.5 140.3,21.6 C125.5,64 107,220 105,300 C103,380 113,480 113,612 Z"/>
-    <path id="v4" d="M105.5,612 C105.5,470 113.5,360 121.5,260 C129.5,160 151,76 176.4,37.6 C180.3,31.8 187.5,36.6 183.6,42.4 C161,76 142.5,160 134.5,260 C126.5,360 118.5,470 118.5,612 Z"/>
-    <path id="v5" d="M92,612 C92,500 82,420 64,330 C46,240 27.5,196 12.2,151.3 C9.9,144.7 17.5,142.1 19.8,148.7 C36.5,196 58,240 76,330 C94,420 104,500 104,612 Z"/>
-    <path id="v6" d="M103,612 C103,530 113,460 111,400 C109,340 94.5,236 89.4,172.4 C88.7,164.9 97.9,164.1 98.6,171.6 C105.5,236 123,340 125,400 C127,460 117,530 117,612 Z"/>
-    <path id="v7" d="M113.5,612 C113.5,530 127.5,470 139.5,420 C151.5,370 176,318 200.7,289.2 C205.2,283.9 211.8,289.5 207.3,294.8 C188,318 164.5,370 152.5,420 C140.5,470 126.5,530 126.5,612 Z"/>
-    <path id="v8" d="M95,612 C95,540 85,480 73,440 C61,400 41.5,362 24.4,338.8 C19.8,332.9 27,327.3 31.6,333.2 C54.5,362 75,400 87,440 C99,480 109,540 109,612 Z"/>
+    <path id="v1" d="M95,612.12 C93.53,528.14 92.88,444.29 87.02,360.49 C82.62,297.64 78.05,233.26 67.11,171.22 C60.86,135.77 55.82,108.56 46.06,86.64 C39.62,72.17 31.17,64.12 16.29,58.7 C8.77,55.96 12.19,46.56 19.71,49.3 C38.65,56.19 49.74,62.94 57.94,81.36 C67.7,103.28 74.64,133.33 80.89,168.78 C91.83,230.82 96.58,296.66 100.98,359.51 C106.84,443.31 107.53,527.9 109,611.88 Z"/>
+    <!-- v2 twists once at (163,221): the two edges cross and the back face shows above -->
+    <path id="v2" d="M109.01,611.63 C113.46,526.75 117.24,443.21 129.07,359.03 C134.75,318.62 141.2,279.39 149.29,243.49 C151.31,235.71 158.33,228.38 162.52,220.85 C166.33,214.41 173.03,209.3 175.1,202.84 C181.32,183.46 186.08,166.79 194.33,152.5 C198.33,145.57 189.67,140.57 185.67,147.5 C177.42,161.79 168,179.18 161.78,198.56 C159.71,205.02 162.47,213.35 162.52,220.85 C162.19,229.44 164.95,238.87 162.93,246.65 C154.84,282.55 148.61,320.56 142.93,360.97 C131.1,445.15 127.44,527.49 122.99,612.37 Z"/>
+    <path id="v3" d="M98,612.28 C95.28,534.33 97.93,457.47 102.01,379.58 C105.67,309.68 109.97,237.55 122.12,168.61 C129.06,129.22 138.94,92.52 153.94,66.5 C165.24,46.93 174.57,40.9 199.05,36.58 C207.72,35.05 209.62,45.89 200.95,47.42 C182.1,50.74 174.76,58.43 166.06,73.5 C151.06,99.52 144.82,132 137.88,171.39 C125.73,240.33 121.65,310.52 117.99,380.42 C113.91,458.31 111.28,533.77 114,611.72 Z"/>
+    <path id="v4" d="M102,612.28 C99.21,532.33 105.68,458.72 114.04,379.16 C123.45,289.65 114.77,217.66 90.83,151.88 C87.82,143.61 98.16,139.85 101.17,148.12 C125.11,213.9 139.37,291.33 129.96,380.84 C121.6,460.4 115.21,531.77 118,611.72 Z"/>
+    <path id="v5" d="M92.51,612.39 C88.33,532.5 86.5,460.08 72.61,381.3 C60.46,312.36 50.48,249.55 21.34,202.91 C16.68,195.45 26,189.63 30.66,197.09 C59.8,243.73 75.24,309.76 87.39,378.7 C101.28,457.48 103.31,531.72 107.49,611.61 Z"/>
+    <path id="v6" d="M104.02,611.44 C108,554.58 112.08,495.85 118.04,439.16 C124.31,379.49 135.18,308.66 146.62,254.86 C148.45,246.25 159.21,248.53 157.38,257.14 C145.94,310.94 140.23,381.17 133.96,440.84 C128,497.53 123.96,555.7 119.98,612.56 Z"/>
+    <path id="v7" d="M112.57,610.96 C120.09,557.48 125.91,501.84 140.79,449.93 C153.19,406.67 170.55,365.62 193.49,332.85 C198.54,325.64 207.56,331.94 202.51,339.15 C179.57,371.92 167.61,410.81 155.21,454.07 C140.33,505.98 134.95,559.56 127.43,613.04 Z"/>
+    <path id="v8" d="M92.04,612.84 C86.61,561.13 82.64,508.19 68.31,458.2 C57.29,419.75 46.71,388.35 25.55,359.23 C20.38,352.11 29.28,345.65 34.45,352.77 C55.61,381.89 72.67,415.35 83.69,453.8 C98.02,503.79 102.53,559.45 107.96,611.16 Z"/>
 
     <clipPath id="c1"><use href="#v1"/></clipPath>
     <clipPath id="c2"><use href="#v2"/></clipPath>
@@ -40,90 +42,94 @@
     <clipPath id="c8"><use href="#v8"/></clipPath>
   </defs>
 
-  <!-- frond-1: back, deep green, tall, leaning left -->
-  <g id="frond-1" data-pivot="100 610" stroke-linejoin="round" stroke-linecap="round">
+  <!-- frond-1: back, deep green, tall, arching over to the left -->
+  <g id="frond-1" data-pivot="102 610" stroke-linejoin="round" stroke-linecap="round">
     <use href="#v1" fill="url(#g-deep)"/>
     <g clip-path="url(#c1)" fill="none">
-      <path d="M106,612 C106,500 100,410 90,330 C80,250 50.5,140 33.9,69.1" stroke="#22573D" stroke-width="10"/>
-      <path d="M94,612 C94,500 88,410 78,330 C68,250 41.5,140 26.1,70.9" stroke="#45954B" stroke-width="7"/>
-      <path d="M100,612 C100,500 94,410 84,330 C74,250 48,150 34,90" stroke="#1F5532" stroke-width="1.5"/>
+      <path d="M95,612.12 C93.53,528.14 92.88,444.29 87.02,360.49 C82.62,297.64 78.05,233.26 67.11,171.22 C60.86,135.77 55.82,108.56 46.06,86.64 C39.62,72.17 31.17,64.12 16.29,58.7" stroke="#22563E" stroke-width="11"/>
+      <path d="M109,611.88 C107.53,527.9 106.84,443.31 100.98,359.51 C96.58,296.66 91.83,230.82 80.89,168.78 C74.64,133.33 67.7,103.28 57.94,81.36 C49.74,62.94 38.65,56.19 19.71,49.3" stroke="#45964C" stroke-width="8"/>
+      <path d="M102,612 C100.53,528.02 99.86,443.8 94,360 C89.6,297.15 84.94,232.04 74,170 C67.75,134.55 61.76,105.92 52,84 C44.68,67.56 36,60 27,57" stroke="#1E5432" stroke-width="1.5"/>
     </g>
     <use href="#v1" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
-  <!-- frond-2: back, deep green, leaning right -->
+  <!-- frond-2: back, deep green, leaning right, one ribbon twist -->
   <g id="frond-2" data-pivot="116 610" stroke-linejoin="round" stroke-linecap="round">
     <use href="#v2" fill="url(#g-deep)"/>
     <g clip-path="url(#c2)" fill="none">
-      <path d="M122,612 C122,510 132,430 140,360 C148,290 176.5,170 193.8,111.1" stroke="#22573D" stroke-width="10"/>
-      <path d="M110,612 C110,510 120,430 128,360 C136,290 167.5,170 186.2,108.9" stroke="#45954B" stroke-width="7"/>
-      <path d="M116,612 C116,510 126,430 134,360 C142,290 170,176 186,124" stroke="#1F5532" stroke-width="1.5"/>
+      <!-- back face above the twist: a bluer deep green -->
+      <path d="M162.52,220.85 C166.33,214.41 173.03,209.3 175.1,202.84 C181.32,183.46 186.08,166.79 194.33,152.5 C198.33,145.57 189.67,140.57 185.67,147.5 C177.42,161.79 168,179.18 161.78,198.56 C159.71,205.02 162.47,213.35 162.52,220.85 Z" fill="#2B6E4A"/>
+      <path d="M122.99,612.37 C127.44,527.49 131.1,445.15 142.93,360.97 C148.61,320.56 154.84,282.55 162.93,246.65 C164.95,238.87 162.19,229.44 162.52,220.85" stroke="#22563E" stroke-width="11"/>
+      <path d="M162.52,220.85 C166.33,214.41 173.03,209.3 175.1,202.84 C181.32,183.46 186.08,166.79 194.33,152.5" stroke="#205240" stroke-width="10"/>
+      <path d="M109.01,611.63 C113.46,526.75 117.24,443.21 129.07,359.03 C134.75,318.62 141.2,279.39 149.29,243.49 C151.31,235.71 158.33,228.38 162.52,220.85" stroke="#45964C" stroke-width="8"/>
+      <path d="M162.52,220.85 C162.47,213.35 159.71,205.02 161.78,198.56 C168,179.18 177.42,161.79 185.67,147.5" stroke="#3E8A5C" stroke-width="7"/>
+      <path d="M116,612 C120.45,527.12 124.17,444.18 136,360 C143.1,309.49 151.22,261.14 162.52,220.85 C170.05,192.99 179,169.05 186,157" stroke="#1E5432" stroke-width="1.5"/>
     </g>
     <use href="#v2" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
-  <!-- frond-3: tallest, leaf green, gentle S -->
+  <!-- frond-3: tallest, leaf green, bending over to the right -->
   <g id="frond-3" data-pivot="106 610" stroke-linejoin="round" stroke-linecap="round">
     <use href="#v3" fill="url(#g-leaf)"/>
     <g clip-path="url(#c3)" fill="none">
-      <path d="M113,612 C113,480 103,380 105,300 C107,220 125.5,64 140.3,21.6" stroke="#3A7F46" stroke-width="10"/>
-      <path d="M99,612 C99,480 89,380 91,300 C93,220 114.5,64 131.7,18.4" stroke="#74C455" stroke-width="7"/>
-      <path d="M106,612 C106,480 96,380 98,300 C100,220 118,76 132,34" stroke="#3A8436" stroke-width="1.5"/>
+      <path d="M114,611.72 C111.28,533.77 113.91,458.31 117.99,380.42 C121.65,310.52 125.73,240.33 137.88,171.39 C144.82,132 151.06,99.52 166.06,73.5 C174.76,58.43 182.1,50.74 200.95,47.42" stroke="#3A7E47" stroke-width="11"/>
+      <path d="M98,612.28 C95.28,534.33 97.93,457.47 102.01,379.58 C105.67,309.68 109.97,237.55 122.12,168.61 C129.06,129.22 138.94,92.52 153.94,66.5 C165.24,46.93 174.57,40.9 199.05,36.58" stroke="#76C657" stroke-width="8"/>
+      <path d="M106,612 C103.28,534.05 105.92,457.89 110,380 C113.66,310.1 117.85,238.94 130,170 C136.94,130.61 145,96.02 160,70 C170,52.68 178,46 190,43.5" stroke="#398336" stroke-width="1.5"/>
     </g>
     <use href="#v3" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
-  <!-- frond-4: tall, leaf green, leaning right -->
-  <g id="frond-4" data-pivot="112 610" stroke-linejoin="round" stroke-linecap="round">
-    <use href="#v4" fill="url(#g-leaf)"/>
+  <!-- frond-4: fresh green, S-curve, tip leaning left -->
+  <g id="frond-4" data-pivot="110 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v4" fill="url(#g-mid)"/>
     <g clip-path="url(#c4)" fill="none">
-      <path d="M118.5,612 C118.5,470 126.5,360 134.5,260 C142.5,160 161,76 183.6,42.4" stroke="#3A7F46" stroke-width="10"/>
-      <path d="M105.5,612 C105.5,470 113.5,360 121.5,260 C129.5,160 151,76 176.4,37.6" stroke="#74C455" stroke-width="7"/>
-      <path d="M112,612 C112,470 120,360 128,260 C136,160 152,90 172,52" stroke="#3A8436" stroke-width="1.5"/>
+      <path d="M118,611.72 C115.21,531.77 121.6,460.4 129.96,380.84 C139.37,291.33 125.11,213.9 101.17,148.12" stroke="#548D45" stroke-width="11"/>
+      <path d="M102,612.28 C99.21,532.33 105.68,458.72 114.04,379.16 C123.45,289.65 114.77,217.66 90.83,151.88" stroke="#9AD85C" stroke-width="8"/>
+      <path d="M110,612 C107.21,532.05 113.64,459.56 122,380 C131.41,290.49 119.94,215.78 100,162" stroke="#569734" stroke-width="1.5"/>
     </g>
     <use href="#v4" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
-  <!-- frond-5: medium, fresh green, arching left -->
-  <g id="frond-5" data-pivot="98 610" stroke-linejoin="round" stroke-linecap="round">
-    <use href="#v5" fill="url(#g-mid)"/>
+  <!-- frond-5: leaf green, medium, leaning left -->
+  <g id="frond-5" data-pivot="100 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v5" fill="url(#g-leaf)"/>
     <g clip-path="url(#c5)" fill="none">
-      <path d="M104,612 C104,500 94,420 76,330 C58,240 36.5,196 19.8,148.7" stroke="#558E44" stroke-width="10"/>
-      <path d="M92,612 C92,500 82,420 64,330 C46,240 27.5,196 12.2,151.3" stroke="#99D75A" stroke-width="7"/>
-      <path d="M98,612 C98,500 88,420 70,330 C52,240 32,196 20,164" stroke="#579834" stroke-width="1.5"/>
+      <path d="M92.51,612.39 C88.33,532.5 86.5,460.08 72.61,381.3 C60.46,312.36 50.48,249.55 21.34,202.91" stroke="#3A7E47" stroke-width="11"/>
+      <path d="M107.49,611.61 C103.31,531.72 101.28,457.48 87.39,378.7 C75.24,309.76 59.8,243.73 30.66,197.09" stroke="#76C657" stroke-width="8"/>
+      <path d="M100,612 C95.82,532.11 93.89,458.78 80,380 C67.85,311.06 55.14,246.64 32,210" stroke="#398336" stroke-width="1.5"/>
     </g>
     <use href="#v5" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
-  <!-- frond-6: front, lime, center -->
-  <g id="frond-6" data-pivot="110 610" stroke-linejoin="round" stroke-linecap="round">
+  <!-- frond-6: front, lime, center-right -->
+  <g id="frond-6" data-pivot="112 610" stroke-linejoin="round" stroke-linecap="round">
     <use href="#v6" fill="url(#g-lime)"/>
     <g clip-path="url(#c6)" fill="none">
-      <path d="M117,612 C117,530 127,460 125,400 C123,340 105.5,236 98.6,171.6" stroke="#71A540" stroke-width="10"/>
-      <path d="M103,612 C103,530 113,460 111,400 C109,340 94.5,236 89.4,172.4" stroke="#BAE35F" stroke-width="7"/>
-      <path d="M110,612 C110,530 120,460 118,400 C116,340 100,240 95,190" stroke="#76AA32" stroke-width="1.5"/>
+      <path d="M119.98,612.56 C123.96,555.7 128,497.53 133.96,440.84 C140.23,381.17 145.94,310.94 157.38,257.14" stroke="#70A442" stroke-width="11"/>
+      <path d="M104.02,611.44 C108,554.58 112.08,495.85 118.04,439.16 C124.31,379.49 135.18,308.66 146.62,254.86" stroke="#BBE461" stroke-width="8"/>
+      <path d="M112,612 C115.98,555.14 120.04,496.69 126,440 C132.27,380.33 140.56,309.8 149.5,268" stroke="#74A832" stroke-width="1.5"/>
     </g>
     <use href="#v6" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
-  <!-- frond-7: front, fresh green, leaning right -->
+  <!-- frond-7: front, fresh green, short, leaning right -->
   <g id="frond-7" data-pivot="120 610" stroke-linejoin="round" stroke-linecap="round">
     <use href="#v7" fill="url(#g-mid)"/>
     <g clip-path="url(#c7)" fill="none">
-      <path d="M126.5,612 C126.5,530 140.5,470 152.5,420 C164.5,370 188,318 207.3,294.8" stroke="#558E44" stroke-width="10"/>
-      <path d="M113.5,612 C113.5,530 127.5,470 139.5,420 C151.5,370 176,318 200.7,289.2" stroke="#99D75A" stroke-width="7"/>
-      <path d="M120,612 C120,530 134,470 146,420 C158,370 180,322 198,300" stroke="#579834" stroke-width="1.5"/>
+      <path d="M127.43,613.04 C134.95,559.56 140.33,505.98 155.21,454.07 C167.61,410.81 179.57,371.92 202.51,339.15" stroke="#548D45" stroke-width="11"/>
+      <path d="M112.57,610.96 C120.09,557.48 125.91,501.84 140.79,449.93 C153.19,406.67 170.55,365.62 193.49,332.85" stroke="#9AD85C" stroke-width="8"/>
+      <path d="M120,612 C127.52,558.52 133.12,503.91 148,452 C160.4,408.74 175.06,368.77 191,345" stroke="#569734" stroke-width="1.5"/>
     </g>
     <use href="#v7" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>
 
   <!-- frond-8: front, lime, short, leaning left -->
-  <g id="frond-8" data-pivot="102 610" stroke-linejoin="round" stroke-linecap="round">
+  <g id="frond-8" data-pivot="100 610" stroke-linejoin="round" stroke-linecap="round">
     <use href="#v8" fill="url(#g-lime)"/>
     <g clip-path="url(#c8)" fill="none">
-      <path d="M109,612 C109,540 99,480 87,440 C75,400 54.5,362 31.6,333.2" stroke="#71A540" stroke-width="10"/>
-      <path d="M95,612 C95,540 85,480 73,440 C61,400 41.5,362 24.4,338.8" stroke="#BAE35F" stroke-width="7"/>
-      <path d="M102,612 C102,540 92,480 80,440 C68,400 48,364 34,346" stroke="#76AA32" stroke-width="1.5"/>
+      <path d="M92.04,612.84 C86.61,561.13 82.64,508.19 68.31,458.2 C57.29,419.75 46.71,388.35 25.55,359.23" stroke="#70A442" stroke-width="11"/>
+      <path d="M107.96,611.16 C102.53,559.45 98.02,503.79 83.69,453.8 C72.67,415.35 55.61,381.89 34.45,352.77" stroke="#BBE461" stroke-width="8"/>
+      <path d="M100,612 C94.57,560.29 90.33,505.99 76,456 C64.98,417.55 51.16,385.12 36.5,365" stroke="#74A832" stroke-width="1.5"/>
     </g>
     <use href="#v8" fill="none" stroke="#2A2745" stroke-width="3"/>
   </g>

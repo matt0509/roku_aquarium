@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="90" viewBox="0 0 140 90">
+  <defs>
+    <path id="p-cara" d="M 70 21.5 C 84 21.5 97 24.5 105 30.5 C 107.5 32.4 109.4 34.6 110.6 37 L 113.2 37.6 L 111.4 39.6 C 111.8 40.4 112 41.2 112 42 L 114.2 43 L 111.8 44.6 C 110.6 48.4 106 51.8 99 54.2 C 90.5 56.8 80.5 57.6 70 57.6 C 59.5 57.6 49.5 56.8 41 54.2 C 34 51.8 29.4 48.4 28.2 44.6 L 25.8 43 L 28 42 C 28 41.2 28.2 40.4 28.6 39.6 L 26.8 37.6 L 29.4 37 C 30.6 34.6 32.5 32.4 35 30.5 C 43 24.5 56 21.5 70 21.5 Z"/>
+    <path id="p-claw" d="M 48 72 C 41.6 72 37 67 37.2 60.6 C 37.4 55.8 40 52 43.2 50.2 C 45.4 44.6 49.8 40 55.6 38.2 C 57.8 37.6 59 39 58.2 40.4 C 56.2 43.4 55.2 46.8 55.4 50.6 C 57.6 48.8 60.2 47.4 62.8 46.8 C 64.4 46.6 65 48 64.2 49.2 C 62.8 52.8 61 55.8 58.8 58 C 59.2 64.4 55.4 72 48 72 Z"/>
+    <clipPath id="clip-cara"><use href="#p-cara"/></clipPath>
+    <clipPath id="clip-claw"><use href="#p-claw"/></clipPath>
+    <linearGradient id="g-top" x1="0" y1="21" x2="0" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EB9A66"/>
+      <stop offset="1" stop-color="#EB8152"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rear leg pairs (P4, P5), farther away: darker, feet a little higher -->
+  <g id="legs-back" data-pivot="70 44" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g id="legs-back-l">
+      <!-- P5 -->
+      <g stroke="#2A2745">
+        <polyline points="36,40 12,30" stroke-width="10.4"/>
+        <polyline points="12,30 9,56" stroke-width="9.6"/>
+        <polygon points="7.4,56 10.6,56 10,78" fill="#2A2745" stroke-width="6"/>
+      </g>
+      <polyline points="36,40 12,30" stroke="#B03E4A" stroke-width="4.4"/>
+      <polyline points="12,30 9,56" stroke="#B03E4A" stroke-width="3.6"/>
+      <polygon points="7.4,56 10.6,56 10,78" fill="#B03E4A"/>
+      <polyline points="30,35.6 14.4,29.2" stroke="#CC5A4E" stroke-width="1.4"/>
+      <!-- P4 -->
+      <g stroke="#2A2745">
+        <polyline points="38,45 18.5,38.5" stroke-width="10.4"/>
+        <polyline points="18.5,38.5 16,62" stroke-width="9.6"/>
+        <polygon points="14.4,62 17.6,62 17.5,81.5" fill="#2A2745" stroke-width="6"/>
+      </g>
+      <polyline points="38,45 18.5,38.5" stroke="#B03E4A" stroke-width="4.4"/>
+      <polyline points="18.5,38.5 16,62" stroke="#B03E4A" stroke-width="3.6"/>
+      <polygon points="14.4,62 17.6,62 17.5,81.5" fill="#B03E4A"/>
+      <polyline points="32,41.4 20.6,37.6" stroke="#CC5A4E" stroke-width="1.4"/>
+    </g>
+    <use href="#legs-back-l" transform="matrix(-1 0 0 1 140 0)"/>
+  </g>
+
+  <!-- front leg pairs (P2, P3): emerge from under the carapace edge, behind the claws -->
+  <g id="legs-front" data-pivot="70 50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g id="legs-front-l">
+      <!-- P3 -->
+      <g stroke="#2A2745">
+        <polyline points="40,50 26,46.5" stroke-width="10.4"/>
+        <polyline points="26,46.5 24,67" stroke-width="9.6"/>
+        <polygon points="22.4,67 25.6,67 25.5,83.5" fill="#2A2745" stroke-width="6"/>
+      </g>
+      <polyline points="40,50 26,46.5" stroke="#D44A42" stroke-width="4.4"/>
+      <polyline points="26,46.5 24,67" stroke="#D44A42" stroke-width="3.6"/>
+      <polygon points="22.4,67 25.6,67 25.5,83.5" fill="#D44A42"/>
+      <polyline points="34,47.4 27.6,45.6" stroke="#EB8556" stroke-width="1.5"/>
+      <polyline points="25.2,50 24.2,60" stroke="#E46A4E" stroke-width="1.3"/>
+      <!-- P2 -->
+      <g stroke="#2A2745">
+        <polyline points="44,55 34,55.5" stroke-width="10.4"/>
+        <polyline points="34,55.5 32.5,71" stroke-width="9.6"/>
+        <polygon points="30.9,71 34.1,71 34.5,85" fill="#2A2745" stroke-width="6"/>
+      </g>
+      <polyline points="44,55 34,55.5" stroke="#D44A42" stroke-width="4.4"/>
+      <polyline points="34,55.5 32.5,71" stroke="#D44A42" stroke-width="3.6"/>
+      <polygon points="30.9,71 34.1,71 34.5,85" fill="#D44A42"/>
+      <polyline points="40,53.8 35.4,54" stroke="#EB8556" stroke-width="1.5"/>
+      <polyline points="33.2,58.6 32.6,65" stroke="#E46A4E" stroke-width="1.3"/>
+    </g>
+    <use href="#legs-front-l" transform="matrix(-1 0 0 1 140 0)"/>
+  </g>
+
+  <g id="body" data-pivot="70 46">
+    <!-- mouthparts plate under the carapace front -->
+    <path d="M 58 54 L 82 54 L 80.4 65.4 C 76 67.4 64 67.4 59.6 65.4 Z" fill="#A8364A" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M 70 57 L 70 66" stroke="#7E2C44" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- carapace -->
+    <use href="#p-cara" fill="#E0503F"/>
+    <g clip-path="url(#clip-cara)">
+      <!-- top surface, lit from above -->
+      <path d="M 20 0 L 120 0 L 120 38.4 L 110.6 38.4 C 102 35.6 90 34 78 34.4 C 75 35.6 72.5 36.4 70 36.4 C 67.5 36.4 65 35.6 62 34.4 C 50 34 38 35.6 29.4 38.4 L 20 38.4 Z" fill="url(#g-top)"/>
+      <!-- underside shadow -->
+      <path d="M 20 48 C 40 52 55 53.6 70 53.6 C 85 53.6 100 52 120 48 L 120 62 L 20 62 Z" fill="#A8364A"/>
+      <!-- front margin -->
+      <path d="M 29.4 38.4 C 38 35.6 50 34 62 34.4 C 65 35.6 67.5 36.4 70 36.4 C 72.5 36.4 75 35.6 78 34.4 C 90 34 102 35.6 110.6 38.4" fill="none" stroke="#B83C46" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- granules on top -->
+      <g fill="#EBB07E">
+        <ellipse cx="48" cy="28.6" rx="1.6" ry="1.1"/>
+        <ellipse cx="54.6" cy="26.4" rx="1.3" ry="0.9"/>
+        <ellipse cx="41.6" cy="31.8" rx="1.2" ry="0.9"/>
+        <ellipse cx="92" cy="28.6" rx="1.6" ry="1.1"/>
+        <ellipse cx="85.4" cy="26.4" rx="1.3" ry="0.9"/>
+        <ellipse cx="98.4" cy="31.8" rx="1.2" ry="0.9"/>
+        <ellipse cx="70" cy="25.4" rx="2.4" ry="1"/>
+      </g>
+    </g>
+    <use href="#p-cara" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <!-- eye stalks and eyes -->
+    <g stroke-linecap="round">
+      <path d="M 62.5 35.5 L 60 19" stroke="#2A2745" stroke-width="11"/>
+      <path d="M 62.5 35.5 L 60 19" stroke="#E0503F" stroke-width="5"/>
+      <path d="M 77.5 35.5 L 80 19" stroke="#2A2745" stroke-width="11"/>
+      <path d="M 77.5 35.5 L 80 19" stroke="#E0503F" stroke-width="5"/>
+      <path d="M 60.8 32 L 59.6 24" stroke="#EB8556" stroke-width="1.6"/>
+      <path d="M 78.4 32 L 79.6 24" stroke="#EB8556" stroke-width="1.6"/>
+    </g>
+    <circle cx="59.6" cy="16" r="5.2" fill="#474F63" stroke="#2A2745" stroke-width="3"/>
+    <circle cx="60.2" cy="16.6" r="3" fill="#1A1830"/>
+    <circle cx="58.4" cy="14.4" r="1.3" fill="#E4E8EA"/>
+    <circle cx="80.4" cy="16" r="5.2" fill="#474F63" stroke="#2A2745" stroke-width="3"/>
+    <circle cx="79.8" cy="16.6" r="3" fill="#1A1830"/>
+    <circle cx="78.6" cy="14.4" r="1.3" fill="#E4E8EA"/>
+  </g>
+
+  <g id="claw-left" data-pivot="61 59">
+    <g id="claw-l-art">
+      <!-- wrist -->
+      <path d="M 60.5 60 L 54.5 66" fill="none" stroke="#2A2745" stroke-width="13" stroke-linecap="round"/>
+      <path d="M 60.5 60 L 54.5 66" fill="none" stroke="#C8443F" stroke-width="7" stroke-linecap="round"/>
+      <!-- hand -->
+      <use href="#p-claw" fill="#E0503F"/>
+      <g clip-path="url(#clip-claw)">
+        <path d="M 36 64 C 42 69.4 52 69.6 62 60 L 62 76 L 36 76 Z" fill="#A8364A"/>
+        <path d="M 38.5 35.5 L 70.5 59.5 L 82 44 L 50 20 Z" fill="#6E2840"/>
+        <path d="M 41.6 61 C 41.4 57.4 42.8 54.6 45.4 52.8" fill="none" stroke="#EB8556" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M 47.6 47.4 C 49.4 44.2 52 41.6 55.2 40" fill="none" stroke="#EB8556" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M 53.4 43.2 C 54.6 41.8 55.6 40.8 56.6 40.2" fill="none" stroke="#9A4A5A" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="49" cy="58" r="1.1" fill="#EB8556"/>
+        <circle cx="52.6" cy="61.6" r="0.9" fill="#EB8556"/>
+        <circle cx="46" cy="63.6" r="0.8" fill="#EB8556"/>
+      </g>
+      <use href="#p-claw" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <g id="claw-right" data-pivot="79 59">
+    <use href="#claw-l-art" transform="matrix(-1 0 0 1 140 0)"/>
+  </g>
+</svg>
