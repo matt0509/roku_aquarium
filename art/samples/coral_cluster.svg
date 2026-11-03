@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="260" viewBox="0 0 300 260">
+  <!-- Coral cluster on a small rock: hot-pink staghorn (back left), purple
+       tube polyps (back right), sunflower/lime brain coral (front right)
+       and aqua button polyps (front). Static piece; light from the upper left. -->
+  <defs>
+    <path id="rock" d="M26,244 C20,230 30,214 50,208 C64,204 76,206 88,203 C104,198 122,200 140,204 C156,207 170,204 186,206 C210,209 240,206 260,212 C276,216 284,230 280,242 C277,250 268,252 256,252 L44,252 C34,252 28,250 26,244 Z"/>
+    <clipPath id="rock-clip"><use href="#rock"/></clipPath>
+
+    <path id="dome" d="M138,234 C134,190 166,150 204,150 C242,150 274,190 270,234 C248,244 160,244 138,234 Z"/>
+    <clipPath id="dome-clip"><use href="#dome"/></clipPath>
+    <linearGradient id="dome-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EBCC40"/>
+      <stop offset="1" stop-color="#DCA92A"/>
+    </linearGradient>
+
+    <!-- staghorn skeleton, grouped by branch thickness -->
+    <path id="sh-22" d="M92,224 C91,206 91,196 93,184"/>
+    <path id="sh-19" d="M93,188 C84,176 74,166 64,154 M93,186 C96,170 98,152 98,136 M94,186 C106,174 118,164 132,156"/>
+    <path id="sh-17" d="M64,156 C56,146 50,134 46,120 M98,138 C98,124 96,110 92,96 M132,158 C144,150 154,140 162,126"/>
+    <path id="sh-15" d="M46,122 C42,104 38,88 38,62 M47,124 C38,120 28,114 20,104 M72,162 C62,166 50,168 38,166 M92,98 C82,82 72,66 68,38 M93,100 C100,78 104,52 104,22 M99,86 C110,76 122,64 132,42 M162,128 C166,110 164,90 158,66 M162,130 C176,122 190,110 200,90 M124,164 C134,152 138,138 138,122 C138,112 137,104 134,96"/>
+
+    <!-- brain coral grooves: one long serpentine up the middle plus hairpins at the sides -->
+    <path id="g1" d="M139.4,216.5 C146,220 152,222.6 160,223.6 C170,224.8 172,228.6 182,227.8 C194,227 198,230.6 208,229.6 C214,229 218,228.2 222,228.4 C228.87,228.4 228.87,218.1 222,218.1 C214,218.1 210,216.6 202,218.2 C194,219.8 188,217.2 180,217.3 C173.23,217.3 173.23,207.15 180,207.15 C186,207.15 190,210.4 197,209.6 C204,208.8 207,208.2 212,208.9 C218.55,208.9 218.55,199.07 212,199.07 C206,199.07 202,197.2 195,198.6 C188,200 184,196.4 178,196.86 C171.71,196.86 171.71,187.43 178,187.43 C186,187.43 190,191.4 200,190.6 C208,189.9 214,187.6 222,188.82 C227.77,188.82 227.77,180.16 222,180.16 C216,180.16 213,182.6 207,181.2 C201,179.9 197,181.2 192,180.96 C186.73,180.96 186.73,173.05 192,173.05 C197,173.05 199,174.8 204,174.2 C209,173.6 212,172.6 216,173.05 C221.32,173.05 221.32,165.07 216,165.07 C211,165.07 208,166.8 202,166.2 C196,165.6 192,164.2 188,164.35 C182.78,164.35 182.78,156.52 188,156.52 C193,156.52 197,159.4 204,158.6 C210,157.9 214,156.6 218,157.08"/>
+    <path id="g2" d="M268.6,216.5 C262,219.4 258,221.6 252,222.6 C248,223.4 245,224.4 242,224.9 C235.07,224.9 235.07,214.5 242,214.5 C248,214 252,212 256,210.8 C260,209.6 263,208.4 266.4,206.6"/>
+    <path id="g3" d="M263.3,197.2 C258,200 252,201.4 247,202.8 C241,204.4 236,205.8 232,206.4 C225.4,206.4 225.4,196.5 232,196.5 C238,195.6 242,193.6 247,192.8 C252,192 256,190 259.4,188.2"/>
+    <path id="g4" d="M254.6,180 C250,182.4 245,184 240,184.99 C233.9,184.99 233.9,175.84 240,175.84 C243.5,175.2 246.5,174 249,172.6"/>
+    <path id="g5" d="M141.6,206.6 C146,209.4 152,211.8 160,212.9 C166.93,212.9 166.93,202.5 160,202.5 C154,202 149,199.8 144.7,197.2"/>
+    <path id="g6" d="M148.6,188.2 C152,190.2 156,191.6 160,192.3 C166.57,192.3 166.57,182.45 160,182.45 C157.4,182 155.4,181.2 153.4,180"/>
+    <path id="g7" d="M159,172.6 C164,175.4 170,177.6 176,178.12 C181.59,178.12 181.59,169.74 176,169.74 C172,169.4 168.4,168 165.2,166"/>
+    <path id="g8" d="M242.8,166 C239,168.2 234.5,169.6 230,170.3 M235,159.8 C232,161.4 229,162.4 226,162.88 M197,152.6 C200,154.2 204,153.8 207,152.8 C209,152.2 210.5,151.8 212,151.8"/>
+  </defs>
+
+  <!-- ===== purple tube polyps (behind the brain coral) ===== -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M248.52,197.45 C250.5,160 252.5,124 254.53,87.3 L273.47,88.7 C270.2,124 266.8,160 263.48,198.55 Z" fill="#7A3FC4"/>
+    <path d="M273.47,88.7 C270.2,124 266.8,160 263.48,198.55 L259,198.2 C262,160 265,124 267.8,88.3 Z" fill="#5B2E98"/>
+    <path d="M254.53,87.3 C252.5,124 250.5,160 248.52,197.45 L251.5,197.7 C253.6,160 255.9,124 258.3,87.6 Z" fill="#9A6AD8"/>
+    <path d="M253.4,107.1 Q262.3,113 271.7,108.5 M252.2,129.2 Q260.7,135 269.7,130.4 M251,151.2 Q259.1,157 267.7,152.4" fill="none" stroke="#5B2E98" stroke-width="1.6"/>
+    <path d="M248.52,197.45 C250.5,160 252.5,124 254.53,87.3 L273.47,88.7 C270.2,124 266.8,160 263.48,198.55 Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+    <ellipse cx="264" cy="88" rx="9.5" ry="3.8" transform="rotate(4.2 264 88)" fill="#B9A2E0" stroke="#2A2745" stroke-width="3"/>
+    <ellipse cx="264" cy="88" rx="5.8" ry="2" transform="rotate(4.2 264 88)" fill="#3A2A5A"/>
+
+    <path d="M268.03,213.35 C271,183 274,152 277.04,121.24 L290.96,122.76 C287.3,153 283.6,184 279.97,214.65 Z" fill="#7A3FC4"/>
+    <path d="M290.96,122.76 C287.3,153 283.6,184 279.97,214.65 L276.4,214.3 C280,184 283.5,153 286.8,122.3 Z" fill="#5B2E98"/>
+    <path d="M277.04,121.24 C274,152 271,183 268.03,213.35 L270.4,213.6 C273.4,183 276.5,152 279.6,121.5 Z" fill="#9A6AD8"/>
+    <path d="M275.1,141.5 Q281.6,146.6 288.5,142.9 M272.5,167.3 Q278.8,172.4 285.5,168.7" fill="none" stroke="#5B2E98" stroke-width="1.6"/>
+    <path d="M268.03,213.35 C271,183 274,152 277.04,121.24 L290.96,122.76 C287.3,153 283.6,184 279.97,214.65 Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+    <ellipse cx="284" cy="122" rx="7" ry="2.9" transform="rotate(6.2 284 122)" fill="#B9A2E0" stroke="#2A2745" stroke-width="3"/>
+    <ellipse cx="284" cy="122" rx="4" ry="1.4" transform="rotate(6.2 284 122)" fill="#3A2A5A"/>
+
+    <path d="M233.51,191.61 C234.7,164 235.9,136 237.01,107.53 L252.99,108.47 C250.8,136 248.6,164 246.49,192.39 Z" fill="#7A3FC4"/>
+    <path d="M252.99,108.47 C250.8,136 248.6,164 246.49,192.39 L242,192.1 C244.2,164 246.2,136 247.4,108.1 Z" fill="#5B2E98"/>
+    <path d="M237.01,107.53 C235.9,136 234.7,164 233.51,191.61 L236.1,191.8 C237.3,164 238.7,136 240.2,107.7 Z" fill="#9A6AD8"/>
+    <path d="M236.2,126 Q243.6,131.4 251.6,127 M235.4,145.4 Q242.5,150.8 250.1,146.2" fill="none" stroke="#5B2E98" stroke-width="1.6"/>
+    <path d="M233.51,191.61 C234.7,164 235.9,136 237.01,107.53 L252.99,108.47 C250.8,136 248.6,164 246.49,192.39 Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+    <ellipse cx="245" cy="108" rx="8" ry="3.3" transform="rotate(3.4 245 108)" fill="#B9A2E0" stroke="#2A2745" stroke-width="3"/>
+    <ellipse cx="245" cy="108" rx="4.8" ry="1.7" transform="rotate(3.4 245 108)" fill="#3A2A5A"/>
+  </g>
+
+  <!-- ===== staghorn coral (hot pink) ===== -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#sh-22" stroke="#2A2745" stroke-width="28"/>
+    <use href="#sh-19" stroke="#2A2745" stroke-width="25"/>
+    <use href="#sh-17" stroke="#2A2745" stroke-width="23"/>
+    <use href="#sh-15" stroke="#2A2745" stroke-width="21"/>
+    <use href="#sh-22" stroke="#A9327F" stroke-width="22"/>
+    <use href="#sh-19" stroke="#A9327F" stroke-width="19"/>
+    <use href="#sh-17" stroke="#A9327F" stroke-width="17"/>
+    <use href="#sh-15" stroke="#A9327F" stroke-width="15"/>
+    <g transform="translate(-1.2 -1.8)" stroke="#EB5E9E">
+      <use href="#sh-22" stroke-width="17"/>
+      <use href="#sh-19" stroke-width="14"/>
+      <use href="#sh-17" stroke-width="12"/>
+      <use href="#sh-15" stroke-width="10"/>
+    </g>
+    <g transform="translate(-2.6 -3.4)" stroke="#EB8CBE">
+      <use href="#sh-22" stroke-width="5"/>
+      <use href="#sh-19" stroke-width="4.5"/>
+      <use href="#sh-17" stroke-width="4"/>
+      <use href="#sh-15" stroke-width="3.5"/>
+    </g>
+  </g>
+  <!-- pale growing tips -->
+  <g fill="#DDA6D6">
+    <circle cx="36.8" cy="60.2" r="4.6"/>
+    <circle cx="18.8" cy="102.2" r="4.6"/>
+    <circle cx="36.8" cy="164.2" r="4.6"/>
+    <circle cx="66.8" cy="36.2" r="4.6"/>
+    <circle cx="102.8" cy="20.2" r="4.6"/>
+    <circle cx="130.8" cy="40.2" r="4.6"/>
+    <circle cx="156.8" cy="64.2" r="4.6"/>
+    <circle cx="198.8" cy="88.2" r="4.6"/>
+    <circle cx="132.8" cy="94.2" r="4.6"/>
+  </g>
+  <!-- corallite dots -->
+  <g fill="#B03A82">
+    <circle cx="89.8" cy="199.4" r="1.4"/>
+    <circle cx="77" cy="169" r="1.4"/>
+    <circle cx="51.5" cy="138.5" r="1.4"/>
+    <circle cx="38.5" cy="94" r="1.4"/>
+    <circle cx="36" cy="74" r="1.4"/>
+    <circle cx="32" cy="113.5" r="1.4"/>
+    <circle cx="55" cy="164" r="1.4"/>
+    <circle cx="94.6" cy="160" r="1.4"/>
+    <circle cx="94.5" cy="116" r="1.4"/>
+    <circle cx="75.8" cy="71" r="1.4"/>
+    <circle cx="68.5" cy="50" r="1.4"/>
+    <circle cx="99.1" cy="62.5" r="1.4"/>
+    <circle cx="101" cy="38" r="1.4"/>
+    <circle cx="114.4" cy="66.5" r="1.4"/>
+    <circle cx="111" cy="167.5" r="1.4"/>
+    <circle cx="147" cy="142.5" r="1.4"/>
+    <circle cx="162" cy="98" r="1.4"/>
+    <circle cx="159" cy="78" r="1.4"/>
+    <circle cx="181" cy="112.5" r="1.4"/>
+    <circle cx="133" cy="143" r="1.4"/>
+    <circle cx="134.8" cy="108" r="1.4"/>
+  </g>
+
+  <!-- ===== rock ===== -->
+  <use href="#rock" fill="#6F7A8C"/>
+  <g clip-path="url(#rock-clip)">
+    <path d="M0,234 C70,246 190,248 300,226 L300,260 L0,260 Z" fill="#535B72"/>
+    <path d="M26,244 C20,230 30,214 50,208 C64,204 76,206 88,203 C104,198 122,200 140,204 C156,207 170,204 186,206 C210,209 240,206 260,212 C276,216 284,230 280,242" fill="none" stroke="#8994A8" stroke-width="12"/>
+    <ellipse cx="40" cy="232" rx="4" ry="2.6" fill="#4E566A"/>
+    <ellipse cx="110" cy="232" rx="3.2" ry="2" fill="#4E566A"/>
+    <ellipse cx="102" cy="244" rx="2.4" ry="1.5" fill="#4E566A"/>
+    <path d="M146,252 C148,246 144,242 147,238" fill="none" stroke="#4E566A" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <use href="#rock" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- ===== brain coral (sunflower dome, lime grooves) ===== -->
+  <ellipse cx="204" cy="240" rx="68" ry="7" fill="#474F63" opacity="0.6"/>
+  <use href="#dome" fill="url(#dome-fill)"/>
+  <g clip-path="url(#dome-clip)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#93C838" stroke-width="4.6">
+      <use href="#g1"/><use href="#g2"/><use href="#g3"/><use href="#g4"/>
+      <use href="#g5"/><use href="#g6"/><use href="#g7"/><use href="#g8"/>
+    </g>
+    <g stroke="#5F7A1F" stroke-width="1.7">
+      <use href="#g1"/><use href="#g2"/><use href="#g3"/><use href="#g4"/>
+      <use href="#g5"/><use href="#g6"/><use href="#g7"/><use href="#g8"/>
+    </g>
+    <!-- highlight crescent (upper left) and shadow crescent (lower right) -->
+    <path fill="#EBDC74" fill-opacity="0.5" fill-rule="evenodd" stroke="none"
+          d="M120,130 H290 V250 H120 Z M146,204 a66,56 0 1,0 132,0 a66,56 0 1,0 -132,0 Z"/>
+    <path fill="#4A2A6E" fill-opacity="0.3" fill-rule="evenodd" stroke="none"
+          d="M120,130 H290 V250 H120 Z M130,188 a66,56 0 1,0 132,0 a66,56 0 1,0 -132,0 Z"/>
+  </g>
+  <use href="#dome" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- ===== aqua button polyps (front) ===== -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <g transform="rotate(-12 50 228)">
+      <path d="M44,242 L45,230 L55,230 L56,242 Z" fill="#22B5A8" stroke="#2A2745" stroke-width="3"/>
+      <path d="M52,231 L53,242 L56,242 L55,230 Z" fill="#188C88"/>
+      <ellipse cx="50" cy="228" rx="10" ry="6" fill="#4FD1D9" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="50" cy="228" rx="6" ry="3.4" fill="#22B5A8"/>
+      <ellipse cx="50" cy="228" rx="2.2" ry="1.2" fill="#1A5A66"/>
+      <path d="M42.5,226.5 Q45,223.6 50,223.4" fill="none" stroke="#86DDE3" stroke-width="1.8"/>
+    </g>
+    <g>
+      <path d="M64,246 L65,236 L75,236 L76,246 Z" fill="#22B5A8" stroke="#2A2745" stroke-width="3"/>
+      <path d="M72,237 L73,246 L76,246 L75,236 Z" fill="#188C88"/>
+      <ellipse cx="70" cy="234" rx="10.5" ry="6.2" fill="#4FD1D9" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="70" cy="234" rx="6.3" ry="3.5" fill="#22B5A8"/>
+      <ellipse cx="70" cy="234" rx="2.3" ry="1.2" fill="#1A5A66"/>
+      <path d="M62,232.5 Q64.6,229.4 70,229.2" fill="none" stroke="#86DDE3" stroke-width="1.8"/>
+    </g>
+    <g transform="rotate(10 89 223)">
+      <path d="M84,235 L85,225 L93,225 L94,235 Z" fill="#22B5A8" stroke="#2A2745" stroke-width="3"/>
+      <path d="M90.5,226 L91.5,235 L94,235 L93,225 Z" fill="#188C88"/>
+      <ellipse cx="89" cy="223" rx="8.6" ry="5.2" fill="#4FD1D9" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="89" cy="223" rx="5.2" ry="2.9" fill="#22B5A8"/>
+      <ellipse cx="89" cy="223" rx="2" ry="1.1" fill="#1A5A66"/>
+      <path d="M82.4,221.8 Q84.6,219.2 89,219" fill="none" stroke="#86DDE3" stroke-width="1.6"/>
+    </g>
+    <g transform="rotate(-6 122 238)">
+      <path d="M118,248 L119,240 L125,240 L126,248 Z" fill="#22B5A8" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="122" cy="238" rx="7.4" ry="4.4" fill="#4FD1D9" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="122" cy="238" rx="4.4" ry="2.4" fill="#22B5A8"/>
+      <ellipse cx="122" cy="238" rx="1.7" ry="0.9" fill="#1A5A66"/>
+    </g>
+    <g transform="rotate(10 277 234)">
+      <path d="M273,244 L274,236 L280,236 L281,244 Z" fill="#22B5A8" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="277" cy="234" rx="7" ry="4.2" fill="#4FD1D9" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="277" cy="234" rx="4.2" ry="2.3" fill="#22B5A8"/>
+      <ellipse cx="277" cy="234" rx="1.6" ry="0.9" fill="#1A5A66"/>
+    </g>
+  </g>
+</svg>

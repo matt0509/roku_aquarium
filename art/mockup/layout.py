@@ -75,7 +75,8 @@ main_back.append(sp("grotto_back", GROTTO["x"], GROTTO["bottom"]))
 main_back.append(sp("castle_back", CASTLE["x"], CASTLE["bottom"]))
 main_back.append(sp("chest_open", 2420, 1000, rotate=0))
 # crab tucked in the grotto crevice (drawn between grotto back and front)
-main_back.append(sp("crab", GROTTO["x"] + 470, GROTTO["bottom"] - 6))
+# crevice is x 41-243, y 325-411 inside the 760x420 grotto; crab feet at y ~394
+main_back.append(sp("crab", GROTTO["x"] + 78, GROTTO["bottom"] - 420 + 398))
 main_back.append(sp("crab", 4420, 968, flip=True))
 # shrimp on the gravel
 for x, y, tint, fl in [(2330, 958, "#D8323A", False), (2760, 962, "#2F6FD8", True), (4150, 960, "#EBC82E", False),
@@ -97,7 +98,8 @@ for x, y, tint, fl in [(520, 420, "#EBD23A", False), (1360, 650, "#8E5BD8", True
 # doorway is x 180-380, y 470-690 inside the 560x700 castle; the fish's head is hidden by the wall at x=380
 mid.append(sp("fish_tang_base", CASTLE["x"] + 340, CASTLE["bottom"] - 700 + 600, anchor="center", tint="#EB8A3A"))
 # a clownfish half inside the grotto mouth, shaded
-mid.append(sp("fish_clownfish", GROTTO["x"] + 250, GROTTO["bottom"] - 170, anchor="center", flip=True, tint="#8C96A8"))
+# cave mouth is x 331-668, y 160-354; this one swims in, its tail still behind the right pillar
+mid.append(sp("fish_clownfish", GROTTO["x"] + 640, GROTTO["bottom"] - 420 + 270, anchor="center", flip=True, tint="#8C96A8"))
 mid += school(1150, 340, 12)
 mid += school(4320, 300, 10, flip=True)
 mid += school(2980, 760, 8, spread=(120, 50))
@@ -107,8 +109,9 @@ layers.append({"id": "mid_fish", "parallax": 0.85, "items": mid})
 main_front = [sp("grotto_front", GROTTO["x"], GROTTO["bottom"]), sp("castle_front", CASTLE["x"], CASTLE["bottom"]),
               {"src": T + "gravel_lip.png", "x": 0, "y": 905, "anchor": "top", "stretch": True}]
 # shrimp grazing on the grotto's moss
-for dx, dy, tint, fl in [(150, -385, "#D8323A", False), (420, -405, "#2F6FD8", True), (600, -370, "#EBC82E", False)]:
-    main_front.append(sp("shrimp_base", GROTTO["x"] + dx, GROTTO["bottom"] + dy, tint=tint, flip=fl))
+# moss walk path points (grotto coords): (160,24) (380,17) (620,53)
+for px, py, tint, fl in [(160, 24, "#D8323A", False), (380, 17, "#2F6FD8", True), (620, 53, "#EBC82E", False)]:
+    main_front.append(sp("shrimp_base", GROTTO["x"] + px - 60, GROTTO["bottom"] - 420 + py + 8, tint=tint, flip=fl))
 layers.append({"id": "main_front", "parallax": 0.85, "items": main_front})
 
 front = [{"src": T + "gravel_front.png", "x": 0, "y": 1000, "anchor": "top", "stretch": True}]

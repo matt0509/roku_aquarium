@@ -5,8 +5,9 @@
     <!-- Canvas minus cave mouth minus crevice (evenodd) -->
     <path id="cutPath" d="M -20 -20 H 780 V 440 H -20 Z
       M 356 356 C 342 356 332 348 331 334 C 330 312 337 294 334 272 C 331 250 334 230 346 210 C 360 188 384 172 414 165 C 440 159 466 162 490 160 C 516 158 544 161 570 167 C 604 175 632 188 650 208 C 666 226 672 248 669 272 C 666 294 671 316 668 336 C 666 349 657 356 644 356 C 612 358 584 352 552 354 C 508 357 462 352 420 355 C 396 357 374 355 356 356 Z
-      M 40 424 L 41 396 C 41 374 50 352 66 342 C 84 332 110 334 132 331 C 158 328 184 332 206 332 C 226 333 241 346 243 366 L 245 424 Z"/>
+      M 40 424 L 41 394 C 41 370 50 348 66 338 C 84 328 106 327 128 325 C 154 323 184 326 206 328 C 226 330 241 344 243 364 L 245 424 Z"/>
     <clipPath id="cut" clip-rule="evenodd"><use href="#cutPath" clip-rule="evenodd"/></clipPath>
+    <clipPath id="aboveBase"><rect x="0" y="0" width="760" height="411"/></clipPath>
 
     <!-- Stones -->
     <path id="sU1" d="M 24 178 C 20 136 42 104 84 96 C 122 88 170 94 190 120 C 204 140 200 176 188 200 C 172 224 120 230 76 224 C 40 218 26 206 24 178 Z"/>
@@ -16,15 +17,19 @@
     <path id="sU5" d="M 640 200 C 636 166 662 142 698 140 C 726 138 744 160 744 192 C 744 222 738 242 716 248 C 686 254 650 244 642 222 C 640 214 640 206 640 200 Z"/>
     <path id="sM1a" d="M 18 262 C 14 222 38 192 86 186 C 130 180 168 200 174 238 C 180 276 172 316 150 332 C 128 344 74 344 44 332 C 26 322 20 294 18 262 Z"/>
     <path id="sM1b" d="M 140 250 C 138 214 166 192 204 190 C 240 188 266 210 268 246 C 270 282 260 318 236 332 C 214 344 176 344 156 336 C 142 326 140 290 140 250 Z"/>
-    <path id="sF1" d="M 12 410 C 8 380 12 342 32 326 C 50 312 72 322 74 348 C 76 372 72 398 66 412 C 50 416 24 416 12 410 Z"/>
+    <path id="sF1" d="M 12 408 C 8 380 12 342 32 326 C 50 312 72 322 74 348 C 76 372 72 396 66 409 C 50 412 24 412 12 408 Z"/>
     <path id="sM2" d="M 230 222 C 226 186 250 158 292 154 C 336 150 378 166 384 200 C 390 236 356 280 316 286 C 280 292 240 280 233 256 C 230 246 230 234 230 222 Z"/>
     <path id="sM3" d="M 220 322 C 216 290 240 268 280 266 C 320 264 348 282 350 316 C 352 348 334 370 296 372 C 258 374 224 358 220 322 Z"/>
-    <path id="sR1" d="M 652 236 C 648 200 668 176 702 172 C 734 168 752 192 752 230 C 752 266 746 296 718 304 C 690 312 660 300 655 274 C 653 262 652 250 652 236 Z"/>
-    <path id="sB1" d="M 238 412 C 234 388 246 356 284 350 C 330 342 400 344 422 368 C 434 382 432 402 426 412 C 380 416 290 416 238 412 Z"/>
-    <path id="sS1" d="M 396 386 C 394 364 420 354 470 352 C 520 350 558 356 564 378 C 568 396 562 408 552 412 C 500 416 440 416 404 412 C 398 404 396 396 396 386 Z"/>
-    <path id="sR2" d="M 644 352 C 640 318 662 292 700 290 C 736 288 754 312 752 350 C 750 380 750 400 744 412 C 710 416 670 416 650 412 C 645 396 644 372 644 352 Z"/>
-    <path id="sS2" d="M 552 384 C 550 362 572 350 610 350 C 648 350 674 360 676 382 C 678 400 670 410 660 413 C 620 416 580 416 560 412 C 554 404 552 394 552 384 Z"/>
-    <path id="sP1" d="M 300 412 C 296 398 306 388 326 388 C 346 388 356 398 352 412 C 336 416 314 416 300 412 Z"/>
+    <path id="sR1" d="M 652 236 C 648 200 668 176 702 172 C 732 168 750 192 750 230 C 750 266 744 296 718 304 C 690 312 660 300 655 274 C 653 262 652 250 652 236 Z"/>
+    <path id="sB1" d="M 238 409 C 234 388 246 356 284 350 C 330 342 400 344 422 368 C 434 382 432 400 426 409 C 380 412 290 412 238 409 Z"/>
+    <path id="sS1" d="M 396 386 C 394 364 420 354 470 352 C 520 350 558 356 564 378 C 568 396 562 406 552 409 C 500 412 440 412 404 409 C 398 402 396 396 396 386 Z"/>
+    <path id="sR2" d="M 644 352 C 640 318 662 292 700 290 C 734 288 750 312 749 350 C 748 380 748 398 742 409 C 710 412 670 412 650 409 C 645 394 644 372 644 352 Z"/>
+    <path id="sS2" d="M 544 384 C 544 362 568 350 610 350 C 648 350 674 360 676 382 C 678 398 670 407 660 410 C 620 412 580 412 556 409 C 548 402 544 394 544 384 Z"/>
+    <!-- small wedge stones filling the gaps -->
+    <path id="sW1" d="M 168 180 C 166 160 182 148 204 148 C 226 148 242 160 242 180 C 242 198 228 208 204 208 C 182 208 170 198 168 180 Z"/>
+    <path id="sW2" d="M 318 156 C 316 138 330 126 350 126 C 370 126 384 138 384 156 C 384 172 370 180 350 180 C 330 180 320 172 318 156 Z"/>
+    <path id="sW3" d="M 604 196 C 602 178 616 166 636 166 C 656 166 668 178 668 196 C 668 212 654 222 636 222 C 616 222 606 212 604 196 Z"/>
+    <path id="sP1" d="M 300 409 C 296 397 306 388 326 388 C 346 388 356 397 352 409 C 336 412 314 412 300 409 Z"/>
 
     <!-- k* = clip to the stone; j* = clip to the stone nudged down-right (leaves a top-left highlight rim) -->
     <clipPath id="kU1"><use href="#sU1"/></clipPath><clipPath id="jU1"><use href="#sU1" transform="translate(3 9)"/></clipPath>
@@ -43,15 +48,47 @@
     <clipPath id="kR2"><use href="#sR2"/></clipPath><clipPath id="jR2"><use href="#sR2" transform="translate(3 8)"/></clipPath>
     <clipPath id="kS2"><use href="#sS2"/></clipPath><clipPath id="jS2"><use href="#sS2" transform="translate(2 8)"/></clipPath>
     <clipPath id="kP1"><use href="#sP1"/></clipPath><clipPath id="jP1"><use href="#sP1" transform="translate(2 5)"/></clipPath>
+    <clipPath id="kW1"><use href="#sW1"/></clipPath><clipPath id="jW1"><use href="#sW1" transform="translate(2 7)"/></clipPath>
+    <clipPath id="kW2"><use href="#sW2"/></clipPath><clipPath id="jW2"><use href="#sW2" transform="translate(2 7)"/></clipPath>
+    <clipPath id="kW3"><use href="#sW3"/></clipPath><clipPath id="jW3"><use href="#sW3" transform="translate(2 7)"/></clipPath>
 
     <!-- Moss blanket: cushioned top, draping lobes below -->
     <path id="mBlanket" d="M 12 182 C 6 166 17 127 30 116 C 25 95 49 69 70 72 C 74 50 109 34 128 46 C 134 29 163 22 176 34 C 188 10 232 4 250 24 C 264 7 301 11 312 30 C 324 19 350 25 356 40 C 368 16 413 12 430 32 C 446 13 488 18 500 40 C 513 29 542 36 548 52 C 564 34 603 38 614 60 C 630 50 659 63 662 82 C 678 74 705 90 706 108 C 725 106 746 132 740 150 C 750 158 754 185 748 196
-      C 752 272 720 278 722 214 C 724 233 692 231 694 196 C 698 214 664 208 668 170 C 672 186 634 160 636 128 C 640 144 592 144 596 112 C 598 124 564 124 566 104 C 570 137 516 137 520 100 C 530 214 490 214 500 98 C 502 123 460 123 462 94 C 466 140 416 140 420 92 C 422 111 394 111 396 92 C 400 132 346 132 350 92 C 352 113 316 113 318 94 C 322 142 266 142 270 94 C 272 117 234 117 236 98 C 240 161 180 161 184 104 C 186 130 148 130 150 110 C 154 170 100 174 104 126 C 106 174 72 180 74 146 C 78 198 46 204 48 168 C 54 262 8 268 12 182 Z"/>
+      C 751 220 750 238 745 246 A 7 7 0 0 1 732 250 A 7 7 0 0 1 720 244 C 718 234 719 222 722 214
+      C 723 220 721 224 716 223 A 10 10 0 0 1 697 219 C 693 213 692 204 694 196
+      C 696 201 694 203 690 202 A 12 12 0 0 1 670 189 C 666 183 666 176 668 170
+      C 669 173 665 175 660 172 A 14 14 0 0 1 641 150 C 637 144 634 136 636 128
+      C 638 134 636 138 630 138 A 8 8 0 0 1 614 137 A 9 9 0 0 1 598 128 C 594 124 594 118 596 112
+      C 598 116 597 119 593 119 A 11 11 0 0 1 570 115 C 566 112 565 108 566 104
+      C 568 110 566 118 560 120 A 11 11 0 0 1 538 122 A 9 9 0 0 1 522 114 C 519 110 519 105 520 100
+      C 523 124 523 146 518 156 A 5 5 0 0 1 508 162 A 5 5 0 0 1 500 156 C 497 142 497 122 500 98
+      C 502 104 500 112 494 114 A 7 7 0 0 1 480 116 A 8 8 0 0 1 466 108 C 463 104 462 99 462 94
+      C 464 104 462 120 456 124 A 9 9 0 0 1 438 126 A 9 9 0 0 1 422 116 C 419 108 419 98 420 92
+      C 421 98 419 102 414 102 A 8 8 0 0 1 398 100 C 396 97 395 95 396 92
+      C 398 102 396 112 390 114 A 10 10 0 0 1 370 116 A 9 9 0 0 1 354 106 C 351 102 350 97 350 92
+      C 351 98 349 102 344 102 A 11 11 0 0 1 322 100 C 319 98 318 96 318 94
+      C 320 104 318 116 312 120 A 10 10 0 0 1 292 122 A 10 10 0 0 1 274 112 C 271 106 270 100 270 94
+      C 271 100 269 104 264 104 A 12 12 0 0 1 240 104 C 237 102 236 100 236 98
+      C 238 110 236 128 230 134 A 11 11 0 0 1 208 136 A 11 11 0 0 1 188 128 C 184 122 183 112 184 104
+      C 185 110 183 114 178 114 A 12 12 0 0 1 154 116 C 151 114 150 112 150 110
+      C 152 122 150 140 144 146 A 11 11 0 0 1 122 148 A 10 10 0 0 1 106 138 C 103 134 103 130 104 126
+      C 105 134 103 146 98 152 A 10 10 0 0 1 78 156 C 74 154 73 150 74 146
+      C 76 156 74 172 68 178 A 9 9 0 0 1 50 180 C 47 176 47 172 48 168
+      C 52 196 52 222 46 232 A 8 8 0 0 1 30 238 A 8 8 0 0 1 16 228 C 12 216 11 198 12 182 Z"/>
     <!-- Moss on the overhang lip above the crevice -->
-    <path id="mLip" d="M 58 334 C 52 322 60 310 74 312 C 80 300 98 298 108 306 C 118 296 140 296 150 306 C 160 300 176 302 182 310 C 192 304 210 306 214 316 C 224 318 230 328 226 336 C 228 342 216 346 208 340 C 204 348 186 350 180 342 C 172 344 158 344 152 338 C 146 348 124 350 118 340 C 110 342 96 342 90 338 C 84 346 66 346 62 340 C 58 338 56 338 58 334 Z"/>
+    <path id="mLip" d="M 58 324 C 52 312 60 300 74 302 C 80 290 98 288 108 296 C 118 286 140 286 150 296 C 160 290 176 292 182 300 C 192 294 210 296 214 306 C 224 308 230 318 226 326 C 228 334 216 338 208 332 C 204 338 190 340 184 330 C 180 322 168 318 154 318 C 140 318 124 318 118 324 C 108 334 92 338 86 330 C 82 338 66 340 62 332 C 58 330 56 328 58 324 Z"/>
     <!-- Moss on the sill of the cave mouth -->
     <path id="mSill" d="M 346 364 C 342 354 350 346 362 347 C 368 340 382 340 390 345 C 398 340 414 341 420 348 C 432 347 440 356 436 364 C 420 369 360 369 346 364 Z
-      M 604 364 C 600 354 610 347 622 349 C 630 342 646 342 654 348 C 666 346 678 354 674 362 C 660 369 616 369 604 364 Z"/>
+      M 604 364 C 600 354 610 347 622 349 C 630 342 646 342 654 348 C 666 346 678 354 674 362 C 660 369 616 369 604 364 Z
+      M 694 304 C 692 296 700 290 710 292 C 716 286 730 286 736 294 C 744 294 748 302 742 307 C 728 311 702 311 694 304 Z"/>
+    <!-- creases between the top cushions -->
+    <g id="creaseSet">
+      <path d="M 70 76 Q 77 88 74 102"/><path d="M 128 50 Q 135 62 132 78"/><path d="M 176 38 Q 183 50 180 66"/>
+      <path d="M 250 28 Q 257 42 254 60"/><path d="M 312 34 Q 319 46 316 64"/><path d="M 356 44 Q 363 56 360 72"/>
+      <path d="M 430 36 Q 437 50 434 68"/><path d="M 500 44 Q 507 56 504 72"/><path d="M 548 56 Q 555 68 552 84"/>
+      <path d="M 614 64 Q 621 76 618 92"/><path d="M 662 86 Q 669 98 666 114"/><path d="M 706 112 Q 712 124 709 140"/>
+      <path d="M 30 120 Q 38 130 37 146"/>
+    </g>
 
     <clipPath id="kBl"><use href="#mBlanket"/></clipPath>
     <clipPath id="jBl"><use href="#mBlanket" transform="translate(2 9)"/></clipPath>
@@ -76,6 +113,7 @@
     <!-- outline pass: union of all stones, 4 px visible outside -->
     <g fill="#2A2745" stroke="#2A2745" stroke-width="8">
       <use href="#sU1"/><use href="#sU2"/><use href="#sU4"/><use href="#sU3"/><use href="#sU5"/>
+      <use href="#sW1"/><use href="#sW2"/><use href="#sW3"/>
       <use href="#sM1a"/><use href="#sM1b"/><use href="#sF1"/><use href="#sM2"/><use href="#sM3"/><use href="#sR1"/>
       <use href="#sB1"/><use href="#sS1"/><use href="#sR2"/><use href="#sS2"/><use href="#sP1"/>
     </g>
@@ -111,6 +149,21 @@
       <g clip-path="url(#jU5)"><use href="#sU5" fill="#535A71"/><use href="#sU5" fill="#6F7A8C" transform="translate(-9 -15)"/></g>
     </g>
     <use href="#sU5" fill="none" stroke="#464D63" stroke-width="2"/>
+    <!-- W1 dark wedge (upper left) -->
+    <g clip-path="url(#kW1)"><use href="#sW1" fill="#5B6479"/>
+      <g clip-path="url(#jW1)"><use href="#sW1" fill="#343950"/><use href="#sW1" fill="#474F63" transform="translate(-7 -11)"/></g>
+    </g>
+    <use href="#sW1" fill="none" stroke="#2F3446" stroke-width="2"/>
+    <!-- W2 dark wedge (top-left corner of the mouth) -->
+    <g clip-path="url(#kW2)"><use href="#sW2" fill="#5B6479"/>
+      <g clip-path="url(#jW2)"><use href="#sW2" fill="#343950"/><use href="#sW2" fill="#474F63" transform="translate(-7 -11)"/></g>
+    </g>
+    <use href="#sW2" fill="none" stroke="#2F3446" stroke-width="2"/>
+    <!-- W3 cool wedge (top-right corner of the mouth) -->
+    <g clip-path="url(#kW3)"><use href="#sW3" fill="#8592A8"/>
+      <g clip-path="url(#jW3)"><use href="#sW3" fill="#535A71"/><use href="#sW3" fill="#6F7A8C" transform="translate(-7 -11)"/></g>
+    </g>
+    <use href="#sW3" fill="none" stroke="#464D63" stroke-width="2"/>
     <!-- M1a cool, left half of the overhang -->
     <g clip-path="url(#kM1a)"><use href="#sM1a" fill="#8592A8"/>
       <g clip-path="url(#jM1a)"><use href="#sM1a" fill="#535A71"/><use href="#sM1a" fill="#6F7A8C" transform="translate(-11 -17)"/></g>
@@ -179,8 +232,8 @@
     </g>
     <use href="#sP1" fill="none" stroke="#6E5B5B" stroke-width="2"/>
 
-    <!-- rim outline around the openings (rock side only, thanks to the clip) -->
-    <use href="#cutPath" fill="none" stroke="#2A2745" stroke-width="8"/>
+    <!-- rim outline around the openings (rock side only, thanks to the clip; stops at the stone bottoms) -->
+    <g clip-path="url(#aboveBase)"><use href="#cutPath" fill="none" stroke="#2A2745" stroke-width="8"/></g>
   </g>
 
   <!-- ===== PLANTS (drawn first so the moss tucks over their bases) ===== -->
@@ -188,29 +241,27 @@
     <!-- tuft on the left shoulder -->
     <path d="M 92 60 C 86 48 78 40 66 36 C 80 34 92 46 98 58 Z" fill="#4FA83D"/>
     <path d="M 103 60 C 110 52 120 47 132 47 C 123 53 115 58 108 63 Z" fill="#2E7A3A"/>
-    <path d="M 95 58 C 92 46 92 34 97 21 C 101 34 103 46 101 58 Z" fill="#9CD43A"/>
-    <path d="M 100 58 C 104 44 111 34 121 26 C 117 38 111 48 106 60 Z" fill="#4FA83D"/>
+    <path d="M 95 58 C 91 44 92 30 98 15 C 102 30 103 44 101 58 Z" fill="#9CD43A"/>
+    <path d="M 100 58 C 105 42 113 30 125 21 C 120 35 112 47 106 60 Z" fill="#4FA83D"/>
     <!-- tuft on the right slope -->
-    <path d="M 580 56 C 574 46 566 40 554 37 C 567 34 580 42 586 52 Z" fill="#4FA83D"/>
-    <path d="M 589 56 C 594 46 602 40 613 36 C 607 46 599 52 594 58 Z" fill="#2E7A3A"/>
-    <path d="M 584 54 C 582 42 584 30 590 18 C 594 30 594 42 590 56 Z" fill="#9CD43A"/>
+    <path d="M 580 56 C 572 42 562 32 547 28 C 563 25 578 38 586 52 Z" fill="#4FA83D"/>
+    <path d="M 589 56 C 596 42 606 32 621 26 C 613 38 602 48 594 58 Z" fill="#2E7A3A"/>
+    <path d="M 584 54 C 581 38 584 22 592 10 C 597 24 595 40 590 56 Z" fill="#9CD43A"/>
     <!-- tiny tuft on the sill moss -->
     <path d="M 386 354 C 380 346 372 340 363 338 C 374 335 384 342 390 352 Z" fill="#4FA83D"/>
     <path d="M 395 354 C 400 346 406 342 415 340 C 409 346 403 352 399 356 Z" fill="#2E7A3A"/>
     <path d="M 390 352 C 390 342 393 332 398 322 C 401 332 400 344 396 354 Z" fill="#9CD43A"/>
     <!-- fern on the right shoulder -->
-    <use href="#frond" transform="translate(688 98) rotate(-40) scale(0.85)" fill="#2E7A3A"/>
-    <use href="#frond" transform="translate(694 100) rotate(62) scale(0.8)" fill="#2E7A3A"/>
-    <use href="#frond" transform="translate(690 98) rotate(-8) scale(1.05)" fill="#4FA83D"/>
-    <use href="#frond" transform="translate(692 98) rotate(28)" fill="#4FA83D"/>
+    <use href="#frond" transform="translate(688 98) rotate(-40)" fill="#2E7A3A" stroke-width="1.8"/>
+    <use href="#frond" transform="translate(694 100) rotate(62) scale(0.95)" fill="#2E7A3A" stroke-width="1.8"/>
+    <use href="#frond" transform="translate(690 98) rotate(-8) scale(1.25)" fill="#4FA83D" stroke-width="1.6"/>
+    <use href="#frond" transform="translate(692 98) rotate(28) scale(1.15)" fill="#9CD43A" stroke-width="1.7"/>
   </g>
-  <g fill="none" stroke="#2E7A3A" stroke-width="1.6" stroke-linecap="round">
-    <use href="#frondRib" transform="translate(690 98) rotate(-8) scale(1.05)"/>
-    <use href="#frondRib" transform="translate(692 98) rotate(28)"/>
-  </g>
-  <g fill="none" stroke="#24502C" stroke-width="1.6" stroke-linecap="round">
-    <use href="#frondRib" transform="translate(688 98) rotate(-40) scale(0.85)"/>
-    <use href="#frondRib" transform="translate(694 100) rotate(62) scale(0.8)"/>
+  <g fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#frondRib" transform="translate(690 98) rotate(-8) scale(1.25)" stroke="#2E7A3A"/>
+    <use href="#frondRib" transform="translate(692 98) rotate(28) scale(1.15)" stroke="#4FA83D"/>
+    <use href="#frondRib" transform="translate(688 98) rotate(-40)" stroke="#24502C"/>
+    <use href="#frondRib" transform="translate(694 100) rotate(62) scale(0.95)" stroke="#24502C"/>
   </g>
 
   <!-- ===== MOSS ===== -->
@@ -228,14 +279,9 @@
         <use href="#mBlanket" fill="#A5D24C" transform="translate(-2 -16)"/>
       </g>
       <rect x="0" y="96" width="760" height="170" fill="url(#gHang)"/>
-      <!-- creases between top cushions -->
-      <g fill="none" stroke="#7DAF3C" stroke-width="2">
-        <path d="M 70 76 Q 77 88 74 102"/><path d="M 128 50 Q 135 62 132 78"/><path d="M 176 38 Q 183 50 180 66"/>
-        <path d="M 250 28 Q 257 42 254 60"/><path d="M 312 34 Q 319 46 316 64"/><path d="M 356 44 Q 363 56 360 72"/>
-        <path d="M 430 36 Q 437 50 434 68"/><path d="M 500 44 Q 507 56 504 72"/><path d="M 548 56 Q 555 68 552 84"/>
-        <path d="M 614 64 Q 621 76 618 92"/><path d="M 662 86 Q 669 98 666 114"/><path d="M 706 112 Q 712 124 709 140"/>
-        <path d="M 30 120 Q 38 130 37 146"/>
-      </g>
+      <!-- creases between top cushions, with a soft cel shadow on the shaded side of each cushion -->
+      <use href="#creaseSet" fill="none" stroke="#96C946" stroke-width="8" transform="translate(-5 1)"/>
+      <use href="#creaseSet" fill="none" stroke="#7DAF3C" stroke-width="2"/>
       <!-- creases where drape lobes part -->
       <g fill="none" stroke="#5E9A36" stroke-width="2">
         <path d="M 722 211 Q 719 202 723 192"/><path d="M 694 193 Q 691 184 695 174"/><path d="M 668 167 Q 665 158 669 148"/>
@@ -272,7 +318,7 @@
     <g clip-path="url(#kSill)">
       <use href="#mSill" fill="#C0E070"/>
       <g clip-path="url(#jSill)"><use href="#mSill" fill="#3E6E2E"/><use href="#mSill" fill="#4FA83D" transform="translate(-1 -5)"/><use href="#mSill" fill="#9CD43A" transform="translate(-2 -10)"/></g>
-      <g fill="#BEDE68"><circle cx="372" cy="350" r="2.2"/><circle cx="636" cy="352" r="2.2"/></g>
+      <g fill="#BEDE68"><circle cx="372" cy="350" r="2.2"/><circle cx="636" cy="352" r="2.2"/><circle cx="716" cy="296" r="2"/></g>
     </g>
   </g>
 </svg>
