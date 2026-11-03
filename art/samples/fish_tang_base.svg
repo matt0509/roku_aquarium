@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="160" viewBox="0 0 210 160">
+  <defs>
+    <path id="tg-tail-shape" d="M 66 71 L 52 72 C 42 64, 28 51, 9 40 C 21 54, 28 67, 29 81 C 28 95, 21 108, 9 122 C 28 111, 42 98, 52 89 L 66 89 Z"/>
+    <path id="tg-body-shape" d="M 205 92 C 198 87, 190 80, 186 72 C 182 62, 176 48, 162 39 C 142 27, 108 26, 86 38 C 74 45, 64 58, 58 70 C 56.5 76, 56.5 84, 58 89 C 64 101, 78 115, 98 124 C 120 134, 150 135, 170 125 C 184 118, 197 105, 205 92 Z"/>
+    <path id="tg-dorsal-shape" d="M 168 46 C 164 36, 158 26, 150 20 C 134 9, 112 5, 94 6 C 78 7, 64 18, 57 34 C 53 44, 53 58, 57 69 L 68 60 L 100 42 L 160 48 Z"/>
+    <path id="tg-anal-shape" d="M 160 124 C 150 138, 136 148, 116 151 C 98 153, 80 146, 68 132 C 61 122, 57 106, 57 91 L 72 96 L 110 118 L 152 118 Z"/>
+    <path id="tg-pelvic-shape" d="M 174 116 C 172 128, 166 140, 154 150 C 152 144, 152 136, 155 126 C 157 121, 159 118, 160 116 Z"/>
+    <path id="tg-pect-shape" d="M 160 84 C 148 79, 136 78, 125 81 C 131 92, 145 100, 159 100 C 163 96, 163 88, 160 84 Z"/>
+    <clipPath id="tg-clip-tail"><use href="#tg-tail-shape"/></clipPath>
+    <clipPath id="tg-clip-body"><use href="#tg-body-shape"/></clipPath>
+    <clipPath id="tg-clip-dorsal"><use href="#tg-dorsal-shape"/></clipPath>
+    <clipPath id="tg-clip-anal"><use href="#tg-anal-shape"/></clipPath>
+    <clipPath id="tg-clip-pelvic"><use href="#tg-pelvic-shape"/></clipPath>
+    <clipPath id="tg-clip-pect"><use href="#tg-pect-shape"/></clipPath>
+    <linearGradient id="tg-grad-tail" x1="0" y1="40" x2="0" y2="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A8A8A8"/>
+      <stop offset="1" stop-color="#868686"/>
+    </linearGradient>
+    <linearGradient id="tg-grad-ped" x1="58" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8E8E8E" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#8E8E8E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- TAIL: crescent caudal fin, pivot at the caudal joint -->
+  <g id="tail" data-pivot="57 80">
+    <use href="#tg-tail-shape" fill="url(#tg-grad-tail)"/>
+    <g clip-path="url(#tg-clip-tail)">
+      <g fill="none" stroke="#767676" stroke-width="1.3" stroke-linecap="round">
+        <path d="M 52 76 L 14 44"/>
+        <path d="M 52 78 L 22 60"/>
+        <path d="M 52 80.5 L 27 81"/>
+        <path d="M 52 83 L 22 102"/>
+        <path d="M 52 85 L 14 118"/>
+      </g>
+      <path d="M 14 40 C 26 54, 33 67, 34 81 C 33 95, 26 108, 14 122" fill="none" stroke="#CFCFCF" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <use href="#tg-tail-shape" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+  <!-- BODY: fins behind, disc body, shading, pattern, gill, pectoral, eye -->
+  <g id="body" data-pivot="128 82">
+    <!-- dorsal fin -->
+    <use href="#tg-dorsal-shape" fill="#C8C8C8"/>
+    <g clip-path="url(#tg-clip-dorsal)">
+      <g fill="none" stroke="#A6A6A6" stroke-width="1.3" stroke-linecap="round">
+        <path d="M 156 40 L 146 16"/>
+        <path d="M 142 34 L 132 8"/>
+        <path d="M 126 32 L 116 4"/>
+        <path d="M 110 33 L 100 4"/>
+        <path d="M 96 38 L 84 6"/>
+        <path d="M 84 44 L 70 12"/>
+        <path d="M 74 52 L 60 28"/>
+        <path d="M 66 60 L 55 48"/>
+      </g>
+      <use href="#tg-dorsal-shape" fill="none" stroke="#7C7C7C" stroke-width="13"/>
+    </g>
+    <use href="#tg-dorsal-shape" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- anal fin -->
+    <use href="#tg-anal-shape" fill="#BABABA"/>
+    <g clip-path="url(#tg-clip-anal)">
+      <g fill="none" stroke="#9C9C9C" stroke-width="1.3" stroke-linecap="round">
+        <path d="M 148 128 L 140 148"/>
+        <path d="M 134 130 L 126 154"/>
+        <path d="M 118 128 L 110 156"/>
+        <path d="M 102 124 L 92 154"/>
+        <path d="M 88 116 L 76 146"/>
+        <path d="M 76 108 L 62 130"/>
+        <path d="M 68 98 L 56 108"/>
+      </g>
+      <use href="#tg-anal-shape" fill="none" stroke="#727272" stroke-width="13"/>
+    </g>
+    <use href="#tg-anal-shape" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- pelvic fin -->
+    <use href="#tg-pelvic-shape" fill="#AEAEAE"/>
+    <g clip-path="url(#tg-clip-pelvic)">
+      <path d="M 166 124 L 156 144" fill="none" stroke="#8C8C8C" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <use href="#tg-pelvic-shape" fill="none" stroke="#2A2745" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- body disc -->
+    <use href="#tg-body-shape" fill="#DADADA"/>
+    <g clip-path="url(#tg-clip-body)">
+      <!-- top highlight -->
+      <path d="M 210 0 L 40 0 L 40 72 L 60 72 C 68 58, 78 50, 90 46 C 112 36, 146 36, 166 48 C 176 54, 182 62, 186 72 L 210 72 Z" fill="#EAEAEA"/>
+      <!-- faint longitudinal lines -->
+      <g fill="none" stroke="#6A6A6A" stroke-width="1.5" stroke-linecap="round" opacity="0.16">
+        <path d="M 84 54 C 106 46, 134 45, 154 51"/>
+        <path d="M 72 67 C 98 59, 130 58, 152 64"/>
+        <path d="M 66 80 C 96 73, 126 73, 150 78"/>
+        <path d="M 68 93 C 96 88, 126 89, 148 94"/>
+        <path d="M 80 107 C 104 104, 128 106, 146 110"/>
+      </g>
+      <!-- belly shadow -->
+      <path d="M 0 160 L 0 94 L 60 96 C 78 110, 102 118, 130 118 C 156 118, 178 110, 196 98 L 210 98 L 210 160 Z" fill="#A0A0A0"/>
+      <!-- darker peduncle -->
+      <rect x="40" y="40" width="50" height="100" fill="url(#tg-grad-ped)"/>
+    </g>
+    <use href="#tg-body-shape" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- scalpel -->
+    <path d="M 60 80 C 65 76.5, 74 76.5, 81 80 C 74 83.5, 65 83.5, 60 80 Z" fill="#E6E6E6" stroke="#5E5E5E" stroke-width="1.5" stroke-linejoin="round"/>
+
+    <!-- gill cover -->
+    <path d="M 158 48 C 148 64, 147 94, 160 116" fill="none" stroke="#6A6A6A" stroke-width="1.75" stroke-linecap="round"/>
+
+    <!-- pectoral fin -->
+    <use href="#tg-pect-shape" fill="#C4C4C4" opacity="0.75"/>
+    <g clip-path="url(#tg-clip-pect)">
+      <g fill="none" stroke="#8E8E8E" stroke-width="1.2" stroke-linecap="round">
+        <path d="M 159 87 L 128 82"/>
+        <path d="M 159 90 L 132 88"/>
+        <path d="M 159 93 L 138 95"/>
+        <path d="M 159 96 L 148 99"/>
+      </g>
+    </g>
+    <use href="#tg-pect-shape" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- mouth -->
+    <path d="M 205 92 L 199 93.5" fill="none" stroke="#6A6A6A" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- eye -->
+    <circle cx="168" cy="62" r="9.5" fill="#E6E6E6" stroke="#2A2745" stroke-width="2.5"/>
+    <circle cx="169" cy="62.5" r="6" fill="#1C1C1C"/>
+    <circle cx="166.6" cy="59.6" r="2" fill="#EAEAEA"/>
+  </g>
+</svg>

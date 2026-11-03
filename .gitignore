@@ -1,0 +1,7 @@
+# Generated output (rebuilt from art/ sources by tools/)
+build/
+images/
+# Local device config (IPs, developer-mode password)
+devices.json
+.env
+__pycache__/

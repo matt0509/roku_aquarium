@@ -1,0 +1,210 @@
+<title>Aquarium Art Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one long, dark "tank glass" column; art sits on its own water backgrounds, page chrome stays quiet. */
+:root {
+  --abyss: #061628;
+  --tank: #0c2440;
+  --tank-2: #10304f;
+  --line: #224a6e;
+  --ink: #e2e8ec;
+  --muted: #9db4c6;
+  --accent: #eb8a3a;
+  --good: #7fd19a;
+  --change: #f08aa8;
+  --focus: #ebd27a;
+  --display: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--abyss);
+  color: var(--ink);
+  font: 16px/1.55 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--abyss); }
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.1rem); letter-spacing: 0.2px; }
+h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+h3 { font-size: 1.2rem; font-weight: 500; }
+p { margin: 0; max-width: 68ch; }
+a { color: var(--focus); }
+code { font-family: var(--mono); font-size: 0.82em; color: var(--muted); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+
+.top { display: grid; gap: 14px; padding-block: 40px 8px; }
+.eyebrow { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); }
+.lede { color: var(--muted); font-size: 1.08rem; }
+.how { display: grid; gap: 6px; background: var(--tank); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; max-width: 760px; }
+.how strong { font-family: var(--display); font-weight: 500; font-size: 1.05rem; }
+.status { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+.status b { color: var(--ink); font-weight: 400; }
+
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--abyss); display: flex; gap: 6px 18px; flex-wrap: wrap; padding-block: 12px; border-bottom: 1px solid var(--line); margin-block: 18px 8px; }
+nav.toc a { color: var(--muted); text-decoration: none; font-size: 0.92rem; }
+nav.toc a:hover { color: var(--ink); }
+
+section { display: grid; gap: 14px; padding-block: 34px 8px; scroll-margin-top: 64px; }
+.intro { color: var(--muted); }
+.items { display: grid; gap: 22px; }
+
+.palette { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px 14px; }
+.palette li { display: grid; grid-template-columns: 30px 1fr; grid-template-rows: auto auto; column-gap: 10px; align-items: center; min-width: 0; }
+.palette .sw { grid-row: span 2; width: 30px; height: 30px; border-radius: 50%; border: 2px solid #2A2745; box-shadow: 0 0 0 1px var(--line); }
+.palette span:not(.sw) { font-size: 0.92rem; }
+.rules { display: grid; gap: 6px; padding-left: 1.1em; margin: 0; color: var(--ink); max-width: 72ch; }
+
+.item { background: var(--tank); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.item > header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.state { font-family: var(--mono); font-size: 0.78rem; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.state:empty { display: none; }
+.state.good { color: var(--good); border-color: var(--good); }
+.state.change { color: var(--change); border-color: var(--change); }
+.state.pick { color: var(--focus); border-color: var(--focus); }
+.note { color: var(--muted); }
+.figs { display: grid; gap: 12px; }
+figure { margin: 0; display: grid; gap: 6px; min-width: 0; }
+figure img { display: block; width: 100%; height: auto; border-radius: 10px; background: var(--tank-2); }
+figcaption { font-size: 0.88rem; color: var(--muted); }
+.missing { color: var(--change); font-family: var(--mono); font-size: 0.85rem; }
+.wide { overflow-x: auto; border-radius: 10px; }
+.wide img { width: auto; max-width: none; height: 360px; }
+
+.feedback { display: grid; gap: 8px; border-top: 1px dashed var(--line); padding-top: 12px; }
+.verdict { display: flex; gap: 8px; flex-wrap: wrap; }
+.verdict button { font: 500 0.98rem var(--display); color: var(--ink); background: var(--tank-2); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+.verdict button:hover { border-color: var(--muted); }
+.verdict button[aria-pressed="true"][data-v="good"] { background: color-mix(in srgb, var(--good) 22%, var(--tank)); border-color: var(--good); }
+.verdict button[aria-pressed="true"][data-v="change"] { background: color-mix(in srgb, var(--change) 22%, var(--tank)); border-color: var(--change); }
+.pick { border: 0; padding: 0; margin: 0; display: flex; gap: 8px 16px; flex-wrap: wrap; }
+.pick legend { font-size: 0.9rem; color: var(--muted); margin-bottom: 4px; }
+.choice { display: inline-flex; gap: 6px; align-items: center; background: var(--tank-2); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.choice:has(input:checked) { border-color: var(--focus); }
+.notes-label { font-size: 0.85rem; color: var(--muted); }
+textarea { width: 100%; font: 0.98rem/1.45 var(--body); color: var(--ink); background: var(--abyss); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; resize: vertical; }
+.banner { background: var(--tank-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.9rem; color: var(--muted); }
+.legend i { display: inline-block; width: 22px; height: 0; border-top: 3px solid; vertical-align: middle; margin-right: 6px; }
+.legend i.dash { border-top-style: dashed; }
+footer { color: var(--muted); padding-block: 40px 0; }
+@media (min-width: 820px) {
+  .figs.two { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Roku aquarium screensaver · Phase 0</span>
+    <h1>Aquarium Art Review</h1>
+    <p class="lede">Sample art and a layout mockup, so the look can be agreed on before any Roku code is written. Everything here is drawn as vector art and rendered at the size it will appear on screen.</p>
+    <div class="how">
+      <strong>How to review</strong>
+      <p id="how-text">For each item, tap <b>Looks good</b> or <b>Needs changes</b> and add a note if you like. Your answers save automatically, and Claude reads them when you say you're done.</p>
+      <span class="status" id="status" aria-live="polite"></span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Sections">{{NAV}}<a href="#palette">Palette</a></nav>
+
+  {{SECTIONS}}
+
+  <section id="palette">
+    <h2>Palette and drawing rules</h2>
+    <p class="intro">Every piece is drawn from this palette. No color goes above 92% brightness (no pure white), which keeps highlights soft on an OLED.</p>
+    <ul class="palette">{{SWATCHES}}</ul>
+    <ul class="rules">
+      <li>Storybook illustration: clean shapes, a deep indigo outline (not black) and simple three-tone shading.</li>
+      <li>Light comes from the water surface above, so tops are lighter and undersides darker.</li>
+      <li>Natural anatomy, simplified. No smiles or cartoon faces.</li>
+      <li>Some sprites are drawn in grays and recolored on the Roku, which gives many color varieties from one drawing.</li>
+    </ul>
+  </section>
+
+  <footer><p>Mockup views are still images assembled from the samples. In the screensaver everything moves: fish swim, plants sway and the camera drifts very slowly.</p></footer>
+</div>
+
+<script>
+(function () {
+  const items = Array.from(document.querySelectorAll(".item"));
+  const statusEl = document.getElementById("status");
+  const state = {};          // id -> saved body
+  const writing = {};        // id -> promise chain (one write at a time per doc)
+  const timers = {};
+  let readOnly = false;
+
+  function setStatus() {
+    const done = items.filter(el => { const s = state[el.dataset.id]; return s && (s.verdict || s.pick); }).length;
+    statusEl.innerHTML = "<b>" + done + "</b> of " + items.length + " items reviewed";
+  }
+
+  function paint(el) {
+    const s = state[el.dataset.id] || {};
+    const chip = el.querySelector(".state");
+    chip.className = "state";
+    chip.textContent = "";
+    if (s.verdict === "good") { chip.textContent = "Looks good"; chip.classList.add("good"); }
+    else if (s.verdict === "change") { chip.textContent = "Needs changes"; chip.classList.add("change"); }
+    else if (s.pick) { chip.textContent = "Picked: " + s.pick; chip.classList.add("pick"); }
+    el.querySelectorAll(".verdict button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === s.verdict)));
+    el.querySelectorAll(".pick input").forEach(r => { r.checked = (r.value === s.pick); });
+    const ta = el.querySelector("textarea");
+    if (ta && document.activeElement !== ta && !timers[el.dataset.id]) ta.value = s.note || "";
+  }
+
+  function save(db, el, patch) {
+    if (readOnly) return;
+    const id = el.dataset.id;
+    state[id] = Object.assign({}, state[id], patch, { updatedAt: new Date().toISOString() });
+    paint(el); setStatus();
+    const body = Object.assign({}, state[id]);
+    writing[id] = (writing[id] || Promise.resolve()).then(() => db.doc("feedback/" + id).set(body)).catch(e => {
+      if (e && (e.code === "invalid_argument" || e.code === "not_granted")) {
+        readOnly = true;
+        statusEl.textContent = "This view can't save answers. Reply in chat with your notes instead.";
+      } else {
+        statusEl.textContent = "Couldn't save just now. Your last change may not be stored.";
+      }
+    });
+  }
+
+  async function start() {
+    const db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+    if (!db) {
+      document.getElementById("how-text").textContent = "Saving answers isn't available in this view. Reply in chat with what you'd change, naming the item.";
+      return;
+    }
+    items.forEach(el => { el.querySelector(".feedback").hidden = false; });
+    statusEl.textContent = "Loading saved answers…";
+    const slow = setTimeout(() => { statusEl.textContent = "Can't reach saved answers yet. New answers will still be saved."; }, 10000);
+    db.collection("feedback").onSnapshot(snap => {
+      if (!snap.metadata.fromCache) clearTimeout(slow);
+      snap.docs.forEach(d => { if (d.exists) state[d.id] = Object.assign({}, d.data()); });
+      items.forEach(paint); setStatus();
+    }, () => { clearTimeout(slow); statusEl.textContent = "Saved answers couldn't be loaded. Reply in chat instead."; });
+
+    items.forEach(el => {
+      el.querySelectorAll(".verdict button").forEach(b => b.addEventListener("click", () => {
+        const cur = (state[el.dataset.id] || {}).verdict;
+        save(db, el, { verdict: cur === b.dataset.v ? "" : b.dataset.v });
+      }));
+      el.querySelectorAll(".pick input").forEach(r => r.addEventListener("change", () => save(db, el, { pick: r.value })));
+      const ta = el.querySelector("textarea");
+      const flush = () => { clearTimeout(timers[el.dataset.id]); delete timers[el.dataset.id]; if ((state[el.dataset.id] || {}).note !== ta.value) save(db, el, { note: ta.value }); };
+      ta.addEventListener("input", () => { clearTimeout(timers[el.dataset.id]); timers[el.dataset.id] = setTimeout(flush, 900); });
+      ta.addEventListener("blur", flush);
+    });
+  }
+  setStatus();
+  start();
+})();
+</script>
