@@ -13,10 +13,12 @@ Status: **planning — no code yet.** This document is meant to be revised as de
 | Style | **Illustrated and colorful**, not photoreal. |
 | Tank type | **Stylized mix.** Freshwater and saltwater fish, coral and plants together. The goal is an interesting scene with lots of motion, not species accuracy. |
 | Fish | No required species. Favor **brightly colored or interestingly shaped** fish. Include **one or two clownfish**. |
-| Extras | **Treasure chest**, **castle**, **grotto** (fish swim in and out, crabs hide under it), **Neocaridina shrimp in several colors**, **one or two crabs** (§4.3). |
+| Extras | **Treasure chest**, **castle** (colorful, storybook style), **grotto** (mossy; fish swim in and out, crabs hide under it), **Neocaridina shrimp in several colors**, **one or two crabs** (§4.3). |
 | Clock | **None.** The screen has no text or UI at all. |
 | Brightness | **Slow brightness cycle** is in v1 (§4.5). |
-| Options screen | Yes. It includes the OLED protection options that change the look (§5, §4.6). |
+| Camera motion | **Lazy and almost unnoticeable.** The panning exists to keep pixels changing, not to be watched. The Standard speed is the default (§4.1). |
+| Options screen | Yes. It includes the OLED protection options that change the look (§5, §6). The **Standard** OLED preset is the default. |
+| First phase | **Art samples and a layout mockup are reviewed and approved before any Roku code is written** (§8, Phase 0). |
 
 ## 1. Goals
 
@@ -24,7 +26,7 @@ Status: **planning — no code yet.** This document is meant to be revised as de
 - **Real-time rendering, not video.** Fish move on randomized paths, so it never visibly loops.
 - **Full screen, no borders.** The tank fills the display edge to edge.
 - **OLED-safe.** Over time every pixel changes. No static element stays put, including the gravel line and the water surface.
-- The camera shows **part of a larger tank** and **pans slowly** across it.
+- The camera shows **part of a larger tank** and **pans so slowly it's hard to notice**. Liveliness comes from the fish and critters, not the camera.
 - Content: many colorful fish, coral, plants, shrimp, crabs, a castle, a grotto, a treasure chest and colorful gravel on the bottom.
 
 ### Non-goals (for v1)
@@ -40,8 +42,8 @@ Status: **planning — no code yet.** This document is meant to be revised as de
 | Language / UI | BrightScript plus **SceneGraph** (XML components). |
 | Screensaver entry | `manifest` declares `screensaver_title=...`. Roku calls `RunScreenSaver()`. `RunScreenSaverSettings()` provides the options screen. |
 | Dev entry | We also provide `Main()` so the app can run as a normal channel. That makes iteration and debugging much faster. |
-| Install | Developer mode allows **one sideloaded channel per device**. The aquarium takes that slot on each Ultra, and installing a different dev channel would replace it. Phase 0 confirms that a sideloaded channel can be chosen in Settings → Theme → Screensavers. |
-| Resolution | Roku app graphics are drawn at **1080p at most**, even on 4K players (the highest manifest UI option is `fhd`). The Roku then upscales to 4K. So art is made for **1920×1080**. Clean illustrated art with smooth shapes upscales well, which is one more reason for the SVG style. Phase 0 checks this on the 4K TVs. |
+| Install | Developer mode allows **one sideloaded channel per device**. The aquarium takes that slot on each Ultra, and installing a different dev channel would replace it. Phase 1 confirms that a sideloaded channel can be chosen in Settings → Theme → Screensavers. |
+| Resolution | Roku app graphics are drawn at **1080p at most**, even on 4K players (the highest manifest UI option is `fhd`). The Roku then upscales to 4K. So art is made for **1920×1080**. Clean illustrated art with smooth shapes upscales well, which is one more reason for the SVG style. Phase 1 checks this on the 4K TVs. |
 | Rendering | Use `Poster` nodes (bitmaps) and `Rectangle`s. There is no vector or canvas API at runtime, so all art ships as PNG/JPG. |
 | Animation | `Animation` + `Vector2DFieldInterpolator` / `FloatFieldInterpolator` run on the **render thread**, so motion is smooth without a per-frame BrightScript loop. |
 | Performance floor | The **4660** is the older and weaker of the two devices, so all budgets are tuned on it. The 4800 will have headroom. **Texture memory** is still limited, so large bitmaps need tiling. |
@@ -109,11 +111,23 @@ Creatures that walk on scenery (shrimp, crabs) are children of the layer they wa
 ## 4. Motion & Behavior
 
 ### 4.1 Camera
-- Slow, eased **side-to-side pan** across the world. One full sweep takes several minutes, with easeInOut at each end.
-- A **slow vertical drift** on a different, non-harmonic period. Horizontal panning alone does not move horizontal edges such as the gravel line, the water surface or coral tops, so this matters for OLED. The drift amount is an option (§5).
-- Optional very slow **zoom "breathing"** (scale 1.00–1.06) so that layer 0, which barely moves, still shifts.
+The camera's job is to keep pixels changing, **not to be watched**. It should feel lazy, close to unnoticeable unless you look for it. OLED wear builds up over hours, so a sweep every several minutes is far more than enough protection.
+
+- **Side-to-side pan** across the world, with long, gentle easing at each end so the camera seems to drift to a stop and turn around without you noticing.
+- **Pan speed (option), Standard is the default:**
+
+  | Setting | One sweep (left → right) | Speed on the main stage |
+  |---|---|---|
+  | Slower | about 20 min | about 3 px/s |
+  | **Standard** | **about 12 min** | **about 5 px/s** |
+  | Faster | about 7 min | about 9 px/s |
+
+  Speeds are starting points to tune on the TV. The back layers move even slower because of parallax.
+- **Vertical drift** on a different, non-harmonic period of about 8–10 minutes. Horizontal panning alone does not move horizontal edges such as the gravel line, the water surface or coral tops, so this matters for OLED. The drift amount is an option (§5).
+- Optional **zoom "breathing"** (scale 1.00–1.06) over about 15 minutes, so that layer 0, which barely moves, still shifts.
 - The path is effectively Lissajous-like with randomized periods, so it never settles into a repeating pattern.
 - Implement it as a few long-running looping interpolators on the camera/layer groups. That costs zero per-frame script.
+- **Smoothness check:** very slow movement can look "steppy" if the Roku snaps positions to whole pixels, especially after upscaling to 4K. Phase 1 tests a slow pan on the TV. If it steps visibly, options include letting the back layers carry most of the motion, using soft-edged art on far layers, or slightly adjusting speeds.
 
 ### 4.2 Fish
 - Each fish follows a **waypoint wander** pattern:
@@ -135,12 +149,12 @@ Creatures that walk on scenery (shrimp, crabs) are children of the layer they wa
 **Walkable surfaces.** The tank layout defines **walk paths**: the top edge of the gravel, plus the tops of rocks, driftwood, the grotto and some large leaves, each as a list of points. Shrimp and crabs move along these paths using multi-key `Vector2DFieldInterpolator`s, so they follow the surface without per-frame script.
 
 **Castle**
-- A colorful, storybook-style castle on the main gravel strip, with turrets, an arched doorway and a couple of windows.
+- A **colorful, storybook-style** castle on the main gravel strip: pastel and jewel-tone walls, pointed turret roofs, little flags, an arched doorway and a couple of windows.
 - Drawn in **back and front pieces**, so fish can swim **in through the doorway and out the other side** or pass behind a window.
 - The tallest turret can double as a **bubbler**, sending a stream of bubbles up from the top.
 
 **Grotto**
-- A rock arch or small cave with a dark interior and an overhang, partly covered in moss and small plants.
+- A **mossy** rock arch or small cave with a dark interior and an overhang. Thick moss covers the top and drapes over the edges, with small plants and a few shrimp grazing on it.
 - Fish **swim in and out**. As a fish enters, its color is gently darkened (a `blendColor` tween), so it looks like it's in shadow, and it brightens again as it comes out.
 - Crabs **hide under the overhang**, sometimes with just their eyes or claws showing, then come back out.
 - Shrimp can graze on the grotto's top surface.
@@ -239,7 +253,7 @@ Shown from Settings → Theme → Screensavers → Aquarium → Custom settings 
 |---|---|---|
 | Tank | Fish count | Fewer / **Normal** / More |
 | Tank | Shrimp and crabs | **On** / Off |
-| Tank | Pan speed | Slow / **Normal** / Fast |
+| Tank | Pan speed | Slower / **Standard** / Faster (§4.1) |
 | Tank | Light rays and caustics | **On** / Off |
 | OLED protection | Preset | **Standard** / Maximum / Custom |
 | OLED protection | Brightness cycle | Off / Subtle / **Medium** / Deep |
@@ -248,7 +262,7 @@ Shown from Settings → Theme → Screensavers → Aquarium → Custom settings 
 | OLED protection | Zoom breathing | **On** / Off |
 | OLED protection | Fade to black | **Never** / 1 h / 2 h / 4 h |
 
-Changing any individual OLED option switches the preset to Custom. "More" fish is only offered up to what the 4660 handles smoothly (decided in Phase 0).
+Defaults are in bold: **Standard** pan speed and the **Standard** OLED preset. Changing any individual OLED option switches the preset to Custom. "More" fish is only offered up to what the 4660 handles smoothly (decided in Phase 1).
 
 ## 7. Architecture
 
@@ -291,35 +305,63 @@ Key design choices:
 
 ## 8. Phased Roadmap
 
+### Phase 0: Art samples and layout mockup (review before any code)
+
+The look gets agreed on before building the engine, because the art style, colors and layout drive almost everything else.
+
+**Deliverables**
+1. **Style guide draft:** color palette, outline weight, shading style, brightness cap and relative sizes per depth layer.
+2. **Art samples** (SVG sources plus rendered PNGs):
+   - Clownfish, plus one "interesting shape" fish (lionfish)
+   - One tinted base fish shown in 3–4 colors, to judge the tinting approach
+   - Neon tetra (school sprite)
+   - Neocaridina shrimp in every planned color
+   - Crab
+   - **Storybook castle**, shown whole and split into its back and front pieces
+   - **Mossy grotto**, shown whole and split
+   - Treasure chest, closed and open
+   - Two plants, one coral piece and the anemone
+   - Gravel tile and background water gradient
+3. **Layout mockup:**
+   - A drawing of the **whole tank** (all 3 screens wide) with the castle, grotto, chest, coral, plants and a scattering of fish placed.
+   - Outlines showing what the TV sees with the camera at the **left, middle and right**, and the vertical drift range.
+   - Full-size **1920×1080 "screenshots"** cropped at a few camera positions, to judge how full and colorful each view feels.
+4. **Review page:** one page showing the samples and mockup together, viewable on a phone or computer.
+5. **Optional TV check:** a tiny sideloaded image viewer that shows the mockup screenshots on the actual 4K TV, since colors and brightness look different there than on a phone or monitor.
+
+**Exit criteria:** you approve the style and layout, or give feedback and we iterate. The approved style guide and mockup become the reference for Phases 4–7.
+
+### Later phases
+
 | Phase | Deliverable | Exit criteria |
 |---|---|---|
-| **0. Spikes** | (a) Performance test: N animated Posters with interpolators on the **4660**. (b) Confirm a sideloaded channel can be selected as the screensaver and that its settings screen opens. (c) Find the texture memory ceiling on the 4660. (d) Confirm 1080p illustrated art looks good upscaled on the 4K TVs. | Fish/layer budget known, screensaver install confirmed, art size confirmed. |
-| **1. Skeleton** | Manifest, `Main()` + `RunScreenSaver()`, empty full-screen Scene, build and deploy scripts for both Ultras. | Sideloads to both devices, runs as channel and as screensaver. |
-| **2. World & camera** | Placeholder colored layers in the world, parallax groups, pan + vertical drift + zoom. | Smooth pan with no edges visible at any point in the cycle, at both drift settings. |
-| **3. Scenery art & pipeline** | Style guide, SVG → PNG pipeline, back gradient, gravel strips, rocks, coral, plants, driftwood, castle, grotto, treasure chest (static). | Tank looks "full" and colorful at any camera position. Castle and grotto line up across layers. |
-| **4. Fish** | Species data, wander behavior, home anchors, swim-through routes, turning, tail animation, depth bands, schools. | 30+ fish swimming naturally on the 4660, some passing through the castle and grotto. |
-| **5. Bottom dwellers & chest** | Walk paths, shrimp (all colors), crabs with grotto hiding, treasure chest lid and bubble burst. | Shrimp and crabs move believably along surfaces. Chest opens on a random timer. |
-| **6. Ambient effects** | Plant sway, anemone, bubbles (castle, bubbler, chest), light rays, caustics. | Scene feels alive and stays within the performance budget. |
-| **7. OLED protection** | Brightness cycle, fade to black, drift and zoom options, checklist in §5.5, screenshot analysis tool. | No static region across a 30-minute capture at Standard settings. |
-| **8. Options screen & polish** | Options screen (§6), presets, saved settings, icons and splash. | Every option takes effect the next time the screensaver starts. |
-| **9. Install & docs** | README with developer-mode setup, one-command build + deploy to both Ultras. | A fresh Ultra can be set up from the README in a few minutes. |
+| **1. Spikes** | (a) Performance test: N animated Posters with interpolators on the **4660**. (b) Confirm a sideloaded channel can be selected as the screensaver and that its settings screen opens. (c) Find the texture memory ceiling on the 4660. (d) Confirm 1080p illustrated art looks good upscaled on the 4K TVs. (e) Check that a very slow pan looks smooth, not steppy, on the TV. | Fish/layer budget known, screensaver install confirmed, art size and pan smoothness confirmed. |
+| **2. Skeleton** | Manifest, `Main()` + `RunScreenSaver()`, empty full-screen Scene, build and deploy scripts for both Ultras. | Sideloads to both devices, runs as channel and as screensaver. |
+| **3. World & camera** | Placeholder layers from the Phase 0 mockup, parallax groups, pan + vertical drift + zoom at all three speeds. | Lazy, smooth pan with no edges visible at any point, at both drift settings. |
+| **4. Scenery art & pipeline** | SVG → PNG pipeline, full set of background, gravel strips, rocks, coral, plants, driftwood, castle, grotto and treasure chest (static), following the approved style. | Tank matches the mockup at any camera position. Castle and grotto pieces line up across layers. |
+| **5. Fish** | Species data, wander behavior, home anchors, swim-through routes, turning, tail animation, depth bands, schools. | 30+ fish swimming naturally on the 4660, some passing through the castle and grotto. |
+| **6. Bottom dwellers & chest** | Walk paths, shrimp (all colors), crabs with grotto hiding, treasure chest lid and bubble burst. | Shrimp and crabs move believably along surfaces. Chest opens on a random timer. |
+| **7. Ambient effects** | Plant sway, anemone, bubbles (castle, bubbler, chest), light rays, caustics. | Scene feels alive and stays within the performance budget. |
+| **8. OLED protection** | Brightness cycle, fade to black, drift and zoom options, checklist in §5.5, screenshot analysis tool. | No static region across a 30-minute capture at Standard settings. |
+| **9. Options screen & polish** | Options screen (§6), presets, saved settings, icons and splash. | Every option takes effect the next time the screensaver starts. |
+| **10. Install & docs** | README with developer-mode setup, one-command build + deploy to both Ultras. | A fresh Ultra can be set up from the README in a few minutes. |
 
-Optional **Phase 0.5:** a quick browser (HTML canvas) prototype to tune the motion "feel" (pan speed, wander, schooling, shrimp grazing) before porting the constants to BrightScript. It is cheap, but it duplicates logic, so it is only worth doing if tuning on device turns out slow.
+Optional **Phase 3.5:** a quick browser (HTML canvas) prototype to tune the motion "feel" (pan speed, wander, schooling, shrimp grazing) before porting the constants to BrightScript. It is cheap, but it duplicates logic, so it is only worth doing if tuning on device turns out slow.
 
 ## 9. Risks & Mitigations
 
 | Risk | Mitigation |
 |---|---|
-| Performance on the 4660 | Render-thread interpolators instead of per-frame script, pooled nodes, few large alpha-blended overlays. Test on the 4660 from Phase 0 onward. |
+| Performance on the 4660 | Render-thread interpolators instead of per-frame script, pooled nodes, few large alpha-blended overlays. Test on the 4660 from Phase 1 onward. |
 | Texture memory limits with a 3×-wide, 1.3×-tall world | Tile large layers into ≤1920-px-wide chunks. Reuse tinted sprites. Use JPG for opaque backgrounds. |
-| Castle and grotto front/back pieces don't line up while panning | Keep them and the mid fish on one parallax factor. Check alignment at the pan extremes in Phase 3. |
+| Castle and grotto front/back pieces don't line up while panning | Keep them and the mid fish on one parallax factor. Check alignment at the pan extremes in Phase 4. |
 | Developer mode allows only one sideloaded channel, and a factory reset or disabling dev mode removes it | Keep a one-command deploy script and README so reinstalling takes a minute. |
-| A Roku OS update changes how sideloaded screensavers work | Confirm in Phase 0, and re-check after OS updates. |
+| A Roku OS update changes how sideloaded screensavers work | Confirm in Phase 1, and re-check after OS updates. |
+| Very slow panning looks steppy instead of smooth | Test in Phase 1 (§4.1) before building on it. |
+| Art direction changes late, forcing rework | Approve the style guide, samples and layout mockup in Phase 0 before producing the full art set. |
 | Art quality / consistency | One style guide and one source format (SVG). Build the pipeline before mass-producing assets. |
 | Visible looping or repetition | Randomized waypoints and routes, non-harmonic camera periods, random chest timer, seeded layout variation per session. |
 
 ## 10. Open Questions
 
-1. **Presets:** are the Standard and Maximum presets in §5.3 the right defaults, or would you rather default to Maximum?
-2. **Castle style:** storybook/fairy-tale castle (colorful turrets) or a ruined stone castle with moss?
-3. **Anything else** to add before work starts?
+1. **Review format:** is a web page you can open on your phone or computer good for the Phase 0 review, or do you also want the optional on-TV preview?
