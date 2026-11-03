@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="460" viewBox="0 0 360 460">
+  <!-- Amazon sword rosette: 11 lance-shaped leaves on short stems, fanning
+       from one crown at (180,440). Each leaf + stem is a top-level group that
+       sways around the crown. Leaves are drawn from two templates (long and
+       broad) in leaf space: stem base at 0,0, pointing up. Strokes are
+       divided by each leaf's scale so outlines stay 3 px on screen.
+       Shadow half = template right half (the lower side once rotated);
+       rim highlight = template left edge (the upper side). -->
+  <defs>
+    <!-- Template 1: long lanceolate leaf -->
+    <path id="t1-stem" d="M0,4 C0.5,-26 1.5,-54 3,-84"/>
+    <path id="t1-blade" d="M3,-80 C-10,-96 -26,-150 -26,-200 C-24,-245 0,-330 34,-398 C42,-340 44,-260 42,-200 C40,-150 20,-96 3,-80 Z"/>
+    <path id="t1-shade" d="M3,-80 C6,-200 14,-320 34,-398 C42,-340 44,-260 42,-200 C40,-150 20,-96 3,-80 Z"/>
+    <path id="t1-rim" d="M3,-80 C-10,-96 -26,-150 -26,-200 C-24,-245 0,-330 34,-398"/>
+    <path id="t1-mid" d="M3,-82 C6,-200 14,-320 32,-392"/>
+    <path id="t1-veins" d="M2,-90 C-6,-120 -10,-160 -9,-200 C-8,-250 4,-320 29,-384 M4,-90 C14,-120 24,-160 25,-200 C26,-250 30,-320 31,-378 M1,-96 C-11,-122 -17,-160 -17,-200 C-17,-238 -6,-292 12,-344 M5,-96 C18,-120 32,-160 35,-200 C37,-240 38,-300 33,-358"/>
+    <clipPath id="t1-clip"><use href="#t1-blade"/></clipPath>
+
+    <!-- Template 2: broad leaf -->
+    <path id="t2-stem" d="M0,4 C0.5,-20 1,-40 2,-64"/>
+    <path id="t2-blade" d="M2,-60 C-14,-70 -31,-96 -31,-132 C-31,-180 -3,-230 22,-262 C30,-227 41,-182 41,-132 C40,-96 18,-70 2,-60 Z"/>
+    <path id="t2-shade" d="M2,-60 C4,-140 10,-210 22,-262 C30,-227 41,-182 41,-132 C40,-96 18,-70 2,-60 Z"/>
+    <path id="t2-rim" d="M2,-60 C-14,-70 -31,-96 -31,-132 C-31,-180 -3,-230 22,-262"/>
+    <path id="t2-mid" d="M2,-62 C4,-140 10,-210 21,-257"/>
+    <path id="t2-veins" d="M2,-68 C-8,-90 -13,-110 -13,-134 C-13,-170 -2,-220 18,-250 M3,-68 C14,-90 22,-110 22,-134 C22,-170 25,-215 21,-250 M1,-64 C-16,-82 -24,-108 -24,-134 C-24,-170 -10,-214 14,-252 M4,-64 C20,-80 33,-104 33,-134 C33,-168 32,-210 22,-250"/>
+    <clipPath id="t2-clip"><use href="#t2-blade"/></clipPath>
+  </defs>
+
+  <!-- ===== back row: deep green ===== -->
+  <g id="leaf-1" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(-4) scale(1.06)">
+      <use href="#t1-stem" fill="none" stroke="#2A2745" stroke-width="12.66"/>
+      <use href="#t1-stem" fill="none" stroke="#2B7238" stroke-width="7"/>
+      <use href="#t1-blade" fill="#2E7A3A"/>
+      <use href="#t1-shade" fill="#225A3E"/>
+      <g clip-path="url(#t1-clip)"><use href="#t1-rim" fill="none" stroke="#44964A" stroke-width="9.43"/></g>
+      <use href="#t1-veins" fill="none" stroke="#163C26" stroke-opacity="0.5" stroke-width="1.51"/>
+      <use href="#t1-mid" fill="none" stroke="#163C26" stroke-opacity="0.6" stroke-width="1.89"/>
+      <use href="#t1-blade" fill="none" stroke="#2A2745" stroke-width="2.83"/>
+    </g>
+  </g>
+
+  <g id="leaf-2" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(-22) scale(-0.78 0.78)">
+      <use href="#t1-stem" fill="none" stroke="#2A2745" stroke-width="14.69"/>
+      <use href="#t1-stem" fill="none" stroke="#2B7238" stroke-width="7"/>
+      <use href="#t1-blade" fill="#2E7A3A"/>
+      <use href="#t1-shade" fill="#225A3E"/>
+      <g clip-path="url(#t1-clip)"><use href="#t1-rim" fill="none" stroke="#44964A" stroke-width="12.82"/></g>
+      <use href="#t1-veins" fill="none" stroke="#163C26" stroke-opacity="0.5" stroke-width="2.05"/>
+      <use href="#t1-mid" fill="none" stroke="#163C26" stroke-opacity="0.6" stroke-width="2.56"/>
+      <use href="#t1-blade" fill="none" stroke="#2A2745" stroke-width="3.85"/>
+    </g>
+  </g>
+
+  <g id="leaf-3" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(18) scale(0.82)">
+      <use href="#t1-stem" fill="none" stroke="#2A2745" stroke-width="14.32"/>
+      <use href="#t1-stem" fill="none" stroke="#2B7238" stroke-width="7"/>
+      <use href="#t1-blade" fill="#2E7A3A"/>
+      <use href="#t1-shade" fill="#225A3E"/>
+      <g clip-path="url(#t1-clip)"><use href="#t1-rim" fill="none" stroke="#44964A" stroke-width="12.2"/></g>
+      <use href="#t1-veins" fill="none" stroke="#163C26" stroke-opacity="0.5" stroke-width="1.95"/>
+      <use href="#t1-mid" fill="none" stroke="#163C26" stroke-opacity="0.6" stroke-width="2.44"/>
+      <use href="#t1-blade" fill="none" stroke="#2A2745" stroke-width="3.66"/>
+    </g>
+  </g>
+
+  <!-- ===== middle row: rich and leaf greens ===== -->
+  <g id="leaf-4" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(-8) scale(-0.95 0.95)">
+      <use href="#t2-stem" fill="none" stroke="#2A2745" stroke-width="13.32"/>
+      <use href="#t2-stem" fill="none" stroke="#3C9142" stroke-width="7"/>
+      <use href="#t2-blade" fill="#41A046"/>
+      <use href="#t2-shade" fill="#2F7849"/>
+      <g clip-path="url(#t2-clip)"><use href="#t2-rim" fill="none" stroke="#61BC5B" stroke-width="10.53"/></g>
+      <use href="#t2-veins" fill="none" stroke="#1B4A2A" stroke-opacity="0.5" stroke-width="1.68"/>
+      <use href="#t2-mid" fill="none" stroke="#1B4A2A" stroke-opacity="0.6" stroke-width="2.11"/>
+      <use href="#t2-blade" fill="none" stroke="#2A2745" stroke-width="3.16"/>
+    </g>
+  </g>
+
+  <g id="leaf-5" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(-36) scale(-0.62 0.62)">
+      <use href="#t1-stem" fill="none" stroke="#2A2745" stroke-width="16.68"/>
+      <use href="#t1-stem" fill="none" stroke="#489C3A" stroke-width="7"/>
+      <use href="#t1-blade" fill="#4FA83D"/>
+      <use href="#t1-shade" fill="#3A7F47"/>
+      <g clip-path="url(#t1-clip)"><use href="#t1-rim" fill="none" stroke="#70C456" stroke-width="16.13"/></g>
+      <use href="#t1-veins" fill="none" stroke="#1B4A2A" stroke-opacity="0.5" stroke-width="2.58"/>
+      <use href="#t1-mid" fill="none" stroke="#1B4A2A" stroke-opacity="0.6" stroke-width="3.23"/>
+      <use href="#t1-blade" fill="none" stroke="#2A2745" stroke-width="4.84"/>
+    </g>
+  </g>
+
+  <g id="leaf-6" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(32) scale(0.66)">
+      <use href="#t1-stem" fill="none" stroke="#2A2745" stroke-width="16.09"/>
+      <use href="#t1-stem" fill="none" stroke="#3C9142" stroke-width="7"/>
+      <use href="#t1-blade" fill="#41A046"/>
+      <use href="#t1-shade" fill="#2F7849"/>
+      <g clip-path="url(#t1-clip)"><use href="#t1-rim" fill="none" stroke="#61BC5B" stroke-width="15.15"/></g>
+      <use href="#t1-veins" fill="none" stroke="#1B4A2A" stroke-opacity="0.5" stroke-width="2.42"/>
+      <use href="#t1-mid" fill="none" stroke="#1B4A2A" stroke-opacity="0.6" stroke-width="3.03"/>
+      <use href="#t1-blade" fill="none" stroke="#2A2745" stroke-width="4.55"/>
+    </g>
+  </g>
+
+  <g id="leaf-7" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(-52) scale(-0.72 0.72)">
+      <use href="#t2-stem" fill="none" stroke="#2A2745" stroke-width="15.33"/>
+      <use href="#t2-stem" fill="none" stroke="#489C3A" stroke-width="7"/>
+      <use href="#t2-blade" fill="#4FA83D"/>
+      <use href="#t2-shade" fill="#3A7F47"/>
+      <g clip-path="url(#t2-clip)"><use href="#t2-rim" fill="none" stroke="#70C456" stroke-width="13.89"/></g>
+      <use href="#t2-veins" fill="none" stroke="#1B4A2A" stroke-opacity="0.5" stroke-width="2.22"/>
+      <use href="#t2-mid" fill="none" stroke="#1B4A2A" stroke-opacity="0.6" stroke-width="2.78"/>
+      <use href="#t2-blade" fill="none" stroke="#2A2745" stroke-width="4.17"/>
+    </g>
+  </g>
+
+  <g id="leaf-8" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(50) scale(0.74)">
+      <use href="#t2-stem" fill="none" stroke="#2A2745" stroke-width="15.11"/>
+      <use href="#t2-stem" fill="none" stroke="#489C3A" stroke-width="7"/>
+      <use href="#t2-blade" fill="#4FA83D"/>
+      <use href="#t2-shade" fill="#3A7F47"/>
+      <g clip-path="url(#t2-clip)"><use href="#t2-rim" fill="none" stroke="#70C456" stroke-width="13.51"/></g>
+      <use href="#t2-veins" fill="none" stroke="#1B4A2A" stroke-opacity="0.5" stroke-width="2.16"/>
+      <use href="#t2-mid" fill="none" stroke="#1B4A2A" stroke-opacity="0.6" stroke-width="2.7"/>
+      <use href="#t2-blade" fill="none" stroke="#2A2745" stroke-width="4.05"/>
+    </g>
+  </g>
+
+  <!-- ===== front row: young lime leaves ===== -->
+  <g id="leaf-9" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(-20) scale(-0.62 0.62)">
+      <use href="#t2-stem" fill="none" stroke="#2A2745" stroke-width="16.68"/>
+      <use href="#t2-stem" fill="none" stroke="#8CC238" stroke-width="7"/>
+      <use href="#t2-blade" fill="#9CD43A"/>
+      <use href="#t2-shade" fill="#72A642"/>
+      <g clip-path="url(#t2-clip)"><use href="#t2-rim" fill="none" stroke="#B8E25E" stroke-width="16.13"/></g>
+      <use href="#t2-veins" fill="none" stroke="#3E6A1C" stroke-opacity="0.55" stroke-width="2.58"/>
+      <use href="#t2-mid" fill="none" stroke="#3E6A1C" stroke-opacity="0.6" stroke-width="3.23"/>
+      <use href="#t2-blade" fill="none" stroke="#2A2745" stroke-width="4.84"/>
+    </g>
+  </g>
+
+  <g id="leaf-10" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(24) scale(0.58)">
+      <use href="#t2-stem" fill="none" stroke="#2A2745" stroke-width="17.34"/>
+      <use href="#t2-stem" fill="none" stroke="#94C244" stroke-width="7"/>
+      <use href="#t2-blade" fill="#A5D24C"/>
+      <use href="#t2-shade" fill="#7AA44A"/>
+      <g clip-path="url(#t2-clip)"><use href="#t2-rim" fill="none" stroke="#BEE070" stroke-width="17.24"/></g>
+      <use href="#t2-veins" fill="none" stroke="#3E6A1C" stroke-opacity="0.55" stroke-width="2.76"/>
+      <use href="#t2-mid" fill="none" stroke="#3E6A1C" stroke-opacity="0.6" stroke-width="3.45"/>
+      <use href="#t2-blade" fill="none" stroke="#2A2745" stroke-width="5.17"/>
+    </g>
+  </g>
+
+  <g id="leaf-11" data-pivot="180 440" stroke-linejoin="round" stroke-linecap="round">
+    <g transform="translate(180 440) rotate(6) scale(0.5)">
+      <use href="#t1-stem" fill="none" stroke="#2A2745" stroke-width="19"/>
+      <use href="#t1-stem" fill="none" stroke="#8CC238" stroke-width="7"/>
+      <use href="#t1-blade" fill="#9CD43A"/>
+      <use href="#t1-shade" fill="#72A642"/>
+      <g clip-path="url(#t1-clip)"><use href="#t1-rim" fill="none" stroke="#B8E25E" stroke-width="20"/></g>
+      <use href="#t1-veins" fill="none" stroke="#3E6A1C" stroke-opacity="0.55" stroke-width="3.2"/>
+      <use href="#t1-mid" fill="none" stroke="#3E6A1C" stroke-opacity="0.6" stroke-width="4"/>
+      <use href="#t1-blade" fill="none" stroke="#2A2745" stroke-width="6"/>
+    </g>
+  </g>
+</svg>

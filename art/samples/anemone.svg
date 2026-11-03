@@ -1,175 +1,182 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="280" height="220" viewBox="0 0 280 220">
   <!--
-    Bubble-tip anemone on a rock: lavender tentacles with hot-pink bulb tips
-    and pale nipple tips, magenta column, cool stone rock.
-    Each tentacle = stalk (outline stroke, then fill stroke) + swollen bulb.
-    It is drawn base-at-origin pointing up and placed with
-    translate(base) rotate(angle). Left-leaning ones add scale(-1 1) so
-    curves bend outward and the bulb highlight stays on top.
+    Bubble-tip anemone on a rock: lavender tentacles with hot-pink bulb tips,
+    magenta column, cool stone rock.
+    Tentacles are packed in staggered rows on a dome around the column top
+    (140 122). Outer rows are drawn first; inner rows are rounder,
+    foreshortened bulbs that hide the necks behind them. Each bulb is placed
+    with translate(centre) rotate(angle); left-leaning ones add scale(-1 1)
+    so the highlight stays on the lit side.
   -->
   <defs>
-    <!-- bulb shape, centred on its widest point; neck at y=14, tip at y=-17 -->
-    <path id="bulb" d="M-6 14 C-9.5 10 -11 5 -11 0 C-11 -6 -8.5 -10 -5 -12 C-4.2 -14.5 -2.6 -17 0 -17 C2.6 -17 4.2 -14.5 5 -12 C8.5 -10 11 -6 11 0 C11 5 9.5 10 6 14 Z"/>
-    <path id="neckShade" d="M-8.5 4 C-7.5 8 -6 11 -4.5 12.5 L4.5 12.5 C6 11 7.5 8 8.5 4 C5 7 -5 7 -8.5 4 Z"/>
-    <path id="blush" d="M-9 -4 C-8.6 -8 -6.8 -10.2 -4.5 -11.2 L4.5 -11.2 C6.8 -10.2 8.6 -8 9 -4 C5 -6.6 -5 -6.6 -9 -4 Z"/>
-    <path id="nipple" d="M-4.4 -11.2 C-3.8 -13.8 -2.4 -15.4 0 -15.4 C2.4 -15.4 3.8 -13.8 4.4 -11.2 C2 -10.2 -2 -10.2 -4.4 -11.2 Z"/>
+    <!-- profile bulb (neck at y=14) and its tip cap -->
+    <path id="bulb" d="M-6 14 C-9.5 10 -11 5 -11 0 C-11 -9 -6.5 -16 0 -16 C6.5 -16 11 -9 11 0 C11 5 9.5 10 6 14 Z"/>
+    <path id="cap" d="M-8.6 -7.5 C-7.8 -11.6 -4.6 -14.6 0 -14.6 C4.6 -14.6 7.8 -11.6 8.6 -7.5 C4.6 -5.2 -4.6 -5.2 -8.6 -7.5 Z"/>
+    <path id="neckShade" d="M-8.6 5 C-7.6 9 -6.2 11.4 -4.5 12.6 L4.5 12.6 C6.2 11.4 7.6 9 8.6 5 C5 7.6 -5 7.6 -8.6 5 Z"/>
+    <!-- squat, foreshortened bulb (neck at y=11) and its tip cap -->
+    <path id="bulbS" d="M-6 11 C-9.5 8 -11.5 4 -11.5 0 C-11.5 -7.5 -6.5 -13 0 -13 C6.5 -13 11.5 -7.5 11.5 0 C11.5 4 9.5 8 6 11 Z"/>
+    <path id="capS" d="M-9 -5.6 C-8.2 -9.4 -5 -11.6 0 -11.6 C5 -11.6 8.2 -9.4 9 -5.6 C4.8 -3.4 -4.8 -3.4 -9 -5.6 Z"/>
+    <path id="neckShadeS" d="M-9 3.5 C-8 6.6 -6.4 8.8 -4.6 9.8 L4.6 9.8 C6.4 8.8 8 6.6 9 3.5 C5 6 -5 6 -9 3.5 Z"/>
 
-    <!-- bulbs and bulb details per depth tone: B back, M middle, F front -->
-    <use id="bB" href="#bulb" fill="#9A84CC" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
-    <use id="bM" href="#bulb" fill="#B9A2E0" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
-    <use id="bF" href="#bulb" fill="#C9B8E8" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
-    <g id="dB">
+    <!-- row 1: back tone, profile bulb with a short stalk -->
+    <g id="T1">
+      <path d="M0 28 V14" stroke="#2A2745" stroke-width="15" stroke-linecap="round"/>
+      <use href="#bulb" fill="#9A84CC" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M0 28 V9" stroke="#9A84CC" stroke-width="9" stroke-linecap="round"/>
       <use href="#neckShade" fill="#7A64B0"/>
-      <use href="#blush" fill="#C9579A"/>
-      <use href="#nipple" fill="#DFA0C4"/>
-      <ellipse cx="-5.6" cy="-1" rx="2.2" ry="4.4" transform="rotate(-10 -5.6 -1)" fill="#B4A0DC"/>
+      <use href="#cap" fill="#CC4F92"/>
+      <ellipse cx="-5.8" cy="1.5" rx="2" ry="4.2" transform="rotate(-8 -5.8 1.5)" fill="#B09CD8"/>
+      <circle cx="-3.4" cy="-10.6" r="1.9" fill="#DC8CB8"/>
     </g>
-    <g id="dM">
-      <use href="#neckShade" fill="#957CC8"/>
-      <use href="#blush" fill="#E45FA2"/>
-      <use href="#nipple" fill="#EBB4D2"/>
-      <ellipse cx="-5.6" cy="-1" rx="2.2" ry="4.4" transform="rotate(-10 -5.6 -1)" fill="#D0C1EA"/>
+    <!-- row 2: middle tone, profile bulb with a short stalk -->
+    <g id="T2">
+      <path d="M0 26 V14" stroke="#2A2745" stroke-width="15" stroke-linecap="round"/>
+      <use href="#bulb" fill="#AE96DA" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M0 26 V9" stroke="#AE96DA" stroke-width="9" stroke-linecap="round"/>
+      <use href="#neckShade" fill="#8A72C0"/>
+      <use href="#cap" fill="#DE58A0"/>
+      <ellipse cx="-5.8" cy="1.5" rx="2" ry="4.2" transform="rotate(-8 -5.8 1.5)" fill="#C6B4E6"/>
+      <circle cx="-3.4" cy="-10.6" r="1.9" fill="#E8A2C8"/>
     </g>
-    <g id="dF">
-      <use href="#neckShade" fill="#A792D6"/>
-      <use href="#blush" fill="#EB6AA8"/>
-      <use href="#nipple" fill="#EBC0DA"/>
-      <ellipse cx="-5.6" cy="-1" rx="2.2" ry="4.4" transform="rotate(-10 -5.6 -1)" fill="#DACEEA"/>
+    <!-- row 3: lavender, squat bulb -->
+    <g id="U3">
+      <use href="#bulbS" fill="#B9A2E0" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <use href="#neckShadeS" fill="#957CC8"/>
+      <use href="#capS" fill="#E45FA2"/>
+      <ellipse cx="-6.2" cy="1.5" rx="2.1" ry="3.8" transform="rotate(-8 -6.2 1.5)" fill="#D0C1EA"/>
+      <circle cx="-3.6" cy="-8" r="2" fill="#EAB0CF"/>
     </g>
-
-    <!-- back tone, long -->
-    <g id="B_s90">
-      <path d="M0 0 V-59" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bB" y="-73"/>
-      <path d="M0 0 V-64" stroke="#9A84CC" stroke-width="9" stroke-linecap="round" fill="none"/>
-      <use href="#dB" y="-73"/>
+    <!-- rows 4 and 5: front, lightest -->
+    <g id="U4">
+      <use href="#bulbS" fill="#C6B4E8" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <use href="#neckShadeS" fill="#A28CD2"/>
+      <use href="#capS" fill="#E866A6"/>
+      <ellipse cx="-6.2" cy="1.5" rx="2.1" ry="3.8" transform="rotate(-8 -6.2 1.5)" fill="#D9CDEA"/>
+      <circle cx="-3.6" cy="-8" r="2" fill="#EABAD6"/>
     </g>
-    <g id="B_c90">
-      <path d="M0 0 C0 -22 4 -42 12 -54" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bB" transform="translate(19.8 -65.6) rotate(33.7)"/>
-      <path d="M0 0 C0 -22 4 -42 12 -54 L14.8 -58.2" stroke="#9A84CC" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <use href="#dB" transform="translate(19.8 -65.6) rotate(33.7)"/>
-    </g>
-    <!-- middle tone -->
-    <g id="M_s75">
-      <path d="M0 0 V-44" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bM" y="-58"/>
-      <path d="M0 0 V-49" stroke="#B9A2E0" stroke-width="9" stroke-linecap="round" fill="none"/>
-      <use href="#dM" y="-58"/>
-    </g>
-    <g id="M_c75">
-      <path d="M0 0 C0 -16 3 -30 10 -40" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bM" transform="translate(18 -51.5) rotate(35)"/>
-      <path d="M0 0 C0 -16 3 -30 10 -40 L12.9 -44.1" stroke="#B9A2E0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <use href="#dM" transform="translate(18 -51.5) rotate(35)"/>
-    </g>
-    <!-- front tone -->
-    <g id="F_s60">
-      <path d="M0 0 V-29" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bF" y="-43"/>
-      <path d="M0 0 V-34" stroke="#C9B8E8" stroke-width="9" stroke-linecap="round" fill="none"/>
-      <use href="#dF" y="-43"/>
-    </g>
-    <g id="F_c60">
-      <path d="M0 0 C0 -10 2 -20 7 -27" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bF" transform="translate(15.1 -38.4) rotate(35.5)"/>
-      <path d="M0 0 C0 -10 2 -20 7 -27 L9.9 -31.1" stroke="#C9B8E8" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      <use href="#dF" transform="translate(15.1 -38.4) rotate(35.5)"/>
-    </g>
-    <g id="F_s45">
-      <path d="M0 0 V-14" stroke="#2A2745" stroke-width="15" stroke-linecap="round" fill="none"/>
-      <use href="#bF" y="-28"/>
-      <path d="M0 0 V-19" stroke="#C9B8E8" stroke-width="9" stroke-linecap="round" fill="none"/>
-      <use href="#dF" y="-28"/>
+    <!-- front tentacle drooping over the column, with a longer stalk -->
+    <g id="TD">
+      <path d="M0 34 V14" stroke="#2A2745" stroke-width="15" stroke-linecap="round"/>
+      <use href="#bulb" fill="#C6B4E8" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M0 34 V9" stroke="#C6B4E8" stroke-width="9" stroke-linecap="round"/>
+      <use href="#neckShade" fill="#A28CD2"/>
+      <use href="#cap" fill="#E866A6"/>
+      <ellipse cx="-5.8" cy="1.5" rx="2" ry="4.2" transform="rotate(-8 -5.8 1.5)" fill="#D9CDEA"/>
+      <circle cx="-3.4" cy="-10.6" r="1.9" fill="#EABAD6"/>
     </g>
   </defs>
 
   <g id="base" data-pivot="140 212">
-    <!-- small front-left stone -->
-    <!-- main rock -->
-    <path d="M36 212 C28 196 36 177 58 168 C74 161 94 160 108 163 C122 156 160 155 174 161 C192 157 216 162 232 174 C248 186 252 204 244 212 Z" fill="#6F7A8C"/>
-    <path d="M44 178 C54 169 72 164 90 165 C100 161 106 163 112 165 C128 159 158 158 172 164 C190 160 212 165 228 176 C214 172 198 170 184 172 C166 168 150 168 138 171 C120 168 104 170 92 174 C74 172 58 174 44 178 Z" fill="#8A95A8"/>
-    <path d="M32 198 C62 205 104 204 142 200 C180 205 224 205 250 196 C251 203 249 209 244 212 L36 212 C34 208 32.5 203 32 198 Z" fill="#525A70"/>
+    <!-- rock peeking out behind, right -->
+    <path d="M190 212 C192 196 206 184 226 183 C244 182 256 194 256 212 Z" fill="#5E687C"/>
+    <path d="M200 194 C208 187 218 185 228 185.5 C240 186 249 192 252 200 C244 194 236 191 226 191 C216 191 207 192 200 194 Z" fill="#6F7A8C"/>
+    <path d="M190 212 C192 196 206 184 226 183 C244 182 256 194 256 212 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <!-- main boulder -->
+    <path d="M46 212 C36 198 42 180 62 170 C78 162 98 160 112 158 C128 152 152 152 166 156 C186 155 206 162 220 172 C234 182 238 200 230 212 Z" fill="#6F7A8C"/>
+    <path d="M54 178 C66 168 86 164 104 163 C116 157 134 155 150 157 C166 156 190 159 206 168 C216 173 224 180 228 188 C216 180 202 176 188 176 C172 171 156 170 140 172 C124 170 108 172 94 176 C80 175 66 176 54 178 Z" fill="#8A95A8"/>
+    <path d="M40 196 C64 204 104 204 140 200 C174 205 210 205 236 196 C237 203 235 209 230 212 L46 212 C43 207 41 202 40 196 Z" fill="#525A70"/>
     <g stroke="#525A70" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M70 186 C76 182 82 185 87 180"/>
-      <path d="M200 184 C207 181 212 184 218 179"/>
-      <path d="M100 194 C106 191 111 193 116 190"/>
-      <path d="M176 194 C180 191 186 192 190 189"/>
+      <path d="M72 188 C78 184 84 187 89 182"/>
+      <path d="M182 186 C188 183 193 185 198 181 L203 183"/>
+      <path d="M104 194 C110 191 115 193 120 190"/>
     </g>
-    <circle cx="58" cy="192" r="2.4" fill="#525A70"/>
-    <circle cx="228" cy="192" r="2" fill="#525A70"/>
-    <circle cx="160" cy="190" r="2.2" fill="#525A70"/>
-    <path d="M36 212 C28 196 36 177 58 168 C74 161 94 160 108 163 C122 156 160 155 174 161 C192 157 216 162 232 174 C248 186 252 204 244 212 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="62" cy="190" r="2.3" fill="#525A70"/>
+    <circle cx="160" cy="190" r="2" fill="#525A70"/>
+    <circle cx="210" cy="194" r="1.8" fill="#525A70"/>
+    <path d="M46 212 C36 198 42 180 62 170 C78 162 98 160 112 158 C128 152 152 152 166 156 C186 155 206 162 220 172 C234 182 238 200 230 212 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <!-- pebble in front, left -->
+    <path d="M26 212 C24 204 30 197 40 197 C50 197 57 204 56 212 Z" fill="#474F63" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M31 203 C34 200 38 199 43 199.5" stroke="#6F7A8C" stroke-width="2" fill="none" stroke-linecap="round"/>
 
-    <!-- column: short, fleshy, gripping the rock with a spread foot -->
-    <path d="M106 170 C114 162 118 146 114 132 C111 122 114 112 126 109 L154 109 C166 112 169 122 166 132 C162 146 166 162 174 170 C160 175 120 175 106 170 Z" fill="#C2378E"/>
-    <path d="M112 166 C118 156 121 144 118 132 C116 124 118 116 126 113 C131 128 131 150 127 170 C121 169 116 168 112 166 Z" fill="#D9559F"/>
-    <path d="M153 171 C150 152 149 130 156 114 C162 117 165 124 163 132 C160 146 163 160 170 168 C164 170 158 171 153 171 Z" fill="#8E2A78"/>
+    <!-- column: short and fleshy, slight waist, foot spread on the rock -->
+    <path d="M110 174 C116 162 118 148 116 134 C114 123 117 113 127 111 L153 111 C163 113 166 123 164 134 C162 148 164 162 170 174 C157 179 123 179 110 174 Z" fill="#C2378E"/>
+    <path d="M115 170 C120 160 122 147 120 134 C119 126 120 118 127 115 C131 130 131 153 128 175 C123 174 118 172 115 170 Z" fill="#D9559F"/>
+    <path d="M152 175 C150 156 150 134 155 116 C160 119 162 126 161 134 C159 148 161 162 166 172 C162 174 157 175 152 175 Z" fill="#8E2A78"/>
     <g stroke="#A02C7C" stroke-width="1.5" fill="none" stroke-linecap="round">
-      <path d="M136 166 C135 152 136 136 134 122"/>
-      <path d="M145 166 C146 152 145 137 147 122"/>
+      <path d="M137 170 C136 156 137 140 135 126"/>
+      <path d="M145 170 C146 156 145 141 147 126"/>
     </g>
     <g fill="#E07AB4">
-      <circle cx="121" cy="150" r="1.6"/>
-      <circle cx="123" cy="138" r="1.4"/>
-      <circle cx="120" cy="160" r="1.4"/>
+      <circle cx="123" cy="154" r="1.6"/>
+      <circle cx="124" cy="142" r="1.4"/>
+      <circle cx="122" cy="164" r="1.4"/>
     </g>
-    <path d="M106 170 C114 162 118 146 114 132 C111 122 114 112 126 109 L154 109 C166 112 169 122 166 132 C162 146 166 162 174 170 C160 175 120 175 106 170 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M110 174 C116 162 118 148 116 134 C114 123 117 113 127 111 L153 111 C163 113 166 123 164 134 C162 148 164 162 170 174 C157 179 123 179 110 174 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
   </g>
 
-  <g id="tentacles" data-pivot="140 112">
-    <!-- dense dark core so gaps read as depth, not water -->
-    <path d="M60 108 C56 74 84 44 140 42 C196 44 224 74 220 108 C210 124 176 128 140 126 C104 128 70 124 60 108 Z" fill="#5E4A8E" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+  <g id="tentacles" data-pivot="140 122">
+    <!-- dark core: gaps between bulbs read as depth -->
+    <path d="M38 130 C36 72 84 34 140 34 C196 34 244 72 242 132 C208 144 72 142 38 130 Z" fill="#5A4688" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
 
-    <!-- back row -->
-    <use href="#B_s90" transform="translate(96 122) rotate(-88) scale(-1 1)"/>
-    <use href="#B_s90" transform="translate(184 121) rotate(86)"/>
-    <use href="#B_c90" transform="translate(100 117) rotate(-72) scale(-1 1)"/>
-    <use href="#B_c90" transform="translate(180 116) rotate(68)"/>
-    <use href="#B_s90" transform="translate(108 112) rotate(-56) scale(-1 1)"/>
-    <use href="#B_s90" transform="translate(172 112) rotate(54)"/>
-    <use href="#B_c90" transform="translate(118 108) rotate(-40) scale(-1 1)"/>
-    <use href="#B_c90" transform="translate(162 109) rotate(36)"/>
-    <use href="#B_s90" transform="translate(126 106) rotate(-22) scale(-1 1)"/>
-    <use href="#B_s90" transform="translate(156 107) rotate(22)"/>
-    <use href="#B_c90" transform="translate(134 105) rotate(-14) scale(-1 1)"/>
-    <use href="#B_s90" transform="translate(146 105) rotate(4)"/>
+    <!-- row 1 (outer rim) -->
+    <use href="#T1" transform="translate(114 23) rotate(-13) scale(-1 1)"/>
+    <use href="#T1" transform="translate(126 26) rotate(-9) scale(-1 1)"/>
+    <use href="#T1" transform="translate(155 29) rotate(6)"/>
+    <use href="#T1" transform="translate(101 33) rotate(-18) scale(-1 1)"/>
+    <use href="#T1" transform="translate(181 35) rotate(27)"/>
+    <use href="#T1" transform="translate(76 41) rotate(-38) scale(-1 1)"/>
+    <use href="#T1" transform="translate(205 48) rotate(34) scale(0.94)"/>
+    <use href="#T1" transform="translate(58 57) rotate(-46) scale(-1.04 1.04)"/>
+    <use href="#T1" transform="translate(224 64) rotate(55)"/>
+    <use href="#T1" transform="translate(40 78) rotate(-66) scale(-1 1)"/>
+    <use href="#T1" transform="translate(240 84) rotate(64)"/>
+    <use href="#T1" transform="translate(31 99) rotate(-80) scale(-0.94 0.94)"/>
+    <use href="#T1" transform="translate(248 106) rotate(82)"/>
+    <use href="#T1" transform="translate(27 121) rotate(-92) scale(-1 1)"/>
+    <use href="#T1" transform="translate(250 128) rotate(96) scale(1.04)"/>
+    <use href="#T1" transform="translate(34 144) rotate(-110) scale(-1 1)"/>
+    <use href="#T1" transform="translate(244 149) rotate(112)"/>
 
-    <!-- middle row -->
-    <use href="#M_s75" transform="translate(100 126) rotate(-106) scale(-1 1)"/>
-    <use href="#M_c75" transform="translate(180 126) rotate(100)"/>
-    <use href="#M_c75" transform="translate(102 120) rotate(-82) scale(-1 1)"/>
-    <use href="#M_s75" transform="translate(178 120) rotate(80)"/>
-    <use href="#M_s75" transform="translate(108 116) rotate(-64) scale(-1 1)"/>
-    <use href="#M_c75" transform="translate(172 116) rotate(58)"/>
-    <use href="#M_c75" transform="translate(116 112) rotate(-46) scale(-1 1)"/>
-    <use href="#M_s75" transform="translate(164 112) rotate(42)"/>
-    <use href="#M_s75" transform="translate(124 110) rotate(-30) scale(-1 1)"/>
-    <use href="#M_c75" transform="translate(156 110) rotate(18)"/>
-    <use href="#M_c75" transform="translate(134 109) rotate(-10) scale(-1 1)"/>
-    <use href="#M_s75" transform="translate(147 109) rotate(6)"/>
-    <use href="#M_s75" transform="translate(140 110) rotate(-2) scale(-1 1)"/>
+    <!-- row 2 -->
+    <use href="#T2" transform="translate(139 45) rotate(-2) scale(-1.04 1.04)"/>
+    <use href="#T2" transform="translate(118 49) rotate(-16) scale(-1 1)"/>
+    <use href="#T2" transform="translate(163 48) rotate(12)"/>
+    <use href="#T2" transform="translate(98 56) rotate(-30) scale(-1 1)"/>
+    <use href="#T2" transform="translate(184 57) rotate(33) scale(0.94)"/>
+    <use href="#T2" transform="translate(80 66) rotate(-38) scale(-1 1)"/>
+    <use href="#T2" transform="translate(202 70) rotate(46)"/>
+    <use href="#T2" transform="translate(67 80) rotate(-58) scale(-0.94 0.94)"/>
+    <use href="#T2" transform="translate(214 84) rotate(60)"/>
+    <use href="#T2" transform="translate(55 96) rotate(-66) scale(-1 1)"/>
+    <use href="#T2" transform="translate(224 101) rotate(74) scale(1.04)"/>
+    <use href="#T2" transform="translate(50 114) rotate(-86) scale(-1 1)"/>
+    <use href="#T2" transform="translate(228 119) rotate(88)"/>
+    <use href="#T2" transform="translate(53 132) rotate(-100) scale(-1 1)"/>
+    <use href="#T2" transform="translate(226 137) rotate(104)"/>
 
-    <!-- front row -->
-    <use href="#F_s60" transform="translate(110 130) rotate(-116) scale(-1 1)"/>
-    <use href="#F_c60" transform="translate(170 130) rotate(110)"/>
-    <use href="#F_c60" transform="translate(108 125) rotate(-88) scale(-1 1)"/>
-    <use href="#F_s60" transform="translate(172 125) rotate(90)"/>
-    <use href="#F_s60" transform="translate(112 120) rotate(-66) scale(-1 1)"/>
-    <use href="#F_c60" transform="translate(168 120) rotate(62)"/>
-    <use href="#F_c60" transform="translate(120 116) rotate(-40) scale(-1 1)"/>
-    <use href="#F_s60" transform="translate(160 116) rotate(40)"/>
-    <use href="#F_s60" transform="translate(130 114) rotate(-20) scale(-1 1)"/>
-    <use href="#F_c60" transform="translate(150 114) rotate(12)"/>
-    <use href="#F_c60" transform="translate(139 113) rotate(-6) scale(-1 1)"/>
+    <!-- row 3 -->
+    <use href="#U3" transform="translate(124 66) rotate(-8) scale(-1 1)"/>
+    <use href="#U3" transform="translate(146 67) rotate(8)"/>
+    <use href="#U3" transform="translate(107 74) rotate(-32) scale(-1 1)"/>
+    <use href="#U3" transform="translate(164 71) rotate(24) scale(1.04)"/>
+    <use href="#U3" transform="translate(181 80) rotate(38)"/>
+    <use href="#U3" transform="translate(92 84) rotate(-46) scale(-0.95 0.95)"/>
+    <use href="#U3" transform="translate(195 92) rotate(56)"/>
+    <use href="#U3" transform="translate(80 97) rotate(-62) scale(-1 1)"/>
+    <use href="#U3" transform="translate(203 106) rotate(72) scale(0.95)"/>
+    <use href="#U3" transform="translate(74 111) rotate(-78) scale(-1 1)"/>
+    <use href="#U3" transform="translate(207 121) rotate(88)"/>
+    <use href="#U3" transform="translate(73 126) rotate(-96) scale(-1 1)"/>
+    <use href="#U3" transform="translate(204 136) rotate(104)"/>
 
-    <!-- short front bulbs and tentacles drooping over the column -->
-    <use href="#F_s45" transform="translate(120 124) rotate(-58) scale(-1 1)"/>
-    <use href="#F_s45" transform="translate(160 124) rotate(54)"/>
-    <use href="#F_s45" transform="translate(131 121) rotate(-28) scale(-1 1)"/>
-    <use href="#F_s45" transform="translate(150 121) rotate(24)"/>
-    <use href="#F_s45" transform="translate(140 120) rotate(-2) scale(-1 1)"/>
-    <use href="#F_s45" transform="translate(122 128) rotate(-104) scale(-1 1)"/>
-    <use href="#F_s45" transform="translate(158 128) rotate(100)"/>
+    <!-- row 4 -->
+    <use href="#U4" transform="translate(138 85) rotate(-4) scale(-1.05 1.05)"/>
+    <use href="#U4" transform="translate(120 90) rotate(-20) scale(-1 1)"/>
+    <use href="#U4" transform="translate(158 90) rotate(20)"/>
+    <use href="#U4" transform="translate(104 99) rotate(-50) scale(-1 1)"/>
+    <use href="#U4" transform="translate(175 100) rotate(46) scale(0.95)"/>
+    <use href="#U4" transform="translate(95 113) rotate(-70) scale(-1 1)"/>
+    <use href="#U4" transform="translate(186 114) rotate(76)"/>
+    <use href="#U4" transform="translate(95 128) rotate(-100) scale(-1 1)"/>
+    <use href="#U4" transform="translate(186 130) rotate(98)"/>
+
+    <!-- row 5: front-most, over the column top -->
+    <use href="#U4" transform="translate(131 105) rotate(-24) scale(-1 1)"/>
+    <use href="#U4" transform="translate(150 106) rotate(16)"/>
+    <use href="#U4" transform="translate(118 116) rotate(-56) scale(-1 1)"/>
+    <use href="#U4" transform="translate(163 117) rotate(62)"/>
+    <use href="#TD" transform="translate(117 131) rotate(-120) scale(-1 1)"/>
+    <use href="#TD" transform="translate(164 132) rotate(116)"/>
+    <use href="#U4" transform="translate(141 119) rotate(6) scale(1.05)"/>
   </g>
 </svg>

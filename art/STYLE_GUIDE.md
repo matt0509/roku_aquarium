@@ -99,7 +99,7 @@ Depth layers reuse the same art at runtime: far layer about 0.55× with a blue t
 |---|---|
 | Fish | `tail`, `body` (body includes head, eye and non-moving fins; draw `tail` first so the body overlaps it). Optional `fin-pectoral`. |
 | Shrimp | `legs`, `body`, `antennae` |
-| Crab | `legs-back`, `claw-left`, `body`, `claw-right`, `legs-front` |
+| Crab | `legs-back`, `legs-front`, `body`, `claw-left`, `claw-right` (draw order; both claws sit in front of the body in a front view) |
 | Chest | `base`, `lid` (with the hinge pivot) |
 | Plants | one group per swaying frond/stem, each with a pivot at its base |
 | Anemone | `base`, `tentacles` |

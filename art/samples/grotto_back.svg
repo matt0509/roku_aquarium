@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+  <!-- Mossy grotto, BACK piece: drawn behind fish and crabs.
+       Dark interior seen through the cave mouth and crevice, plus far rocks peeking out behind the top. -->
+  <defs>
+    <radialGradient id="gCave" gradientUnits="userSpaceOnUse" cx="470" cy="262" r="230">
+      <stop offset="0" stop-color="#1C263A"/>
+      <stop offset="0.55" stop-color="#141C2C"/>
+      <stop offset="1" stop-color="#0F1524"/>
+    </radialGradient>
+    <linearGradient id="gCrev" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="250" y2="0">
+      <stop offset="0" stop-color="#182133"/>
+      <stop offset="1" stop-color="#0E1422"/>
+    </linearGradient>
+    <filter id="fSoft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="fSoft2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter>
+
+    <!-- far rocks -->
+    <path id="fr1" d="M 654 108 C 652 70 678 46 708 44 C 736 42 752 66 750 102 C 748 138 734 166 704 168 C 674 170 656 146 654 108 Z"/>
+    <path id="fr2" d="M 12 96 C 10 62 32 36 62 34 C 90 32 104 56 100 88 C 98 116 82 134 56 136 C 28 138 14 124 12 96 Z"/>
+    <path id="frc1" d="M 664 74 C 670 54 688 42 708 42 C 730 42 748 56 748 78 C 740 84 734 78 728 84 C 720 78 712 82 706 78 C 698 84 688 80 682 84 C 674 82 666 80 664 74 Z"/>
+    <path id="frc2" d="M 22 64 C 28 44 46 32 64 32 C 84 32 100 46 100 66 C 92 72 86 66 80 72 C 72 66 64 70 58 66 C 50 72 40 68 34 72 C 28 70 22 70 22 64 Z"/>
+    <clipPath id="kfr1"><use href="#fr1"/></clipPath><clipPath id="jfr1"><use href="#fr1" transform="translate(3 7)"/></clipPath>
+    <clipPath id="kfr2"><use href="#fr2"/></clipPath><clipPath id="jfr2"><use href="#fr2" transform="translate(3 7)"/></clipPath>
+    <clipPath id="kfrc1"><use href="#frc1"/></clipPath><clipPath id="jfrc1"><use href="#frc1" transform="translate(1 5)"/></clipPath>
+    <clipPath id="kfrc2"><use href="#frc2"/></clipPath><clipPath id="jfrc2"><use href="#frc2" transform="translate(1 5)"/></clipPath>
+
+    <!-- faint back-wall stones -->
+    <path id="bw1" d="M 344 304 C 340 262 368 232 412 228 C 454 224 486 250 488 288 C 490 320 470 340 430 344 C 384 348 348 338 344 304 Z"/>
+    <path id="bw2" d="M 474 240 C 472 202 504 182 552 180 C 600 178 634 202 636 240 C 638 274 612 294 566 296 C 518 298 476 280 474 240 Z"/>
+    <path id="bw3" d="M 524 322 C 524 300 552 288 594 288 C 632 288 662 304 662 326 C 662 348 642 358 598 358 C 554 358 524 346 524 322 Z"/>
+    <path id="bw4" d="M 352 210 C 352 188 372 174 400 174 C 428 174 446 190 446 210 C 446 228 428 238 400 238 C 372 238 352 230 352 210 Z"/>
+    <clipPath id="kbw1"><use href="#bw1"/></clipPath><clipPath id="jbw1"><use href="#bw1" transform="translate(2 6)"/></clipPath>
+    <clipPath id="kbw2"><use href="#bw2"/></clipPath><clipPath id="jbw2"><use href="#bw2" transform="translate(2 6)"/></clipPath>
+    <clipPath id="kbw3"><use href="#bw3"/></clipPath><clipPath id="jbw3"><use href="#bw3" transform="translate(2 6)"/></clipPath>
+    <clipPath id="kbw4"><use href="#bw4"/></clipPath><clipPath id="jbw4"><use href="#bw4" transform="translate(2 6)"/></clipPath>
+  </defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- ===== FAR ROCKS (peek out behind the moss top) ===== -->
+    <g fill="#2A2745" stroke="#2A2745" stroke-width="8">
+      <use href="#fr1"/><use href="#fr2"/><use href="#frc1"/><use href="#frc2"/>
+    </g>
+    <g clip-path="url(#kfr1)"><use href="#fr1" fill="#6E7990"/>
+      <g clip-path="url(#jfr1)"><use href="#fr1" fill="#424960"/><use href="#fr1" fill="#596379" transform="translate(-8 -12)"/></g>
+    </g>
+    <g clip-path="url(#kfr2)"><use href="#fr2" fill="#6E7990"/>
+      <g clip-path="url(#jfr2)"><use href="#fr2" fill="#424960"/><use href="#fr2" fill="#596379" transform="translate(-8 -12)"/></g>
+      <path d="M 40 96 C 48 100 52 108 52 116" fill="none" stroke="#3A4054" stroke-width="2"/>
+    </g>
+    <g clip-path="url(#kfrc1)"><use href="#frc1" fill="#7DBE45"/>
+      <g clip-path="url(#jfrc1)"><use href="#frc1" fill="#3E6E2E"/><use href="#frc1" fill="#4FA83D" transform="translate(0 -6)"/></g>
+    </g>
+    <g clip-path="url(#kfrc2)"><use href="#frc2" fill="#7DBE45"/>
+      <g clip-path="url(#jfrc2)"><use href="#frc2" fill="#3E6E2E"/><use href="#frc2" fill="#4FA83D" transform="translate(0 -6)"/></g>
+    </g>
+
+    <!-- ===== CAVE MOUTH INTERIOR ===== -->
+    <path d="M 322 376 C 312 340 314 300 316 262 C 318 222 326 190 350 168 C 380 142 430 140 480 140 C 540 140 610 146 650 174 C 682 196 690 240 688 286 C 686 330 692 366 676 378 Z" fill="url(#gCave)"/>
+
+    <!-- faint stones of the back wall -->
+    <g clip-path="url(#kbw4)"><use href="#bw4" fill="#212C42"/>
+      <g clip-path="url(#jbw4)"><use href="#bw4" fill="#121A29"/><use href="#bw4" fill="#192335" transform="translate(-6 -9)"/></g>
+    </g>
+    <use href="#bw4" fill="none" stroke="#0E141F" stroke-width="1.5"/>
+    <g clip-path="url(#kbw2)"><use href="#bw2" fill="#212C42"/>
+      <g clip-path="url(#jbw2)"><use href="#bw2" fill="#121A29"/><use href="#bw2" fill="#192335" transform="translate(-6 -9)"/></g>
+    </g>
+    <use href="#bw2" fill="none" stroke="#0E141F" stroke-width="1.5"/>
+    <g clip-path="url(#kbw1)"><use href="#bw1" fill="#212C42"/>
+      <g clip-path="url(#jbw1)"><use href="#bw1" fill="#121A29"/><use href="#bw1" fill="#192335" transform="translate(-6 -9)"/></g>
+    </g>
+    <use href="#bw1" fill="none" stroke="#0E141F" stroke-width="1.5"/>
+    <g clip-path="url(#kbw3)"><use href="#bw3" fill="#212C42"/>
+      <g clip-path="url(#jbw3)"><use href="#bw3" fill="#121A29"/><use href="#bw3" fill="#192335" transform="translate(-6 -9)"/></g>
+    </g>
+    <use href="#bw3" fill="none" stroke="#0E141F" stroke-width="1.5"/>
+
+    <!-- cave floor -->
+    <path d="M 316 366 L 316 330 C 380 322 440 326 500 324 C 560 322 620 326 690 330 L 690 366 Z" fill="#1A2131"/>
+    <path d="M 336 330 C 380 323 440 327 500 325 C 560 323 620 327 664 330" fill="none" stroke="#242C3D" stroke-width="2"/>
+    <g fill="#222A3B" stroke="#12182A" stroke-width="1.5">
+      <ellipse cx="420" cy="338" rx="10" ry="5"/><ellipse cx="446" cy="344" rx="6" ry="3"/>
+      <ellipse cx="560" cy="337" rx="12" ry="5"/><ellipse cx="590" cy="343" rx="7" ry="4"/><ellipse cx="502" cy="346" rx="8" ry="4"/>
+    </g>
+
+    <!-- reveal: inner thickness of the arch -->
+    <path d="M 352 216 C 346 234 348 252 347 272 C 346 292 350 312 348 332 C 347 344 352 352 358 362 L 300 362 L 300 200 Z" fill="#1A1F2D"/>
+    <path d="M 636 218 C 646 236 650 256 648 276 C 646 296 650 316 648 336 C 647 346 644 354 640 362 L 692 362 L 692 196 Z" fill="#283044"/>
+    <path d="M 636 220 C 646 238 650 256 648 276 C 646 296 650 316 648 336" fill="none" stroke="#333B51" stroke-width="3"/>
+    <g fill="none" stroke="#1E2434" stroke-width="1.5"><path d="M 650 262 L 690 258"/><path d="M 650 314 L 690 320"/></g>
+    <path d="M 300 236 L 300 130 L 700 130 L 700 240 L 640 226 C 622 204 598 192 566 184 C 540 178 514 175 490 177 C 468 179 446 177 420 183 C 394 189 372 206 358 228 Z" fill="#1B202E"/>
+    <path d="M 358 228 C 372 206 394 189 420 183 C 446 177 468 179 490 177 C 514 175 540 178 566 184 C 598 192 622 204 640 226" fill="none" stroke="#252B3B" stroke-width="2"/>
+    <!-- dark moss drips hanging inside the ceiling -->
+    <g fill="#29452F" stroke="#1C3022" stroke-width="1.5">
+      <ellipse cx="438" cy="186" rx="6" ry="9"/><ellipse cx="560" cy="190" rx="6" ry="10"/><ellipse cx="574" cy="190" rx="4" ry="6"/>
+    </g>
+
+    <!-- a faint shaft of light falling in from the upper left -->
+    <polygon points="376,178 452,166 592,356 480,356" fill="#8FD3E0" opacity="0.07" filter="url(#fSoft)"/>
+    <ellipse cx="536" cy="346" rx="74" ry="9" fill="#8FD3E0" opacity="0.08" filter="url(#fSoft2)"/>
+
+    <!-- ===== CREVICE INTERIOR ===== -->
+    <path d="M 28 416 L 28 360 C 28 330 50 316 90 316 L 214 316 C 248 316 260 334 260 370 L 260 416 Z" fill="url(#gCrev)"/>
+    <path d="M 70 404 C 66 380 84 362 116 360 C 148 358 168 376 168 400 C 168 412 150 416 118 416 C 86 416 72 414 70 404 Z" fill="#172031" stroke="#0D121C" stroke-width="1.5"/>
+    <path d="M 150 408 C 148 386 168 372 196 372 C 222 372 240 388 240 408 C 240 416 220 418 196 418 C 170 418 152 416 150 408 Z" fill="#131B2B" stroke="#0D121C" stroke-width="1.5"/>
+    <path d="M 28 316 L 262 316 L 262 372 L 238 370 C 234 354 222 345 206 344 C 186 344 160 340 134 343 C 112 346 88 345 70 354 L 28 358 Z" fill="#0E1320"/>
+    <path d="M 70 354 C 88 345 112 346 134 343 C 160 340 186 344 206 344 C 222 345 234 354 238 370" fill="none" stroke="#1A2030" stroke-width="2"/>
+  </g>
+</svg>
