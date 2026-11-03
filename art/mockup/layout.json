@@ -1,0 +1,1139 @@
+{
+ "views": {
+  "left": 0,
+  "middle": 1920,
+  "right": 3840
+ },
+ "bubble_streams": [
+  {
+   "id": "castle",
+   "layer": "main_back",
+   "x": 3430,
+   "y": 309,
+   "height": 600,
+   "count": 14,
+   "seed": 3
+  },
+  {
+   "id": "chest",
+   "layer": "main_front",
+   "x": 2535,
+   "y": 860,
+   "height": 300,
+   "count": 7,
+   "seed": 5
+  },
+  {
+   "id": "bubbler",
+   "layer": "main_back",
+   "x": 1260,
+   "y": 940,
+   "height": 900,
+   "count": 22,
+   "seed": 9
+  }
+ ],
+ "layers": [
+  {
+   "id": "water",
+   "parallax": 0.3,
+   "items": [
+    {
+     "src": "build/phase0/textures/water_back.png",
+     "x": 0,
+     "y": -68,
+     "anchor": "top",
+     "stretch": true
+    }
+   ]
+  },
+  {
+   "id": "far_scenery",
+   "parallax": 0.5,
+   "items": [
+    {
+     "src": "build/phase0/textures/gravel_far.png",
+     "x": 0,
+     "y": 840,
+     "anchor": "top",
+     "stretch": true
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 120,
+     "y": 905,
+     "scale": 0.55,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 690,
+     "y": 905,
+     "scale": 0.5,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 1480,
+     "y": 905,
+     "scale": 0.6,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 2280,
+     "y": 905,
+     "scale": 0.52,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 3080,
+     "y": 905,
+     "scale": 0.58,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 3620,
+     "y": 905,
+     "scale": 0.5,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_amazon_sword.svg",
+     "x": 1050,
+     "y": 905,
+     "scale": 0.5,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/plant_amazon_sword.svg",
+     "x": 2650,
+     "y": 905,
+     "scale": 0.5,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 380,
+     "y": 908,
+     "scale": 0.55,
+     "flip": false,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 1850,
+     "y": 908,
+     "scale": 0.55,
+     "flip": true,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 3300,
+     "y": 908,
+     "scale": 0.55,
+     "flip": false,
+     "haze": [
+      "#1E6A90",
+      0.5
+     ],
+     "opacity": 0.9
+    }
+   ]
+  },
+  {
+   "id": "far_fish",
+   "parallax": 0.55,
+   "items": [
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 400,
+     "y": 300,
+     "anchor": "center",
+     "scale": 0.5,
+     "tint": "#3F8EE6",
+     "flip": false,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 1300,
+     "y": 520,
+     "anchor": "center",
+     "scale": 0.5,
+     "tint": "#EBD23A",
+     "flip": true,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 2100,
+     "y": 260,
+     "anchor": "center",
+     "scale": 0.5,
+     "tint": "#8E5BD8",
+     "flip": false,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 2900,
+     "y": 600,
+     "anchor": "center",
+     "scale": 0.5,
+     "tint": "#EB8A3A",
+     "flip": true,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 3600,
+     "y": 380,
+     "anchor": "center",
+     "scale": 0.5,
+     "tint": "#3F8EE6",
+     "flip": true,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1738.5710928423564,
+     "y": 425.9772386080496,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.62,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1741.7560168239456,
+     "y": 420.7841273062271,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.6,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1674.3184825251703,
+     "y": 421.19086390418056,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.6,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1820.3144494047885,
+     "y": 379.41234562292186,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.58,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1651.7609289980414,
+     "y": 450.96445343671775,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.61,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1640.051280728763,
+     "y": 468.21934207987783,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.63,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1786.9414080481217,
+     "y": 431.55627045785707,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.56,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1633.6001768679052,
+     "y": 422.83812661704786,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.56,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1675.649983071503,
+     "y": 394.1943013665215,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.55,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3192.0655814691227,
+     "y": 224.6478004990991,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.62,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3204.207305248097,
+     "y": 242.62625371272594,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.59,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3235.738897015881,
+     "y": 226.1596893439602,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.57,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3309.484364101879,
+     "y": 274.61224774905793,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.62,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3245.718116729549,
+     "y": 213.3749495313995,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.57,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3153.5887884091244,
+     "y": 191.32011496039334,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.61,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3178.087957082068,
+     "y": 261.1925259693061,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.58,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3300.769324330359,
+     "y": 261.2578795972524,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.55,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    },
+    {
+     "src": "art/samples/fish_clownfish.svg",
+     "x": 800,
+     "y": 640,
+     "anchor": "center",
+     "scale": 0.55,
+     "haze": [
+      "#1E6A90",
+      0.45
+     ],
+     "opacity": 0.9
+    }
+   ]
+  },
+  {
+   "id": "main_back",
+   "parallax": 0.85,
+   "items": [
+    {
+     "src": "build/phase0/textures/gravel_main.png",
+     "x": 0,
+     "y": 850,
+     "anchor": "top",
+     "stretch": true
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 40,
+     "y": 990,
+     "scale": 1.0
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 1600,
+     "y": 990,
+     "scale": 0.85
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 2230,
+     "y": 990,
+     "scale": 0.7
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 2950,
+     "y": 990,
+     "scale": 1.05
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 3860,
+     "y": 990,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 4880,
+     "y": 990,
+     "scale": 1.0
+    },
+    {
+     "src": "art/samples/plant_amazon_sword.svg",
+     "x": 430,
+     "y": 992,
+     "flip": false
+    },
+    {
+     "src": "art/samples/plant_amazon_sword.svg",
+     "x": 4010,
+     "y": 992,
+     "flip": true
+    },
+    {
+     "src": "art/samples/plant_amazon_sword.svg",
+     "x": 4720,
+     "y": 992,
+     "flip": false
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 150,
+     "y": 985,
+     "flip": false,
+     "scale": 1.0
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 1480,
+     "y": 985,
+     "flip": false,
+     "scale": 0.8
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 2700,
+     "y": 985,
+     "flip": true,
+     "scale": 1.0
+    },
+    {
+     "src": "art/samples/coral_cluster.svg",
+     "x": 4350,
+     "y": 985,
+     "flip": false,
+     "scale": 1.0
+    },
+    {
+     "src": "art/samples/anemone.svg",
+     "x": 1820,
+     "y": 978
+    },
+    {
+     "src": "art/samples/grotto_back.svg",
+     "x": 700,
+     "y": 990
+    },
+    {
+     "src": "art/samples/castle_back.svg",
+     "x": 3150,
+     "y": 995
+    },
+    {
+     "src": "art/samples/chest_open.svg",
+     "x": 2420,
+     "y": 1000,
+     "rotate": 0
+    },
+    {
+     "src": "art/samples/crab.svg",
+     "x": 1170,
+     "y": 984
+    },
+    {
+     "src": "art/samples/crab.svg",
+     "x": 4180,
+     "y": 968,
+     "flip": true
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 2330,
+     "y": 958,
+     "tint": "#D8323A",
+     "flip": false
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 2760,
+     "y": 962,
+     "tint": "#2F6FD8",
+     "flip": true
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 3820,
+     "y": 960,
+     "tint": "#EBC82E",
+     "flip": false
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 1300,
+     "y": 958,
+     "tint": "#3FA860",
+     "flip": true
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 4600,
+     "y": 962,
+     "tint": "#EB7A2A",
+     "flip": false
+    },
+    {
+     "src": "art/samples/shrimp_rili.svg",
+     "x": 2050,
+     "y": 965,
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "mid_fish",
+   "parallax": 0.85,
+   "items": [
+    {
+     "src": "art/samples/fish_clownfish.svg",
+     "x": 1960,
+     "y": 770,
+     "anchor": "center"
+    },
+    {
+     "src": "art/samples/fish_clownfish.svg",
+     "x": 2075,
+     "y": 840,
+     "anchor": "center",
+     "flip": true
+    },
+    {
+     "src": "art/samples/fish_lionfish.svg",
+     "x": 2760,
+     "y": 520,
+     "anchor": "center"
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 520,
+     "y": 420,
+     "anchor": "center",
+     "tint": "#EBD23A",
+     "flip": false
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 1360,
+     "y": 650,
+     "anchor": "center",
+     "tint": "#8E5BD8",
+     "flip": true
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 3980,
+     "y": 470,
+     "anchor": "center",
+     "tint": "#3F8EE6",
+     "flip": false
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 4700,
+     "y": 690,
+     "anchor": "center",
+     "tint": "#EB8A3A",
+     "flip": true
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 2260,
+     "y": 330,
+     "anchor": "center",
+     "tint": "#EBD23A",
+     "flip": true
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 1000,
+     "y": 230,
+     "anchor": "center",
+     "tint": "#3F8EE6",
+     "flip": false
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 3490,
+     "y": 895,
+     "anchor": "center",
+     "tint": "#EB8A3A"
+    },
+    {
+     "src": "art/samples/fish_clownfish.svg",
+     "x": 950,
+     "y": 820,
+     "anchor": "center",
+     "flip": true,
+     "tint": "#8C96A8"
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1051.3039210080678,
+     "y": 397.4380699345854,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.98
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1313.3220399992592,
+     "y": 325.6394143310994,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.93
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1194.0146701595681,
+     "y": 378.9915202147311,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.96
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1009.6290274397379,
+     "y": 316.56198756486873,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.05
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1237.733775777878,
+     "y": 286.5188351187371,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1014.3557450452797,
+     "y": 278.38507641175073,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.02
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1040.4105635874446,
+     "y": 348.30131982545527,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.98
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1044.8327011987244,
+     "y": 372.46519020000903,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.94
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1198.863142061797,
+     "y": 286.3111182695588,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.97
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1052.3743288230903,
+     "y": 307.7712968066838,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.05
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1253.1599110479042,
+     "y": 312.58032098193854,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.04
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 1051.6414752877095,
+     "y": 325.1984491900876,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.03
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4368.224123240757,
+     "y": 244.0465853057436,
+     "anchor": "center",
+     "flip": true,
+     "scale": 1.05
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4222.5027453163575,
+     "y": 266.15885810062684,
+     "anchor": "center",
+     "flip": true,
+     "scale": 1.02
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4261.8448446862285,
+     "y": 271.4854667638525,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.93
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4180.639838807057,
+     "y": 311.5828717434573,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4354.4365068178595,
+     "y": 282.03856652305194,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.98
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4476.1057886456865,
+     "y": 297.7214346567563,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.99
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4444.618727052755,
+     "y": 255.59588020901592,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.94
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4458.864068520445,
+     "y": 344.49227292435074,
+     "anchor": "center",
+     "flip": true,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4214.532226427508,
+     "y": 333.51941457433117,
+     "anchor": "center",
+     "flip": true,
+     "scale": 1.04
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 4216.840530437016,
+     "y": 363.01901932321033,
+     "anchor": "center",
+     "flip": true,
+     "scale": 1.03
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3004.8482115480265,
+     "y": 752.1457223947358,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.93
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 2869.287153206508,
+     "y": 806.2681511455615,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3029.0990705340105,
+     "y": 735.6981398320312,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.03
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3003.1519135671847,
+     "y": 739.3435346484737,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.94
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 3032.8847986051646,
+     "y": 716.8776124167443,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 2994.247922277762,
+     "y": 795.2399875341881,
+     "anchor": "center",
+     "flip": false,
+     "scale": 1.0
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 2927.2526542170053,
+     "y": 801.7360178492575,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.95
+    },
+    {
+     "src": "art/samples/fish_neon_tetra.svg",
+     "x": 2863.9779503389973,
+     "y": 736.9193928028841,
+     "anchor": "center",
+     "flip": false,
+     "scale": 0.98
+    }
+   ]
+  },
+  {
+   "id": "main_front",
+   "parallax": 0.85,
+   "items": [
+    {
+     "src": "art/samples/grotto_front.svg",
+     "x": 700,
+     "y": 990
+    },
+    {
+     "src": "art/samples/castle_front.svg",
+     "x": 3150,
+     "y": 995
+    },
+    {
+     "src": "build/phase0/textures/gravel_lip.png",
+     "x": 0,
+     "y": 905,
+     "anchor": "top",
+     "stretch": true
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 850,
+     "y": 605,
+     "tint": "#D8323A",
+     "flip": false
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 1120,
+     "y": 585,
+     "tint": "#2F6FD8",
+     "flip": true
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 1300,
+     "y": 620,
+     "tint": "#EBC82E",
+     "flip": false
+    }
+   ]
+  },
+  {
+   "id": "front_gravel",
+   "parallax": 1.0,
+   "items": [
+    {
+     "src": "build/phase0/textures/gravel_front.png",
+     "x": 0,
+     "y": 1000,
+     "anchor": "top",
+     "stretch": true
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 700,
+     "y": 1062,
+     "tint": "#EB7A2A",
+     "flip": false,
+     "scale": 1.15
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 2900,
+     "y": 1062,
+     "tint": "#D8323A",
+     "flip": true,
+     "scale": 1.15
+    },
+    {
+     "src": "art/samples/shrimp_base.svg",
+     "x": 4700,
+     "y": 1062,
+     "tint": "#3FA860",
+     "flip": false,
+     "scale": 1.15
+    }
+   ]
+  },
+  {
+   "id": "near_fish",
+   "parallax": 1.1,
+   "items": [
+    {
+     "src": "art/samples/fish_lionfish.svg",
+     "x": 1450,
+     "y": 300,
+     "anchor": "center",
+     "scale": 1.35,
+     "flip": true
+    },
+    {
+     "src": "art/samples/fish_tang_base.svg",
+     "x": 4620,
+     "y": 560,
+     "anchor": "center",
+     "scale": 1.35,
+     "tint": "#8E5BD8"
+    }
+   ]
+  },
+  {
+   "id": "foreground",
+   "parallax": 1.2,
+   "items": [
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": -60,
+     "y": 1130,
+     "scale": 1.4,
+     "blur": 4,
+     "tint": "#A9BCC4"
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 3960,
+     "y": 1130,
+     "scale": 1.4,
+     "blur": 4,
+     "tint": "#A9BCC4"
+    },
+    {
+     "src": "art/samples/plant_vallisneria.svg",
+     "x": 6280,
+     "y": 1130,
+     "scale": 1.4,
+     "blur": 4,
+     "tint": "#A9BCC4"
+    }
+   ]
+  },
+  {
+   "id": "light",
+   "parallax": 0.9,
+   "items": [
+    {
+     "src": "build/phase0/textures/light_rays.png",
+     "x": 0,
+     "y": -144,
+     "anchor": "top",
+     "stretch": true
+    }
+   ]
+  }
+ ]
+}

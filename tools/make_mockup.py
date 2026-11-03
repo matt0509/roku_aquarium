@@ -45,6 +45,11 @@ def load_sprite(src, scale=1.0):
     if key in _cache:
         return _cache[key]
     path = os.path.join(ROOT, src)
+    if not os.path.exists(path):
+        print("  missing (skipped):", src)
+        im = Image.new("RGBA", (1, 1), (0, 0, 0, 0))
+        _cache[key] = im
+        return im
     if src.endswith(".svg"):
         with open(path) as fh:
             data = bytes(resvg_py.svg_to_bytes(svg_string=fh.read(), zoom=scale))
