@@ -1,6 +1,6 @@
 # Roku Aquarium Screensaver — Development Plan (Draft)
 
-Status: **planning — no code yet.** This document is meant to be revised as decisions are made.
+Status: **Phase 0 in review.** Sample art is in `art/samples/` and follows `art/STYLE_GUIDE.md`. The mockup and review page are built by `tools/` (see `art/mockup/layout.py`). No Roku code yet.
 
 ## 0. Decisions So Far
 

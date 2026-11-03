@@ -147,7 +147,7 @@ def define_items():
          "note": "One gray drawing, recolored on the Roku. This is how many color varieties come from a few drawings.",
          "images": [("fish_tang_base_preview.png", "Gray original, then yellow, purple, blue and orange")]},
         {"id": "fish-tetra", "title": "Neon tetra", "note": "Small school fish. They will swim in groups of 8 to 12.",
-         "images": [("fish_neon_tetra_preview.png", "Zoomed 2x")]},
+         "images": [("fish_neon_tetra_preview.png", "Zoomed 2x"), ("tetra_school_2x.png", "A school of ten next to a tang, zoomed 2x")]},
     ])
     add_section("critters", "Shrimp and crabs", "Bottom dwellers that walk along the gravel, rocks and the grotto's moss.", [
         {"id": "shrimp-colors", "title": "Neocaridina shrimp colors",

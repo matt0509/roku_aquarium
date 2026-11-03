@@ -174,20 +174,24 @@ def render_view(layout, cx, cy, dim=0.0):
     return canvas.convert("RGB")
 
 
-def render_overview(layout, top=-170, height=1420):
+def render_overview(layout, top=-156, height=1392):
     """Whole tank in main-stage coordinates, each layer aligned as seen at screen center."""
     W = layer_width(MAIN_F)
     canvas = Image.new("RGBA", (W, height), (10, 35, 66, 255))
     for layer in layout["layers"]:
+        if layer.get("overview") is False:
+            continue
         f = layer["parallax"]
         for it in items_for_layer(layout, layer):
             im = prepare(it)
+            if it.get("fill"):
+                # the back water fills the whole overview
+                place(canvas, im.resize((W, height), Image.LANCZOS), 0, 0, "top")
+                continue
             if it.get("stretch"):
-                # backgrounds/gravel: map the whole strip onto the overview width
-                xs = [(0 - 960) * MAIN_F / f + 960, (im.width - 960) * MAIN_F / f + 960]
-                nw = int(xs[1] - xs[0])
-                im = im.resize((max(1, nw), im.height), Image.LANCZOS)
-                x = xs[0]
+                # gravel strips and light rays span the whole overview width
+                im = im.resize((W, im.height), Image.LANCZOS)
+                x = 0
             else:
                 x = 960 + (it["x"] - 960) * MAIN_F / f
             place(canvas, im, x, it["y"] - top, it.get("anchor", "bottom"))
@@ -195,12 +199,12 @@ def render_overview(layout, top=-170, height=1420):
     colors = [(235, 210, 122), (228, 232, 234), (235, 94, 158)]
     for (name, cx), col in zip(layout["views"].items(), colors):
         x0 = cx * MAIN_F
-        for k in range(4):
+        for k in range(7):
             d.rectangle([x0 + k, -top + k, x0 + VIEW_W - k, -top + VIEW_H - k], outline=col)
         dy = 160 * MAIN_F
         for x in range(int(x0), int(x0 + VIEW_W), 28):
-            d.line([(x, -top - dy), (x + 14, -top - dy)], fill=col, width=3)
-            d.line([(x, -top + VIEW_H + dy), (x + 14, -top + VIEW_H + dy)], fill=col, width=3)
+            d.line([(x, -top - dy + 4), (x + 14, -top - dy + 4)], fill=col, width=5)
+            d.line([(x, -top + VIEW_H + dy - 4), (x + 14, -top + VIEW_H + dy - 4)], fill=col, width=5)
     return canvas.convert("RGB")
 
 

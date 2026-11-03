@@ -5,3 +5,4 @@ images/
 devices.json
 .env
 __pycache__/
+art/mockup/layout.json

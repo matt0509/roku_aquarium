@@ -38,7 +38,7 @@ CASTLE = {"x": 3480, "bottom": 995}
 layers = []
 
 layers.append({"id": "water", "parallax": 0.3, "items": [
-    {"src": T + "water_back.png", "x": 0, "y": -68, "anchor": "top", "stretch": True}]})
+    {"src": T + "water_back.png", "x": 0, "y": -68, "anchor": "top", "stretch": True, "fill": True}]})
 
 far = [{"src": T + "gravel_far.png", "x": 0, "y": 840, "anchor": "top", "stretch": True}]
 for x, s in [(120, 0.55), (690, 0.5), (1480, 0.6), (2280, 0.52), (3080, 0.58), (3620, 0.5)]:
@@ -89,7 +89,7 @@ mid = []
 mid.append(sp("fish_clownfish", 1960, 770, anchor="center"))
 mid.append(sp("fish_clownfish", 2075, 840, anchor="center", flip=True))
 mid.append(sp("fish_lionfish", 2760, 520, anchor="center"))
-for x, y, tint, fl in [(520, 420, "#EBD23A", False), (1360, 650, "#8E5BD8", True), (3980, 470, "#3F8EE6", False),
+for x, y, tint, fl in [(520, 420, "#EBD23A", False), (1640, 590, "#8E5BD8", True), (3980, 470, "#3F8EE6", False),
                        (4700, 690, "#EB8A3A", True), (2260, 330, "#EBD23A", True), (1000, 230, "#3F8EE6", False),
                        (300, 170, "#EB8A3A", True), (3050, 190, "#8E5BD8", True), (4900, 250, "#EBD23A", True),
                        (1750, 140, "#EB8A3A", False), (3700, 120, "#EBD23A", False)]:
@@ -121,13 +121,13 @@ layers.append({"id": "front_gravel", "parallax": 1.0, "items": front})
 
 layers.append({"id": "near_fish", "parallax": 1.1, "items": [
     sp("fish_lionfish", 1450, 300, anchor="center", scale=1.35, flip=True),
-    sp("fish_tang_base", 4620, 560, anchor="center", scale=1.35, tint="#8E5BD8"),
+    sp("fish_tang_base", 5470, 170, anchor="center", scale=1.35, tint="#8E5BD8", flip=True),
 ]})
 
 fg = []
 for x in (-60, 4190, 6280):
     fg.append(sp("plant_vallisneria", x, 1130, scale=1.4, blur=4, tint="#A9BCC4"))
-layers.append({"id": "foreground", "parallax": 1.2, "items": fg})
+layers.append({"id": "foreground", "parallax": 1.2, "overview": False, "items": fg})
 
 layers.append({"id": "light", "parallax": 0.9, "items": [
     {"src": T + "light_rays.png", "x": 0, "y": -144, "anchor": "top", "stretch": True}]})
@@ -137,7 +137,7 @@ layout = {
     "bubble_streams": [
         {"id": "castle", "layer": "main_back", "x": CASTLE["x"] + 280, "y": CASTLE["bottom"] - 700 + 14, "height": 600, "count": 14, "seed": 3},
         {"id": "chest", "layer": "main_front", "x": 2535, "y": 860, "height": 300, "count": 7, "seed": 5},
-        {"id": "bubbler", "layer": "main_back", "x": 1260, "y": 940, "height": 900, "count": 22, "seed": 9},
+        {"id": "bubbler", "layer": "main_back", "x": 1540, "y": 940, "height": 900, "count": 22, "seed": 9},
     ],
     "layers": layers,
 }

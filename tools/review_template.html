@@ -99,6 +99,9 @@ footer { color: var(--muted); padding-block: 40px 0; }
 @media (min-width: 820px) {
   .figs.two { grid-template-columns: 1fr 1fr; }
 }
+@media (max-width: 600px) {
+  nav.toc { position: static; }
+}
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
 
@@ -181,6 +184,7 @@ footer { color: var(--muted); padding-block: 40px 0; }
     const db = window.claude && window.claude.use ? await window.claude.use("db") : null;
     if (!db) {
       document.getElementById("how-text").textContent = "Saving answers isn't available in this view. Reply in chat with what you'd change, naming the item.";
+      statusEl.textContent = "";
       return;
     }
     items.forEach(el => { el.querySelector(".feedback").hidden = false; });
