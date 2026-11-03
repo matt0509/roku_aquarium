@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="288" height="218" viewBox="0 0 288 218">
   <defs>
     <clipPath id="lf-clip-body">
-      <path d="M 282 126 C 280 116, 272 104, 262 96 C 256 91, 248 88, 240 86 C 230 82, 216 79, 200 79 C 170 80, 130 92, 96 106 C 84 111, 72 115, 62 117 L 62 132 C 76 136, 92 142, 110 148 C 140 158, 176 165, 208 164 C 236 163, 256 155, 268 145 C 274 140, 279 134, 282 130 Z"/>
+      <path d="M 283 123 C 282 111, 275 100, 264 94 C 255 89, 245 84, 232 81 C 214 77, 190 78, 165 84 C 135 91, 106 101, 88 108 C 78 112, 70 115, 62 117 L 62 132 C 76 136, 94 143, 114 150 C 142 159, 180 167, 216 167 C 244 167, 263 159, 275 147 C 280 141, 283 133, 283 128 Z"/>
     </clipPath>
     <clipPath id="lf-clip-hi">
-      <path d="M 58 116 C 100 102, 160 82, 200 76 C 225 74, 250 80, 270 98 C 276 104, 281 112, 284 122 C 276 108, 262 94, 240 90 C 220 87, 200 87, 180 89 C 140 94, 100 106, 58 124 Z"/>
+      <path d="M 58 116 C 100 101, 160 80, 205 75 C 232 73, 258 80, 274 96 C 279 102, 283 110, 285 120 C 277 106, 264 94, 244 88 C 226 84, 205 84, 180 87 C 140 93, 100 106, 58 124 Z"/>
     </clipPath>
     <clipPath id="lf-clip-sh">
-      <path d="M 50 132 C 100 141, 160 154, 212 153 C 242 152, 264 142, 292 124 L 292 222 L 50 222 Z"/>
+      <path d="M 50 133 C 100 142, 160 156, 216 156 C 246 155, 266 145, 292 126 L 292 222 L 50 222 Z"/>
     </clipPath>
     <clipPath id="lf-clip-pect">
-      <path d="M 203.2 142 Q 159.8 152.2 110.3 156.4 Q 118.2 160.6 114.3 167.4 Q 123.3 170.3 121 177.1 Q 130.9 178.5 129.9 185 Q 140.1 184.8 140.1 191 Q 150.3 189.1 151.1 194.8 Q 160.7 191.5 161.9 196.7 Q 171.1 191.9 172.8 196.4 Q 181 190.3 183 194.4 Q 190.1 187.2 192.1 190.9 Q 198 182.8 200.1 186.1 Q 209.2 166.1 210.8 149 Q 210 143 203.2 142 Z"/>
+      <path d="M 205.2 144 Q 162.5 154.1 113.9 158.2 Q 121.7 162.3 117.9 169 Q 126.8 171.8 124.4 178.6 Q 134.3 179.9 133.3 186.3 Q 143.4 186 143.4 192.1 Q 153.5 190.2 154.2 195.7 Q 163.8 192.4 165 197.6 Q 174.1 192.7 175.8 197.1 Q 183.9 191 185.8 195 Q 192.8 187.8 194.7 191.5 Q 200.5 183.3 202.5 186.6 Q 211.5 167.4 212.9 151.1 Q 212 145 205.2 144 Z"/>
     </clipPath>
-    <!-- head and body stripes (wide mid-flank, tapering to the back and belly); fill is set where used -->
+    <!-- head and body stripes (wide mid-flank, tapering toward back and belly); fill is set where used -->
     <g id="lf-stripes">
-      <path d="M 259.8 70 Q 270.2 121 283.8 172 L 286.2 172 Q 279.8 121 262.2 70 Z"/>
-      <path d="M 241.9 70 Q 246.5 121 263.9 172 L 269.5 172 Q 268.9 121 247.5 70 Z"/>
-      <path d="M 228.4 70 Q 235.6 121 248.4 172 L 251.6 172 Q 248.4 121 231.6 70 Z"/>
-      <path d="M 216.4 70 Q 222.6 121 234.4 172 L 237.6 172 Q 235.4 121 219.6 70 Z"/>
+      <path d="M 262.3 70 Q 272.7 121 286.3 172 L 288.7 172 Q 282.3 121 264.7 70 Z"/>
+      <path d="M 244.1 70 Q 248.7 121 266.1 172 L 271.7 172 Q 271.1 121 249.7 70 Z"/>
+      <path d="M 230.9 70 Q 238.1 121 250.9 172 L 254.1 172 Q 250.9 121 234.1 70 Z"/>
+      <path d="M 218.4 70 Q 224.6 121 236.4 172 L 239.6 172 Q 237.4 121 221.6 70 Z"/>
       <path d="M 203.2 70 Q 199.8 121 209.2 172 L 214.8 172 Q 222.2 121 208.8 70 Z"/>
       <path d="M 188.7 70 Q 187.3 121 192.7 172 L 196.3 172 Q 201.7 121 192.3 70 Z"/>
       <path d="M 172.9 70 Q 168.1 121 174.9 172 L 180.1 172 Q 188.9 121 178.1 70 Z"/>
@@ -32,34 +32,36 @@
     </g>
     <!-- dorsal spines; stroke is set where used -->
     <g id="lf-spines">
-      <path d="M 236 88.5 Q 239.2 65.4 234.4 42.6"/>
-      <path d="M 227 86 Q 228.3 55.3 221.7 25.2"/>
-      <path d="M 218 84.3 Q 217 48.6 208.1 14"/>
-      <path d="M 209 83.3 Q 205.7 45.3 194.5 8.7"/>
-      <path d="M 200 83 Q 194.6 44.7 181.4 8.3"/>
-      <path d="M 191 83.6 Q 183.9 46.6 169.1 11.9"/>
-      <path d="M 182 84.7 Q 173.6 50 157.7 18"/>
-      <path d="M 173 86.2 Q 164 54.7 147.6 26.3"/>
-      <path d="M 164 88 Q 154.9 60.2 138.6 35.9"/>
-      <path d="M 155 90.2 Q 146.1 66 130.3 45.6"/>
-      <path d="M 146 92.6 Q 138 72.3 123.2 56.2"/>
-      <path d="M 137 95.3 Q 130.2 78.7 116.9 66.6"/>
-      <path d="M 128 98.1 Q 122.5 84.6 110.8 76"/>
+      <path d="M 236 86 Q 239.2 62.9 234.4 40.1"/>
+      <path d="M 227 84 Q 228.3 53.3 221.7 23.3"/>
+      <path d="M 218 83 Q 217 47.3 208.1 12.7"/>
+      <path d="M 209 82.6 Q 205.7 44.5 194.5 8"/>
+      <path d="M 200 82.8 Q 194.6 44.5 181.4 8.1"/>
+      <path d="M 191 83.5 Q 183.9 46.5 169.1 11.8"/>
+      <path d="M 182 84.7 Q 173.6 49.9 157.7 17.9"/>
+      <path d="M 173 86.3 Q 164 54.8 147.6 26.4"/>
+      <path d="M 164 88.2 Q 154.9 60.4 138.6 36.1"/>
+      <path d="M 155 90.5 Q 146.1 66.2 130.3 45.9"/>
+      <path d="M 146 92.8 Q 138 72.5 123.2 56.4"/>
+      <path d="M 137 95.4 Q 130.2 78.7 116.9 66.7"/>
+      <path d="M 128 98.1 Q 122.5 84.6 110.8 76.1"/>
     </g>
     <!-- pectoral rays; stroke is set where used -->
     <g id="lf-pect-rays">
-      <path d="M 203.2 142 Q 147.5 155.1 81.3 158.4"/>
-      <path d="M 203.5 143 Q 150.6 162.1 86.1 172.5"/>
-      <path d="M 203.9 144 Q 155.3 168.2 94.4 185.2"/>
-      <path d="M 204.4 144.9 Q 161.5 173 105.6 195.4"/>
-      <path d="M 205 145.8 Q 168.5 176.6 118.3 203.2"/>
-      <path d="M 205.8 146.6 Q 176 178.7 132.2 208.2"/>
-      <path d="M 206.6 147.3 Q 183.3 179.6 145.8 210.9"/>
-      <path d="M 207.5 147.9 Q 190.7 178.9 159.7 210.7"/>
-      <path d="M 208.5 148.4 Q 197.4 177.2 172.5 208.4"/>
-      <path d="M 209.6 148.8 Q 203.5 174.5 184.1 204.2"/>
-      <path d="M 210.8 149 Q 208.8 170.9 194.2 198.3"/>
+      <path d="M 205.2 144 Q 150.5 157 85.3 160.1"/>
+      <path d="M 205.5 145 Q 153.5 163.8 90.1 174"/>
+      <path d="M 205.9 146 Q 158.3 169.8 98.2 186.4"/>
+      <path d="M 206.4 146.9 Q 164.4 174.6 109.3 196.5"/>
+      <path d="M 207 147.8 Q 171.3 178 122 204.1"/>
+      <path d="M 207.8 148.6 Q 178.7 180 135.7 208.9"/>
+      <path d="M 208.6 149.3 Q 186 180.8 149.2 211.5"/>
+      <path d="M 209.6 149.9 Q 193.2 180.1 162.8 211.1"/>
+      <path d="M 210.6 150.4 Q 199.9 178.3 175.5 208.7"/>
+      <path d="M 211.7 150.8 Q 205.9 175.6 186.9 204.4"/>
+      <path d="M 212.9 151.1 Q 211.1 172 196.8 198.4"/>
     </g>
+    <!-- supraocular tentacle filament -->
+    <path id="lf-tentacle" d="M 251.5 91 Q 251.3 81 244 71.5"/>
   </defs>
 
   <!-- TAIL: small rounded caudal fin, pivot at the caudal joint -->
@@ -100,39 +102,39 @@
     <path d="M 126 100 C 121 91, 111 88, 100 88 C 89 88, 80 95, 74 108" fill="none" stroke="#2A2745" stroke-width="2" stroke-linecap="round"/>
 
     <!-- anal fin -->
-    <path d="M 113 149 C 112 156, 104 161, 95 161 C 86 161, 80 156, 77 147 L 79 136 L 113 142 Z" fill="#E4C8B4" opacity="0.58"/>
+    <path d="M 113 150 C 112 157, 104 162, 95 162 C 86 162, 80 157, 77 148 L 79 136 L 113 143 Z" fill="#E4C8B4" opacity="0.58"/>
     <g fill="none" stroke="#B08C7C" stroke-width="1.3" stroke-linecap="round">
-      <path d="M 106 149 L 104.5 158"/>
-      <path d="M 98 146 L 96.5 160"/>
-      <path d="M 90 144 L 88.5 159"/>
-      <path d="M 82 142 L 81.5 154"/>
+      <path d="M 106 150 L 104.5 159"/>
+      <path d="M 98 147 L 96.5 161"/>
+      <path d="M 90 145 L 88.5 160"/>
+      <path d="M 82 142 L 81.5 155"/>
     </g>
-    <path d="M 107 150 C 106 154.5, 101 157, 95 157 C 89 157, 84 154.5, 82 149" fill="none" stroke="#6E2446" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.01 5.5"/>
-    <path d="M 113 149 C 112 156, 104 161, 95 161 C 86 161, 80 156, 77 147" fill="none" stroke="#2A2745" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 107 151 C 106 155.5, 101 158, 95 158 C 89 158, 84 155.5, 82 150" fill="none" stroke="#6E2446" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.01 5.5"/>
+    <path d="M 113 150 C 112 157, 104 162, 95 162 C 86 162, 80 157, 77 148" fill="none" stroke="#2A2745" stroke-width="2" stroke-linecap="round"/>
 
     <!-- pelvic fin: dark, cream-spotted, angled back -->
-    <path d="M 236 157 L 226 189 Q 223.5 193 220 191 Q 216.5 192 215 188 Q 212.5 186 213.5 182 L 223 157 Z" fill="#A02E48" opacity="0.85"/>
+    <path d="M 237 163 L 218.3 195.5 Q 215.5 198.5 211.9 194.5 Q 207.5 192.5 209.6 187.8 L 226 163 Z" fill="#A02E48" opacity="0.75"/>
     <g fill="none" stroke="#6E2446" stroke-width="1.2" stroke-linecap="round">
-      <path d="M 229 160 L 224.5 189"/>
-      <path d="M 228 160 L 218.5 190"/>
-      <path d="M 227 160 L 214.5 184.5"/>
+      <path d="M 232 165 L 217.5 194.5"/>
+      <path d="M 231 165 L 212.5 193"/>
+      <path d="M 230 165 L 210.5 188.5"/>
     </g>
     <g fill="none" stroke="#DCCAA4" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="0.01 5.5">
-      <path d="M 229.5 167 L 224 186"/>
-      <path d="M 223.5 168 L 217 186"/>
+      <path d="M 231 171 L 219.5 190"/>
+      <path d="M 226.5 171 L 214 189"/>
     </g>
-    <path d="M 236 157 L 226 189 Q 223.5 193 220 191 Q 216.5 192 215 188 Q 212.5 186 213.5 182 L 223 157" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 237 163 L 218.3 195.5 Q 215.5 198.5 211.9 194.5 Q 207.5 192.5 209.6 187.8 L 226 163" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
 
     <!-- dorsal spine membranes: deeply notched, translucent -->
-    <path d="M 236 88.5 L 236.8 59 Q 233.4 68.3 227.1 67.6 L 225.4 46.9 Q 222.6 59.9 216.7 63 L 213.5 39 Q 211.4 54.8 206.3 60.6 L 201.5 35.2 Q 200.3 52.7 196 60.2 L 189.9 34.7 Q 189.4 53.2 186 61.6 L 178.7 37.1 Q 179 55.6 176.3 64.1 L 168.2 41.4 Q 169.1 59.5 166.9 67.6 L 158.4 47.2 Q 159.7 64.4 157.9 71.6 L 149.4 53.8 Q 150.7 69.9 149.1 76 L 140.8 60.8 Q 142.2 75.8 140.6 80.8 L 133 68.3 Q 134.2 82 132.4 85.7 L 125.7 75.9 Q 126.4 88.1 124.2 90.4 L 118.4 82.8 Q 120 92 124 100 L 130 104 L 236 95 Z" fill="#E4C8B4" opacity="0.55"/>
-    <path d="M 236.8 59 Q 233.4 68.3 227.1 67.6 M 225.4 46.9 Q 222.6 59.9 216.7 63 M 213.5 39 Q 211.4 54.8 206.3 60.6 M 201.5 35.2 Q 200.3 52.7 196 60.2 M 189.9 34.7 Q 189.4 53.2 186 61.6 M 178.7 37.1 Q 179 55.6 176.3 64.1 M 168.2 41.4 Q 169.1 59.5 166.9 67.6 M 158.4 47.2 Q 159.7 64.4 157.9 71.6 M 149.4 53.8 Q 150.7 69.9 149.1 76 M 140.8 60.8 Q 142.2 75.8 140.6 80.8 M 133 68.3 Q 134.2 82 132.4 85.7 M 125.7 75.9 Q 126.4 88.1 124.2 90.4 M 118.4 82.8 Q 120 92 124 100" fill="none" stroke="#2A2745" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 236 86 L 236.8 56.5 Q 233.4 66.1 227.1 65.7 L 225.4 45 Q 222.6 58.3 216.7 61.7 L 213.5 37.7 Q 211.4 53.8 206.3 59.9 L 201.5 34.5 Q 200.3 52.2 196 60 L 189.9 34.5 Q 189.4 53 186 61.5 L 178.7 37.1 Q 179 55.6 176.3 64.1 L 168.2 41.3 Q 169.1 59.5 166.9 67.6 L 158.4 47.2 Q 159.7 64.5 157.9 71.8 L 149.4 54 Q 150.7 70.2 149.1 76.3 L 140.8 61 Q 142.2 76 140.6 81 L 133 68.5 Q 134.2 82.2 132.4 85.8 L 125.7 76 Q 126.4 88.2 124.2 90.5 L 118.4 82.9 Q 120 92 124 100 L 130 104 L 236 93 Z" fill="#E4C8B4" opacity="0.55"/>
+    <path d="M 236.8 56.5 Q 233.4 66.1 227.1 65.7 M 225.4 45 Q 222.6 58.3 216.7 61.7 M 213.5 37.7 Q 211.4 53.8 206.3 59.9 M 201.5 34.5 Q 200.3 52.2 196 60 M 189.9 34.5 Q 189.4 53 186 61.5 M 178.7 37.1 Q 179 55.6 176.3 64.1 M 168.2 41.3 Q 169.1 59.5 166.9 67.6 M 158.4 47.2 Q 159.7 64.5 157.9 71.8 M 149.4 54 Q 150.7 70.2 149.1 76.3 M 140.8 61 Q 142.2 76 140.6 81 M 133 68.5 Q 134.2 82.2 132.4 85.8 M 125.7 76 Q 126.4 88.2 124.2 90.5 M 118.4 82.9 Q 120 92 124 100" fill="none" stroke="#2A2745" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/>
     <!-- dorsal spines: outline, cream core, maroon bands -->
     <use href="#lf-spines" fill="none" stroke="#2A2745" stroke-width="3" stroke-linecap="round"/>
     <use href="#lf-spines" fill="none" stroke="#DCCAA4" stroke-width="1.7" stroke-linecap="round"/>
     <use href="#lf-spines" fill="none" stroke="#A02E48" stroke-width="1.7" stroke-linecap="butt" stroke-dasharray="5 4"/>
 
     <!-- body: cream base, maroon stripes, highlight and shadow tones -->
-    <path d="M 282 126 C 280 116, 272 104, 262 96 C 256 91, 248 88, 240 86 C 230 82, 216 79, 200 79 C 170 80, 130 92, 96 106 C 84 111, 72 115, 62 117 L 62 132 C 76 136, 92 142, 110 148 C 140 158, 176 165, 208 164 C 236 163, 256 155, 268 145 C 274 140, 279 134, 282 130 Z" fill="#DCCAA4"/>
+    <path d="M 283 123 C 282 111, 275 100, 264 94 C 255 89, 245 84, 232 81 C 214 77, 190 78, 165 84 C 135 91, 106 101, 88 108 C 78 112, 70 115, 62 117 L 62 132 C 76 136, 94 143, 114 150 C 142 159, 180 167, 216 167 C 244 167, 263 159, 275 147 C 280 141, 283 133, 283 128 Z" fill="#DCCAA4"/>
     <g clip-path="url(#lf-clip-body)">
       <use href="#lf-stripes" fill="#A02E48"/>
       <g clip-path="url(#lf-clip-hi)">
@@ -144,43 +146,43 @@
         <use href="#lf-stripes" fill="#6E2446"/>
       </g>
       <!-- gill cover edge -->
-      <path d="M 228 92 C 221 106, 219 124, 224 144" fill="none" stroke="#6E2446" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 228.5 90 C 221.5 106, 219.5 126, 224.5 146" fill="none" stroke="#6E2446" stroke-width="1.6" stroke-linecap="round"/>
     </g>
-    <path d="M 62 132 C 76 136, 92 142, 110 148 C 140 158, 176 165, 208 164 C 236 163, 256 155, 268 145 C 274 140, 279 134, 282 130 L 282 126 C 280 116, 272 104, 262 96 C 256 91, 248 88, 240 86 C 230 82, 216 79, 200 79 C 170 80, 130 92, 96 106 C 84 111, 72 115, 62 117" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 62 132 C 76 136, 94 143, 114 150 C 142 159, 180 167, 216 167 C 244 167, 263 159, 275 147 C 280 141, 283 133, 283 128 L 283 123 C 282 111, 275 100, 264 94 C 255 89, 245 84, 232 81 C 214 77, 190 78, 165 84 C 135 91, 106 101, 88 108 C 78 112, 70 115, 62 117" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 
     <!-- mouth -->
-    <path d="M 282 127.8 L 267 131.6" fill="none" stroke="#2A2745" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 283 125.8 L 267.5 131" fill="none" stroke="#2A2745" stroke-width="2" stroke-linecap="round"/>
 
     <!-- supraocular tentacle: banded filament with a small flag -->
-    <path d="M 249.6 91 Q 248.6 83 242.6 74.5 Q 241.6 80 245.6 91 Z" fill="#E4C8B4" opacity="0.6"/>
-    <path d="M 249.6 92 Q 249.4 82 242 72.5" fill="none" stroke="#2A2745" stroke-width="2.8" stroke-linecap="round"/>
-    <path d="M 249.6 92 Q 249.4 82 242 72.5" fill="none" stroke="#DCCAA4" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M 249.6 92 Q 249.4 82 242 72.5" fill="none" stroke="#A02E48" stroke-width="1.5" stroke-dasharray="3.5 3"/>
+    <path d="M 251.5 90 Q 250.5 82 244.5 73.5 Q 243.6 79 247.6 90 Z" fill="#E4C8B4" opacity="0.6"/>
+    <use href="#lf-tentacle" fill="none" stroke="#2A2745" stroke-width="2.8" stroke-linecap="round"/>
+    <use href="#lf-tentacle" fill="none" stroke="#DCCAA4" stroke-width="1.5" stroke-linecap="round"/>
+    <use href="#lf-tentacle" fill="none" stroke="#A02E48" stroke-width="1.5" stroke-dasharray="3.5 3"/>
 
     <!-- eye -->
-    <circle cx="253" cy="104" r="9" fill="#E0B23A" stroke="#2A2745" stroke-width="2"/>
-    <circle cx="253.6" cy="104.4" r="5.8" fill="#1A1830"/>
-    <circle cx="250.8" cy="101.4" r="2" fill="#E4E8EA"/>
+    <circle cx="255" cy="103" r="9" fill="#E0B23A" stroke="#2A2745" stroke-width="2"/>
+    <circle cx="255.6" cy="103.4" r="5.8" fill="#1A1830"/>
+    <circle cx="252.8" cy="100.4" r="2" fill="#E4E8EA"/>
   </g>
 
   <!-- PECTORAL FIN: large banded fan, pivot at its base -->
-  <g id="fin-pectoral" data-pivot="212 140">
+  <g id="fin-pectoral" data-pivot="214 142">
     <g opacity="0.62">
       <g clip-path="url(#lf-clip-pect)">
         <rect x="80" y="120" width="140" height="98" fill="#E4C8B4"/>
         <g fill="none" stroke="#A02E48" stroke-width="10">
-          <circle cx="212" cy="140" r="20"/>
-          <circle cx="212" cy="140" r="40"/>
-          <circle cx="212" cy="140" r="60"/>
-          <circle cx="212" cy="140" r="80"/>
-          <circle cx="212" cy="140" r="100"/>
+          <circle cx="214" cy="142" r="20"/>
+          <circle cx="214" cy="142" r="40"/>
+          <circle cx="214" cy="142" r="60"/>
+          <circle cx="214" cy="142" r="80"/>
+          <circle cx="214" cy="142" r="100"/>
         </g>
       </g>
     </g>
-    <path d="M 110.3 156.4 Q 118.2 160.6 114.3 167.4 Q 123.3 170.3 121 177.1 Q 130.9 178.5 129.9 185 Q 140.1 184.8 140.1 191 Q 150.3 189.1 151.1 194.8 Q 160.7 191.5 161.9 196.7 Q 171.1 191.9 172.8 196.4 Q 181 190.3 183 194.4 Q 190.1 187.2 192.1 190.9 Q 198 182.8 200.1 186.1" fill="none" stroke="#2A2745" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 113.9 158.2 Q 121.7 162.3 117.9 169 Q 126.8 171.8 124.4 178.6 Q 134.3 179.9 133.3 186.3 Q 143.4 186 143.4 192.1 Q 153.5 190.2 154.2 195.7 Q 163.8 192.4 165 197.6 Q 174.1 192.7 175.8 197.1 Q 183.9 191 185.8 195 Q 192.8 187.8 194.7 191.5 Q 200.5 183.3 202.5 186.6" fill="none" stroke="#2A2745" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round" opacity="0.8"/>
     <use href="#lf-pect-rays" fill="none" stroke="#2A2745" stroke-width="3" stroke-linecap="round"/>
     <use href="#lf-pect-rays" fill="none" stroke="#DCCAA4" stroke-width="1.7" stroke-linecap="round"/>
     <use href="#lf-pect-rays" fill="none" stroke="#A02E48" stroke-width="1.7" stroke-linecap="butt" stroke-dasharray="10 10" stroke-dashoffset="14"/>
-    <path d="M 201.5 141.2 Q 211 141.5 212 150.5" fill="none" stroke="#2A2745" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M 203.5 143.2 Q 213 143.5 214 152.5" fill="none" stroke="#2A2745" stroke-width="2" stroke-linecap="round"/>
   </g>
 </svg>
