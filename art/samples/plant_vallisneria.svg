@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="620" viewBox="0 0 220 620">
+  <!-- Vallisneria clump: 8 ribbon leaves from one base, back to front.
+       Each frond is a top-level group that sways around its base pivot.
+       Bottom ~25 px sits under the gravel. -->
+  <defs>
+    <!-- Base fills: lighter toward the water surface -->
+    <linearGradient id="g-deep" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="612">
+      <stop offset="0" stop-color="#388846"/>
+      <stop offset="1" stop-color="#286B37"/>
+    </linearGradient>
+    <linearGradient id="g-leaf" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="0" y2="612">
+      <stop offset="0" stop-color="#5BB444"/>
+      <stop offset="1" stop-color="#43943A"/>
+    </linearGradient>
+    <linearGradient id="g-mid" gradientUnits="userSpaceOnUse" x1="0" y1="150" x2="0" y2="612">
+      <stop offset="0" stop-color="#80C642"/>
+      <stop offset="1" stop-color="#63AB3A"/>
+    </linearGradient>
+    <linearGradient id="g-lime" gradientUnits="userSpaceOnUse" x1="0" y1="170" x2="0" y2="612">
+      <stop offset="0" stop-color="#A8DA45"/>
+      <stop offset="1" stop-color="#8AC238"/>
+    </linearGradient>
+
+    <path id="v1" d="M94,612 C94,500 88,410 78,330 C68,250 41.5,140 26.1,70.9 C24.5,64.1 32.3,62.3 33.9,69.1 C50.5,140 80,250 90,330 C100,410 106,500 106,612 Z"/>
+    <path id="v2" d="M110,612 C110,510 120,430 128,360 C136,290 167.5,170 186.2,108.9 C188.2,102.2 195.8,104.4 193.8,111.1 C176.5,170 148,290 140,360 C132,430 122,510 122,612 Z"/>
+    <path id="v3" d="M99,612 C99,480 89,380 91,300 C93,220 114.5,64 131.7,18.4 C134.2,11.4 142.9,14.5 140.3,21.6 C125.5,64 107,220 105,300 C103,380 113,480 113,612 Z"/>
+    <path id="v4" d="M105.5,612 C105.5,470 113.5,360 121.5,260 C129.5,160 151,76 176.4,37.6 C180.3,31.8 187.5,36.6 183.6,42.4 C161,76 142.5,160 134.5,260 C126.5,360 118.5,470 118.5,612 Z"/>
+    <path id="v5" d="M92,612 C92,500 82,420 64,330 C46,240 27.5,196 12.2,151.3 C9.9,144.7 17.5,142.1 19.8,148.7 C36.5,196 58,240 76,330 C94,420 104,500 104,612 Z"/>
+    <path id="v6" d="M103,612 C103,530 113,460 111,400 C109,340 94.5,236 89.4,172.4 C88.7,164.9 97.9,164.1 98.6,171.6 C105.5,236 123,340 125,400 C127,460 117,530 117,612 Z"/>
+    <path id="v7" d="M113.5,612 C113.5,530 127.5,470 139.5,420 C151.5,370 176,318 200.7,289.2 C205.2,283.9 211.8,289.5 207.3,294.8 C188,318 164.5,370 152.5,420 C140.5,470 126.5,530 126.5,612 Z"/>
+    <path id="v8" d="M95,612 C95,540 85,480 73,440 C61,400 41.5,362 24.4,338.8 C19.8,332.9 27,327.3 31.6,333.2 C54.5,362 75,400 87,440 C99,480 109,540 109,612 Z"/>
+
+    <clipPath id="c1"><use href="#v1"/></clipPath>
+    <clipPath id="c2"><use href="#v2"/></clipPath>
+    <clipPath id="c3"><use href="#v3"/></clipPath>
+    <clipPath id="c4"><use href="#v4"/></clipPath>
+    <clipPath id="c5"><use href="#v5"/></clipPath>
+    <clipPath id="c6"><use href="#v6"/></clipPath>
+    <clipPath id="c7"><use href="#v7"/></clipPath>
+    <clipPath id="c8"><use href="#v8"/></clipPath>
+  </defs>
+
+  <!-- frond-1: back, deep green, tall, leaning left -->
+  <g id="frond-1" data-pivot="100 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v1" fill="url(#g-deep)"/>
+    <g clip-path="url(#c1)" fill="none">
+      <path d="M106,612 C106,500 100,410 90,330 C80,250 50.5,140 33.9,69.1" stroke="#22573D" stroke-width="10"/>
+      <path d="M94,612 C94,500 88,410 78,330 C68,250 41.5,140 26.1,70.9" stroke="#45954B" stroke-width="7"/>
+      <path d="M100,612 C100,500 94,410 84,330 C74,250 48,150 34,90" stroke="#1F5532" stroke-width="1.5"/>
+    </g>
+    <use href="#v1" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-2: back, deep green, leaning right -->
+  <g id="frond-2" data-pivot="116 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v2" fill="url(#g-deep)"/>
+    <g clip-path="url(#c2)" fill="none">
+      <path d="M122,612 C122,510 132,430 140,360 C148,290 176.5,170 193.8,111.1" stroke="#22573D" stroke-width="10"/>
+      <path d="M110,612 C110,510 120,430 128,360 C136,290 167.5,170 186.2,108.9" stroke="#45954B" stroke-width="7"/>
+      <path d="M116,612 C116,510 126,430 134,360 C142,290 170,176 186,124" stroke="#1F5532" stroke-width="1.5"/>
+    </g>
+    <use href="#v2" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-3: tallest, leaf green, gentle S -->
+  <g id="frond-3" data-pivot="106 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v3" fill="url(#g-leaf)"/>
+    <g clip-path="url(#c3)" fill="none">
+      <path d="M113,612 C113,480 103,380 105,300 C107,220 125.5,64 140.3,21.6" stroke="#3A7F46" stroke-width="10"/>
+      <path d="M99,612 C99,480 89,380 91,300 C93,220 114.5,64 131.7,18.4" stroke="#74C455" stroke-width="7"/>
+      <path d="M106,612 C106,480 96,380 98,300 C100,220 118,76 132,34" stroke="#3A8436" stroke-width="1.5"/>
+    </g>
+    <use href="#v3" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-4: tall, leaf green, leaning right -->
+  <g id="frond-4" data-pivot="112 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v4" fill="url(#g-leaf)"/>
+    <g clip-path="url(#c4)" fill="none">
+      <path d="M118.5,612 C118.5,470 126.5,360 134.5,260 C142.5,160 161,76 183.6,42.4" stroke="#3A7F46" stroke-width="10"/>
+      <path d="M105.5,612 C105.5,470 113.5,360 121.5,260 C129.5,160 151,76 176.4,37.6" stroke="#74C455" stroke-width="7"/>
+      <path d="M112,612 C112,470 120,360 128,260 C136,160 152,90 172,52" stroke="#3A8436" stroke-width="1.5"/>
+    </g>
+    <use href="#v4" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-5: medium, fresh green, arching left -->
+  <g id="frond-5" data-pivot="98 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v5" fill="url(#g-mid)"/>
+    <g clip-path="url(#c5)" fill="none">
+      <path d="M104,612 C104,500 94,420 76,330 C58,240 36.5,196 19.8,148.7" stroke="#558E44" stroke-width="10"/>
+      <path d="M92,612 C92,500 82,420 64,330 C46,240 27.5,196 12.2,151.3" stroke="#99D75A" stroke-width="7"/>
+      <path d="M98,612 C98,500 88,420 70,330 C52,240 32,196 20,164" stroke="#579834" stroke-width="1.5"/>
+    </g>
+    <use href="#v5" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-6: front, lime, center -->
+  <g id="frond-6" data-pivot="110 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v6" fill="url(#g-lime)"/>
+    <g clip-path="url(#c6)" fill="none">
+      <path d="M117,612 C117,530 127,460 125,400 C123,340 105.5,236 98.6,171.6" stroke="#71A540" stroke-width="10"/>
+      <path d="M103,612 C103,530 113,460 111,400 C109,340 94.5,236 89.4,172.4" stroke="#BAE35F" stroke-width="7"/>
+      <path d="M110,612 C110,530 120,460 118,400 C116,340 100,240 95,190" stroke="#76AA32" stroke-width="1.5"/>
+    </g>
+    <use href="#v6" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-7: front, fresh green, leaning right -->
+  <g id="frond-7" data-pivot="120 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v7" fill="url(#g-mid)"/>
+    <g clip-path="url(#c7)" fill="none">
+      <path d="M126.5,612 C126.5,530 140.5,470 152.5,420 C164.5,370 188,318 207.3,294.8" stroke="#558E44" stroke-width="10"/>
+      <path d="M113.5,612 C113.5,530 127.5,470 139.5,420 C151.5,370 176,318 200.7,289.2" stroke="#99D75A" stroke-width="7"/>
+      <path d="M120,612 C120,530 134,470 146,420 C158,370 180,322 198,300" stroke="#579834" stroke-width="1.5"/>
+    </g>
+    <use href="#v7" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+
+  <!-- frond-8: front, lime, short, leaning left -->
+  <g id="frond-8" data-pivot="102 610" stroke-linejoin="round" stroke-linecap="round">
+    <use href="#v8" fill="url(#g-lime)"/>
+    <g clip-path="url(#c8)" fill="none">
+      <path d="M109,612 C109,540 99,480 87,440 C75,400 54.5,362 31.6,333.2" stroke="#71A540" stroke-width="10"/>
+      <path d="M95,612 C95,540 85,480 73,440 C61,400 41.5,362 24.4,338.8" stroke="#BAE35F" stroke-width="7"/>
+      <path d="M102,612 C102,540 92,480 80,440 C68,400 48,364 34,346" stroke="#76AA32" stroke-width="1.5"/>
+    </g>
+    <use href="#v8" fill="none" stroke="#2A2745" stroke-width="3"/>
+  </g>
+</svg>

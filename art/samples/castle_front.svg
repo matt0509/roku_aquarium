@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="700" viewBox="0 0 560 700">
+  <defs>
+    <!-- Everything outside the openings: doorway, two arched windows, porthole -->
+    <clipPath id="cut">
+      <path clip-rule="evenodd" d="M0 0H560V700H0Z M178 700V570A102 102 0 0 1 382 570V700Z M33 500V433A37 37 0 0 1 107 433V500Z M453 520V453A37 37 0 0 1 527 453V520Z M256 340A24 24 0 1 1 304 340A24 24 0 1 1 256 340Z"/>
+    </clipPath>
+    <clipPath id="cWallC"><rect x="208" y="280" width="144" height="150"/></clipPath>
+    <clipPath id="cRoofC"><path d="M186 260Q258 240 275 36L285 36Q302 240 374 260Q280 286 186 260Z"/></clipPath>
+    <clipPath id="cWallL"><rect x="14" y="334" width="112" height="318"/></clipPath>
+    <clipPath id="cRoofL"><path d="M6 314Q52 294 68 152L72 152Q88 294 134 314Q70 340 6 314Z"/></clipPath>
+    <clipPath id="cWallR"><rect x="434" y="372" width="112" height="280"/></clipPath>
+    <clipPath id="cRoofR"><path d="M426 344Q472 324 488 186L492 186Q508 324 554 344Q490 370 426 344Z"/></clipPath>
+    <clipPath id="cKeep"><path d="M118 652V394H162V414H178V394H206V414H222V394H250V414H266V394H294V414H310V394H338V414H354V394H382V414H398V394H442V652Z"/></clipPath>
+    <clipPath id="cRing"><path d="M160 644V570A120 120 0 0 1 400 570V644H382V570A102 102 0 0 0 178 570V644Z"/></clipPath>
+    <clipPath id="cFoot"><path d="M8 692V650Q8 644 14 644H546Q552 644 552 650V692Z"/></clipPath>
+    <!-- one row of roof shingles (scallops), 192 px wide -->
+    <path id="sc" fill="none" d="M0 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0a8 8 0 0 0 16 0"/>
+    <!-- moss clump, about 40 x 15, origin at bottom-left -->
+    <g id="moss">
+      <path d="M0 0C-2 -7 4 -12 10 -9C13 -15 22 -15 25 -9C30 -13 38 -10 38 -4C42 -3 43 0 40 2C28 5 10 5 0 2C-2 1 -2 0 0 0Z" fill="#A5D24C"/>
+      <path d="M1 0C12 -3 28 -3 41 0C40 2 28 5 10 5C4 4 0 2 1 0Z" fill="#3E6E2E"/>
+      <path d="M0 0C-2 -7 4 -12 10 -9C13 -15 22 -15 25 -9C30 -13 38 -10 38 -4C42 -3 43 0 40 2C28 5 10 5 0 2C-2 1 -2 0 0 0Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+    </g>
+    <!-- ivy leaf, tip pointing up, origin at stem -->
+    <g id="leaf">
+      <path d="M0 0C-7 -5 -8 -14 0 -20C8 -14 7 -5 0 0Z" fill="#4FA83D" stroke="#2A2745" stroke-width="2"/>
+      <path d="M-2 -5C-4 -9 -3 -13 0 -16" fill="none" stroke="#9CD43A" stroke-width="1.5"/>
+    </g>
+  </defs>
+
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <g clip-path="url(#cut)">
+
+      <!-- ===== Central tower (tallest, bubbler on top) ===== -->
+      <rect x="208" y="280" width="144" height="150" fill="#E6A3C3"/>
+      <g clip-path="url(#cWallC)">
+        <rect x="222" y="280" width="14" height="150" fill="#EBBCD4"/>
+        <rect x="322" y="280" width="30" height="150" fill="#B57CA6"/>
+        <rect x="208" y="280" width="144" height="16" fill="#B57CA6"/>
+        <g fill="none" stroke="#C98AAE" stroke-width="2">
+          <rect x="214" y="312" width="26" height="13" rx="3"/>
+          <rect x="222" y="364" width="22" height="12" rx="3"/>
+        </g>
+        <g fill="none" stroke="#9A6890" stroke-width="2">
+          <rect x="324" y="308" width="22" height="12" rx="3"/>
+          <rect x="320" y="362" width="24" height="12" rx="3"/>
+        </g>
+      </g>
+      <rect x="208" y="280" width="144" height="150" fill="none" stroke="#2A2745" stroke-width="4"/>
+
+      <!-- porthole trim -->
+      <path fill-rule="evenodd" d="M247 340A33 33 0 1 1 313 340A33 33 0 1 1 247 340Z M256 340A24 24 0 1 0 304 340A24 24 0 1 0 256 340Z" fill="#D9C08E"/>
+      <path d="M250 336A30 30 0 0 1 295 314" fill="none" stroke="#E6D6AE" stroke-width="4"/>
+      <path d="M310 344A30 30 0 0 1 265 366" fill="none" stroke="#AE9488" stroke-width="4"/>
+      <path d="M304 340H313 M297 323L303.3 316.7 M280 316V307 M263 323L256.7 316.7 M256 340H247 M263 357L256.7 363.3 M280 364V373 M297 357L303.3 363.3" fill="none" stroke="#B39A74" stroke-width="2"/>
+      <path d="M247 340A33 33 0 1 1 313 340A33 33 0 1 1 247 340Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+
+      <!-- central corbel band -->
+      <path d="M199 286a9 9 0 0 0 18 0Z M223 286a9 9 0 0 0 18 0Z M247 286a9 9 0 0 0 18 0Z M271 286a9 9 0 0 0 18 0Z M295 286a9 9 0 0 0 18 0Z M319 286a9 9 0 0 0 18 0Z M343 286a9 9 0 0 0 18 0Z" fill="#AE9488" stroke="#2A2745" stroke-width="3"/>
+      <rect x="198" y="266" width="164" height="20" rx="4" fill="#D9C08E"/>
+      <rect x="201" y="269" width="158" height="5" rx="2" fill="#E6D6AE"/>
+      <rect x="198" y="266" width="164" height="20" rx="4" fill="none" stroke="#2A2745" stroke-width="4"/>
+
+      <!-- central roof (royal blue) -->
+      <path d="M186 260Q258 240 275 36L285 36Q302 240 374 260Q280 286 186 260Z" fill="#3F5FC4"/>
+      <g clip-path="url(#cRoofC)">
+        <path d="M277 36Q246 190 214 292L238 292Q262 190 280 36Z" fill="#6B86D8"/>
+        <path d="M281 36Q304 190 328 292L380 292L380 30Z" fill="#2E4296"/>
+        <g stroke="#34509F" stroke-width="1.75">
+          <use href="#sc" x="184" y="90"/>
+          <use href="#sc" x="176" y="104"/>
+          <use href="#sc" x="184" y="118"/>
+          <use href="#sc" x="176" y="132"/>
+          <use href="#sc" x="184" y="146"/>
+          <use href="#sc" x="176" y="160"/>
+          <use href="#sc" x="184" y="174"/>
+          <use href="#sc" x="176" y="188"/>
+          <use href="#sc" x="184" y="202"/>
+          <use href="#sc" x="176" y="216"/>
+          <use href="#sc" x="184" y="230"/>
+          <use href="#sc" x="176" y="244"/>
+        </g>
+        <path d="M186 260Q280 286 374 260" fill="none" stroke="#2E4296" stroke-width="14"/>
+      </g>
+      <path d="M186 260Q258 240 275 36L285 36Q302 240 374 260Q280 286 186 260Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+
+      <!-- bubbler spout -->
+      <rect x="272" y="16" width="16" height="26" fill="#E0B23A" stroke="#2A2745" stroke-width="3"/>
+      <rect x="275" y="20" width="4" height="17" fill="#EBD27A"/>
+      <rect x="268" y="36" width="24" height="8" rx="3" fill="#A87A1E" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="280" cy="16" rx="11" ry="4.5" fill="#EBD27A" stroke="#2A2745" stroke-width="3"/>
+      <ellipse cx="280" cy="16" rx="6.5" ry="2.2" fill="#1A1830"/>
+
+      <!-- ===== Keep (front wall with crenellations) ===== -->
+      <path d="M118 652V394H162V414H178V394H206V414H222V394H250V414H266V394H294V414H310V394H338V414H354V394H382V414H398V394H442V652Z" fill="#B9A2E0"/>
+      <g clip-path="url(#cKeep)">
+        <rect x="118" y="394" width="324" height="6" fill="#CFC0EA"/>
+        <rect x="118" y="414" width="324" height="9" fill="#CFC0EA"/>
+        <rect x="118" y="423" width="324" height="6" fill="#9F8ACF"/>
+        <rect x="126" y="394" width="18" height="258" fill="#8C78BE"/>
+        <path d="M118 414H442" fill="none" stroke="#9A86CA" stroke-width="2"/>
+        <g fill="none" stroke="#9A86CA" stroke-width="2">
+          <rect x="150" y="440" width="24" height="12" rx="3"/>
+          <rect x="152" y="484" width="22" height="12" rx="3"/>
+          <rect x="190" y="434" width="26" height="11" rx="3"/>
+          <rect x="342" y="436" width="26" height="12" rx="3"/>
+          <rect x="394" y="456" width="26" height="12" rx="3"/>
+          <rect x="398" y="500" width="24" height="12" rx="3"/>
+          <rect x="408" y="560" width="20" height="12" rx="3"/>
+          <rect x="406" y="610" width="22" height="12" rx="3"/>
+        </g>
+        <g fill="none" stroke="#7866A8" stroke-width="2">
+          <rect x="128" y="540" width="14" height="12" rx="3"/>
+          <rect x="128" y="600" width="14" height="12" rx="3"/>
+        </g>
+      </g>
+      <path d="M118 652V394H162V414H178V394H206V414H222V394H250V414H266V394H294V414H310V394H338V414H354V394H382V414H398V394H442V652Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+
+      <!-- doorway arch stones -->
+      <path d="M160 644V570A120 120 0 0 1 400 570V644H382V570A102 102 0 0 0 178 570V644Z" fill="#D9C08E"/>
+      <g clip-path="url(#cRing)">
+        <path d="M167 550A115 115 0 0 1 338 470" fill="none" stroke="#E6D6AE" stroke-width="6"/>
+        <path d="M176 570A104 104 0 0 1 384 570" fill="none" stroke="#C4AB80" stroke-width="5"/>
+        <rect x="391" y="540" width="12" height="110" fill="#AE9488"/>
+        <path d="M375.2 533.4L392 527 M357 503.1L370.6 491.3 M329.4 480.8L338.2 465 M230.6 480.8L221.8 465 M203 503.1L189.4 491.3 M184.8 533.4L168 527 M160 570H178 M382 570H400 M160 596H178 M382 596H400 M160 621H178 M382 621H400" fill="none" stroke="#B39A74" stroke-width="2"/>
+      </g>
+      <path d="M160 644V570A120 120 0 0 1 400 570V644" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- keystone -->
+      <path d="M264 470Q280 466 296 470L301 437L259 437Z" fill="#E0B23A"/>
+      <path d="M261 441H299" fill="none" stroke="#EBD27A" stroke-width="4"/>
+      <path d="M264 470Q280 466 296 470L301 437L259 437Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+
+      <!-- ===== Left tower (mint, magenta roof) ===== -->
+      <rect x="14" y="334" width="112" height="318" fill="#9ED9C0"/>
+      <g clip-path="url(#cWallL)">
+        <rect x="26" y="334" width="12" height="318" fill="#BCE6D4"/>
+        <rect x="98" y="334" width="28" height="318" fill="#74A9A6"/>
+        <rect x="14" y="334" width="112" height="16" fill="#74A9A6"/>
+        <rect x="29" y="511" width="82" height="6" fill="#74A9A6"/>
+        <g fill="none" stroke="#7DB8A6" stroke-width="2">
+          <rect x="42" y="360" width="26" height="12" rx="3"/>
+          <rect x="74" y="366" width="20" height="11" rx="3"/>
+          <rect x="44" y="532" width="26" height="13" rx="3"/>
+          <rect x="58" y="566" width="28" height="13" rx="3"/>
+          <rect x="44" y="604" width="22" height="13" rx="3"/>
+          <rect x="74" y="620" width="20" height="12" rx="3"/>
+        </g>
+        <g fill="none" stroke="#5F9090" stroke-width="2">
+          <rect x="102" y="546" width="20" height="13" rx="3"/>
+          <rect x="104" y="596" width="18" height="13" rx="3"/>
+        </g>
+      </g>
+      <rect x="14" y="334" width="112" height="318" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- left window trim + sill -->
+      <path d="M23 433A47 47 0 0 1 117 433H107A37 37 0 0 0 33 433Z" fill="#D9C08E"/>
+      <path d="M27.7 425.5A43 43 0 0 1 91.5 395.8" fill="none" stroke="#E6D6AE" stroke-width="4"/>
+      <path d="M99.9 411.3L108 405.4 M81.4 397.8L84.5 388.3 M58.6 397.8L55.5 388.3 M40.1 411.3L32 405.4" fill="none" stroke="#B39A74" stroke-width="2"/>
+      <path d="M23 433A47 47 0 0 1 117 433H107A37 37 0 0 0 33 433Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <rect x="25" y="500" width="90" height="11" rx="3" fill="#D9C08E" stroke="#2A2745" stroke-width="3"/>
+      <!-- left corbel band -->
+      <path d="M16 340a9 9 0 0 0 18 0Z M38.5 340a9 9 0 0 0 18 0Z M61 340a9 9 0 0 0 18 0Z M83.5 340a9 9 0 0 0 18 0Z M106 340a9 9 0 0 0 18 0Z" fill="#AE9488" stroke="#2A2745" stroke-width="3"/>
+      <rect x="10" y="320" width="120" height="20" rx="4" fill="#D9C08E"/>
+      <rect x="13" y="323" width="114" height="5" rx="2" fill="#E6D6AE"/>
+      <rect x="10" y="320" width="120" height="20" rx="4" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- left roof (magenta) -->
+      <path d="M6 314Q52 294 68 152L72 152Q88 294 134 314Q70 340 6 314Z" fill="#C24A8E"/>
+      <g clip-path="url(#cRoofL)">
+        <path d="M69 152Q52 250 30 332L52 332Q64 250 71 152Z" fill="#D673AC"/>
+        <path d="M71 152Q86 250 102 332L140 332L140 148Z" fill="#8E3478"/>
+        <g stroke="#A53C7E" stroke-width="1.75">
+          <use href="#sc" x="-6" y="204"/>
+          <use href="#sc" x="2" y="218"/>
+          <use href="#sc" x="-6" y="232"/>
+          <use href="#sc" x="2" y="246"/>
+          <use href="#sc" x="-6" y="260"/>
+          <use href="#sc" x="2" y="274"/>
+          <use href="#sc" x="-6" y="288"/>
+          <use href="#sc" x="2" y="302"/>
+        </g>
+        <path d="M6 314Q70 340 134 314" fill="none" stroke="#8E3478" stroke-width="14"/>
+      </g>
+      <path d="M6 314Q52 294 68 152L72 152Q88 294 134 314Q70 340 6 314Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- left flag -->
+      <path d="M70 156V104" fill="none" stroke="#2A2745" stroke-width="7"/>
+      <path d="M70 156V104" fill="none" stroke="#E0B23A" stroke-width="3"/>
+      <path d="M73 108C86 104 98 114 118 117C100 122 88 130 73 134Z" fill="#EBC42A"/>
+      <path d="M74 125C88 123 100 120 116 117C100 123 88 130 74 133Z" fill="#C8942E"/>
+      <path d="M76 111C86 108 96 113 106 115" fill="none" stroke="#EBD978" stroke-width="2.5"/>
+      <path d="M73 108C86 104 98 114 118 117C100 122 88 130 73 134Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+      <circle cx="70" cy="102" r="5" fill="#E0B23A" stroke="#2A2745" stroke-width="2.5"/>
+
+      <!-- ===== Right tower (mint, magenta roof) ===== -->
+      <rect x="434" y="372" width="112" height="280" fill="#9ED9C0"/>
+      <g clip-path="url(#cWallR)">
+        <rect x="446" y="372" width="12" height="280" fill="#BCE6D4"/>
+        <rect x="518" y="372" width="28" height="280" fill="#74A9A6"/>
+        <rect x="434" y="372" width="112" height="16" fill="#74A9A6"/>
+        <rect x="449" y="531" width="82" height="6" fill="#74A9A6"/>
+        <g fill="none" stroke="#7DB8A6" stroke-width="2">
+          <rect x="462" y="392" width="22" height="11" rx="3"/>
+          <rect x="464" y="552" width="26" height="13" rx="3"/>
+          <rect x="478" y="584" width="28" height="13" rx="3"/>
+          <rect x="462" y="616" width="22" height="13" rx="3"/>
+        </g>
+        <g fill="none" stroke="#5F9090" stroke-width="2">
+          <rect x="522" y="560" width="20" height="13" rx="3"/>
+          <rect x="524" y="608" width="18" height="13" rx="3"/>
+          <rect x="522" y="396" width="20" height="11" rx="3"/>
+        </g>
+      </g>
+      <rect x="434" y="372" width="112" height="280" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- right window trim + sill -->
+      <path d="M443 453A47 47 0 0 1 537 453H527A37 37 0 0 0 453 453Z" fill="#D9C08E"/>
+      <path d="M447.7 445.5A43 43 0 0 1 511.5 415.8" fill="none" stroke="#E6D6AE" stroke-width="4"/>
+      <path d="M519.9 431.3L528 425.4 M501.4 417.8L504.5 408.3 M478.6 417.8L475.5 408.3 M460.1 431.3L452 425.4" fill="none" stroke="#B39A74" stroke-width="2"/>
+      <path d="M443 453A47 47 0 0 1 537 453H527A37 37 0 0 0 453 453Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <rect x="445" y="520" width="90" height="11" rx="3" fill="#D9C08E" stroke="#2A2745" stroke-width="3"/>
+      <!-- right corbel band -->
+      <path d="M436 378a9 9 0 0 0 18 0Z M458.5 378a9 9 0 0 0 18 0Z M481 378a9 9 0 0 0 18 0Z M503.5 378a9 9 0 0 0 18 0Z M526 378a9 9 0 0 0 18 0Z" fill="#AE9488" stroke="#2A2745" stroke-width="3"/>
+      <rect x="430" y="358" width="120" height="20" rx="4" fill="#D9C08E"/>
+      <rect x="433" y="361" width="114" height="5" rx="2" fill="#E6D6AE"/>
+      <rect x="430" y="358" width="120" height="20" rx="4" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- right roof (magenta) -->
+      <path d="M426 344Q472 324 488 186L492 186Q508 324 554 344Q490 370 426 344Z" fill="#C24A8E"/>
+      <g clip-path="url(#cRoofR)">
+        <path d="M489 186Q472 280 450 362L472 362Q484 280 491 186Z" fill="#D673AC"/>
+        <path d="M491 186Q506 280 522 362L560 362L560 180Z" fill="#8E3478"/>
+        <g stroke="#A53C7E" stroke-width="1.75">
+          <use href="#sc" x="414" y="238"/>
+          <use href="#sc" x="422" y="252"/>
+          <use href="#sc" x="414" y="266"/>
+          <use href="#sc" x="422" y="280"/>
+          <use href="#sc" x="414" y="294"/>
+          <use href="#sc" x="422" y="308"/>
+          <use href="#sc" x="414" y="322"/>
+          <use href="#sc" x="422" y="336"/>
+        </g>
+        <path d="M426 344Q490 370 554 344" fill="none" stroke="#8E3478" stroke-width="14"/>
+      </g>
+      <path d="M426 344Q472 324 488 186L492 186Q508 324 554 344Q490 370 426 344Z" fill="none" stroke="#2A2745" stroke-width="4"/>
+      <!-- right flag -->
+      <path d="M490 190V138" fill="none" stroke="#2A2745" stroke-width="7"/>
+      <path d="M490 190V138" fill="none" stroke="#E0B23A" stroke-width="3"/>
+      <path d="M493 142C506 138 518 148 538 151C520 156 508 164 493 168Z" fill="#EBC42A"/>
+      <path d="M494 159C508 157 520 154 536 151C520 157 508 164 494 167Z" fill="#C8942E"/>
+      <path d="M496 145C506 142 516 147 526 149" fill="none" stroke="#EBD978" stroke-width="2.5"/>
+      <path d="M493 142C506 138 518 148 538 151C520 156 508 164 493 168Z" fill="none" stroke="#2A2745" stroke-width="3"/>
+      <circle cx="490" cy="136" r="5" fill="#E0B23A" stroke="#2A2745" stroke-width="2.5"/>
+
+      <!-- ===== Stone footing ===== -->
+      <path d="M8 692V650Q8 644 14 644H546Q552 644 552 650V692Z" fill="#6F7A8C"/>
+      <g clip-path="url(#cFoot)">
+        <rect x="8" y="644" width="544" height="7" fill="#8C97AA"/>
+        <path d="M8 668H552" fill="none" stroke="#586276" stroke-width="2"/>
+        <path d="M52 651V668 M100 651V668 M146 651V668 M414 651V668 M460 651V668 M508 651V668 M30 668V692 M76 668V692 M124 668V692 M166 668V692 M396 668V692 M440 668V692 M486 668V692 M530 668V692" fill="none" stroke="#586276" stroke-width="2"/>
+      </g>
+      <path d="M8 692V650Q8 644 14 644H546Q552 644 552 650V692H8" fill="none" stroke="#2A2745" stroke-width="4"/>
+
+      <!-- ===== Climbing ivy, moss and seaweed ===== -->
+      <path d="M24 646C14 620 34 602 24 578C16 558 30 542 26 522" fill="none" stroke="#2A2745" stroke-width="6"/>
+      <path d="M24 646C14 620 34 602 24 578C16 558 30 542 26 522" fill="none" stroke="#2E7A3A" stroke-width="2.5"/>
+      <use href="#leaf" transform="translate(19 630) rotate(-55)"/>
+      <use href="#leaf" transform="translate(27 606) rotate(45)"/>
+      <use href="#leaf" transform="translate(20 584) rotate(-45)"/>
+      <use href="#leaf" transform="translate(25 560) rotate(40)"/>
+      <use href="#leaf" transform="translate(22 540) rotate(-35)"/>
+      <use href="#leaf" transform="translate(26 524) rotate(10)"/>
+
+      <path d="M424 646C434 622 414 604 424 582C430 566 420 552 424 536" fill="none" stroke="#2A2745" stroke-width="6"/>
+      <path d="M424 646C434 622 414 604 424 582C430 566 420 552 424 536" fill="none" stroke="#2E7A3A" stroke-width="2.5"/>
+      <use href="#leaf" transform="translate(429 628) rotate(50)"/>
+      <use href="#leaf" transform="translate(420 608) rotate(-45)"/>
+      <use href="#leaf" transform="translate(425 586) rotate(40)"/>
+      <use href="#leaf" transform="translate(424 564) rotate(-40)"/>
+      <use href="#leaf" transform="translate(424 540) rotate(15)"/>
+
+      <use href="#moss" transform="translate(40 647)"/>
+      <use href="#moss" transform="translate(112 647) scale(0.8)"/>
+      <use href="#moss" transform="translate(440 647) scale(0.9)"/>
+      <use href="#moss" transform="translate(500 647) scale(0.7)"/>
+      <use href="#moss" transform="translate(70 503) scale(0.6)"/>
+
+      <path d="M538 692C528 664 546 646 534 616C528 600 536 588 540 578C548 594 542 606 546 620C554 646 540 664 550 692Z" fill="#4FA83D" stroke="#2A2745" stroke-width="3"/>
+      <path d="M540 584C538 600 544 610 542 630" fill="none" stroke="#9CD43A" stroke-width="1.75"/>
+      <path d="M524 692C518 672 530 660 524 640C534 654 530 670 536 692Z" fill="#2E7A3A" stroke="#2A2745" stroke-width="3"/>
+      <path d="M150 692C142 670 156 656 148 632C160 648 156 668 162 692Z" fill="#4FA83D" stroke="#2A2745" stroke-width="3"/>
+    </g>
+
+    <!-- outlines of the openings (on top, 2 px of each falls inside the hole) -->
+    <g fill="none" stroke="#2A2745" stroke-width="4">
+      <path d="M178 692V570A102 102 0 0 1 382 570V692"/>
+      <path d="M33 500V433A37 37 0 0 1 107 433V500Z"/>
+      <path d="M453 520V453A37 37 0 0 1 527 453V520Z"/>
+      <circle cx="280" cy="340" r="24"/>
+    </g>
+  </g>
+</svg>

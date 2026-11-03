@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="36" viewBox="0 0 72 36">
+  <defs>
+    <path id="nt-tail-shape" d="M 21 16.6 C 16 15, 11 12.2, 5.5 9.6 C 7.6 13, 9.6 16.2, 11.6 19.3 C 9.6 22.4, 7.6 25.6, 5.5 29 C 11 26.4, 16 23.6, 21 21.8 Z"/>
+    <path id="nt-body-shape" d="M 67 19.6 C 66.4 16, 63 13.2, 57 12.2 C 50 11, 42 10.6, 34 11.6 C 28 12.4, 22 14.6, 17.5 16.8 L 17.5 21.8 C 22 22.6, 27 24.2, 33 26 C 41 28, 52 27.8, 59 25.6 C 64 24, 66.6 22, 67 19.6 Z"/>
+    <path id="nt-stripe-shape" d="M 61 15.2 C 52 14.4, 38 14.2, 23.5 16.6 C 22.6 17.2, 22.6 18.2, 23.5 18.8 C 36 18.8, 48 19.4, 60.5 19.8 Z"/>
+    <clipPath id="nt-clip-tail"><use href="#nt-tail-shape"/></clipPath>
+    <clipPath id="nt-clip-body"><use href="#nt-body-shape"/></clipPath>
+    <linearGradient id="nt-grad-stripe" x1="60" y1="0" x2="22" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FD1D9"/>
+      <stop offset="0.5" stop-color="#3AA8E2"/>
+      <stop offset="1" stop-color="#2E7DE0"/>
+    </linearGradient>
+    <filter id="nt-glow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <!-- TAIL: forked, translucent, pivot at the caudal joint -->
+  <g id="tail" data-pivot="18.5 19.3">
+    <use href="#nt-tail-shape" fill="#B4CCD6" opacity="0.55"/>
+    <g clip-path="url(#nt-clip-tail)">
+      <path d="M 22 15.4 C 19 16.4, 16 17.4, 13 18.4 L 13 20.4 C 16 21.2, 19 22.2, 22 23 Z" fill="#E0484D" opacity="0.85"/>
+    </g>
+    <use href="#nt-tail-shape" fill="none" stroke="#2A2745" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+  <!-- BODY -->
+  <g id="body" data-pivot="42 19.5">
+    <!-- dorsal, adipose, anal and pelvic fins (translucent, behind the body) -->
+    <g fill="#B4CCD6" fill-opacity="0.55" stroke="#2A2745" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M 45 12 C 43 8.6, 41 6.2, 38 5.2 C 36.8 7.2, 35.6 9.8, 34 12.6 Z"/>
+      <path d="M 26 14.4 C 25 12.6, 23.6 12, 22 12.4 C 22.4 13.6, 23 14.8, 23.6 16.2 Z"/>
+      <path d="M 37 26.4 C 34 29.6, 30 30.8, 25.5 30.4 C 23.8 28.6, 22.6 26.2, 21.5 22.6 Z"/>
+      <path d="M 49 27 C 47.5 29.2, 45.6 30.6, 43.6 31.2 C 43.8 29.8, 44.4 28.4, 45 27 Z"/>
+    </g>
+
+    <!-- body -->
+    <use href="#nt-body-shape" fill="#C9D3DA"/>
+    <g clip-path="url(#nt-clip-body)">
+      <!-- dark olive back with a lit top edge -->
+      <path d="M 0 0 L 72 0 L 72 14.4 L 61 15.2 C 52 14.4, 38 14.2, 23.5 16.6 L 0 17.4 Z" fill="#5E6B66"/>
+      <path d="M 0 0 L 72 0 L 72 13 C 64 12.8, 58 12.6, 50 12.2 C 40 11.8, 28 13.4, 16 17 L 0 17 Z" fill="#788A80"/>
+      <!-- coral-red lower rear -->
+      <path d="M 45.5 19.2 C 44 22, 42.6 25, 42 30 L 10 30 L 10 18.6 C 22 18.8, 34 18.9, 45.5 19.2 Z" fill="#E0484D"/>
+      <!-- belly shadow -->
+      <path d="M 0 36 L 0 22.8 C 20 24.2, 40 25.8, 66 21.6 L 72 21.6 L 72 36 Z" fill="#3B2A6E" opacity="0.3"/>
+      <!-- neon stripe with a soft glow -->
+      <use href="#nt-stripe-shape" fill="#4FD1D9" opacity="0.7" filter="url(#nt-glow)"/>
+      <use href="#nt-stripe-shape" fill="url(#nt-grad-stripe)"/>
+      <path d="M 59.5 15.8 C 50 15.2, 38 15.1, 25.5 17" fill="none" stroke="#9CE6EA" stroke-width="1" stroke-linecap="round" opacity="0.9"/>
+    </g>
+    <use href="#nt-body-shape" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- gill -->
+    <path d="M 54 16.8 C 52.8 19.2, 52.8 21.8, 54.2 24.2" fill="none" stroke="#8C98A6" stroke-width="1" stroke-linecap="round"/>
+    <!-- mouth -->
+    <path d="M 67 19.9 L 64.8 20.5" fill="none" stroke="#2A2745" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- eye -->
+    <circle cx="59" cy="17.6" r="3.4" fill="#C4CED6" stroke="#2A2745" stroke-width="1.25"/>
+    <circle cx="59.4" cy="17.8" r="2.05" fill="#1A1830"/>
+    <circle cx="58.4" cy="16.7" r="0.8" fill="#E4E8EA"/>
+  </g>
+</svg>

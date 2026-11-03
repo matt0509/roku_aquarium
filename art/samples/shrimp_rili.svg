@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="0 0 120 60">
+  <defs>
+    <path id="p-body" d="M 96 22.4 C 92.8 22.6 89.6 22.8 86.6 23 C 81 22 75.5 21 70 20.4 C 66 19.2 62 18 58 18 C 53.6 18 50 19.6 47.4 22.4 C 45.2 24.8 43.8 27.6 42.6 31 L 47 36.4 C 48 36.2 49 36.4 50 37 C 51.8 38 53.6 38.8 55.6 39.3 C 58 39.8 60.8 39.9 63.4 39.7 C 65.4 39.5 67 39.1 68.6 38.5 C 71.5 38.4 75 38.4 78 38.3 C 80.6 38.1 82.6 37.6 84.2 36.6 C 85.8 35.4 86.8 33.4 87.6 31.2 C 88.2 30 88.6 28.8 88.7 27.8 L 89 25.4 C 91.4 24.4 93.6 23.2 96 22.4 Z"/>
+    <path id="p-fan" d="M 42.8 30.8 C 39.8 31 36.2 32.2 34 34 C 32.9 35 33.1 36.4 34.3 36.8 C 35.2 37.1 36 37.3 36.7 37.3 C 35.9 38.4 35.7 39.8 36.6 40.6 C 37.4 41.3 38.5 41.1 39.3 40.5 C 39.2 41.6 39.7 42.4 40.8 42.8 C 43.2 41.8 45.6 39.2 47.2 36.4 Z"/>
+    <clipPath id="clip-body"><use href="#p-body"/></clipPath>
+    <clipPath id="clip-fan"><use href="#p-fan"/></clipPath>
+    <!-- pigment regions: red head (right of the carapace margin), red tail (left of the 4/5 segment margin) -->
+    <clipPath id="clip-red">
+      <path d="M 70.8 0 L 70.2 20.8 C 68.4 26 68.2 32 69.6 38.6 L 70 60 L 120 60 L 120 0 Z"/>
+      <path d="M 0 0 L 48.6 0 L 48.2 21.6 C 46.2 26.4 47.2 32.6 51 37.6 L 54 60 L 0 60 Z"/>
+    </clipPath>
+    <clipPath id="clip-clear">
+      <path d="M 70.8 0 L 70.2 20.8 C 68.4 26 68.2 32 69.6 38.6 L 70 60 L 54 60 L 51 37.6 C 47.2 32.6 46.2 26.4 48.2 21.6 L 48.6 0 Z"/>
+    </clipPath>
+    <linearGradient id="g-red" x1="0" y1="18" x2="0" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#DE4A50"/>
+      <stop offset="0.5" stop-color="#D63A44"/>
+      <stop offset="1" stop-color="#C83442"/>
+    </linearGradient>
+    <linearGradient id="g-ant" x1="94" y1="0" x2="9" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B8303E" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#B8303E" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#B8303E" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <g id="legs" data-pivot="78 38">
+    <!-- far-side legs: thin and faint, behind everything -->
+    <g fill="none" stroke="#9AAEC0" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+      <polyline points="84,36.6 90.4,42.4 93,51"/>
+      <polyline points="80.8,37.4 85.6,43.8 86,51.8"/>
+      <polyline points="77.2,37.8 79.2,44.6 77.6,52"/>
+      <polyline points="73.4,38 72.8,44.8 68.6,52"/>
+    </g>
+    <!-- swimmerets: clear under the clear section, red under the tail -->
+    <g fill="#C4D4DE" fill-opacity="0.5" stroke="#2A2745" stroke-width="1" stroke-opacity="0.45">
+      <ellipse cx="67.8" cy="40.6" rx="0.9" ry="3" transform="rotate(-38 67.8 40.6)"/>
+      <ellipse cx="62.4" cy="41.4" rx="0.9" ry="3.1" transform="rotate(-38 62.4 41.4)"/>
+      <ellipse cx="57" cy="41.4" rx="0.9" ry="3.1" transform="rotate(-36 57 41.4)"/>
+      <ellipse cx="52.8" cy="40.4" rx="0.85" ry="2.8" transform="rotate(-34 52.8 40.4)"/>
+    </g>
+    <ellipse cx="49.2" cy="38.9" rx="0.8" ry="2.4" transform="rotate(-30 49.2 38.9)" fill="#C83442" fill-opacity="0.75" stroke="#2A2745" stroke-width="1" stroke-opacity="0.6"/>
+    <!-- near-side walking legs: clear with red joints -->
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke="#2A2745" stroke-width="2.4" opacity="0.75">
+        <polyline points="85.4,35.8 89.8,39 93,41.2"/>
+        <polyline points="82.8,37 87.6,43.2 89,52"/>
+        <polyline points="79.4,37.8 82.4,44.4 81.4,52.4"/>
+        <polyline points="75.6,38.2 75.4,45 72.2,52.6"/>
+        <polyline points="71.8,38.4 68.6,44.8 63.4,52.2"/>
+      </g>
+      <g stroke="#C4D4DE" stroke-width="1" opacity="0.9">
+        <polyline points="85.4,35.8 89.8,39 93,41.2"/>
+        <polyline points="82.8,37 87.6,43.2 89,52"/>
+        <polyline points="79.4,37.8 82.4,44.4 81.4,52.4"/>
+        <polyline points="75.6,38.2 75.4,45 72.2,52.6"/>
+        <polyline points="71.8,38.4 68.6,44.8 63.4,52.2"/>
+      </g>
+      <g stroke="#D63A44" stroke-width="1.1">
+        <path d="M 85.6 36 L 88.6 38.2"/>
+        <path d="M 86.6 41.9 L 87.9 44.6"/>
+        <path d="M 81.8 43 L 82.3 45.8"/>
+        <path d="M 75.5 43.6 L 75.2 46.4"/>
+        <path d="M 69.3 43.4 L 68 46"/>
+      </g>
+    </g>
+  </g>
+
+  <g id="body" data-pivot="64 30">
+    <!-- antennal scale (clear) -->
+    <path d="M 87 29.8 C 90 28.8 94 28.8 96.4 29.8 C 94 31.6 90.4 32.3 87.2 32.1 Z" fill="#C4D4DE" fill-opacity="0.6" stroke="#2A2745" stroke-width="1.2" stroke-opacity="0.8" stroke-linejoin="round"/>
+
+    <!-- tail fan (red) -->
+    <use href="#p-fan" fill="#D63A44"/>
+    <g clip-path="url(#clip-fan)">
+      <path d="M 48 35.8 C 44.6 38.4 41 40.2 35.4 41.2 L 35.4 46 L 48 46 Z" fill="#9A2840"/>
+      <path d="M 41.8 32 C 39.4 32.3 37 33.2 35.2 34.6" fill="none" stroke="#EB7270" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M 43.6 33.8 C 41.4 34.8 39.4 35.8 37.4 36.9 M 45 35.4 C 43.2 36.8 41.4 38.4 39.8 40" fill="none" stroke="#7E2034" stroke-width="1.1" stroke-linecap="round" stroke-opacity="0.8"/>
+    </g>
+    <use href="#p-fan" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round"/>
+
+    <!-- red head and tail -->
+    <g clip-path="url(#clip-red)">
+      <use href="#p-body" fill="url(#g-red)"/>
+      <g clip-path="url(#clip-body)">
+        <path d="M 40 35.6 C 46 34.4 52 34.8 58 35.2 C 66 35.6 74 35.4 80 34.8 C 83 34.6 85.6 33.8 88 32.6 L 92 44 L 38 44 Z" fill="#9A2840"/>
+        <g fill="none" stroke="#7E2034" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.5">
+          <path d="M 45 25.4 C 43.6 29 45 33.4 48.6 36.6"/>
+        </g>
+        <g fill="none" stroke="#EB7270" stroke-width="2.2" stroke-linecap="round">
+          <path d="M 86 25 C 80.5 24.1 75.5 23.3 71.6 22.7"/>
+          <path d="M 47 25 C 46.4 25.7 45.9 26.4 45.6 27.2"/>
+        </g>
+        <path d="M 84.8 34 C 80.6 32.4 76.4 32 72.4 32.6" fill="none" stroke="#7E2034" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.5"/>
+      </g>
+      <use href="#p-body" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+
+    <!-- clear middle section -->
+    <g clip-path="url(#clip-clear)">
+      <use href="#p-body" fill="#BCCEDA" fill-opacity="0.42"/>
+      <g clip-path="url(#clip-body)">
+        <!-- soft underside -->
+        <path d="M 40 35.6 C 46 34.4 52 34.8 58 35.2 C 66 35.6 74 35.4 80 34.8 L 92 44 L 38 44 Z" fill="#7E94AA" fill-opacity="0.35"/>
+        <!-- hint of the inner body outline -->
+        <path d="M 70 24 C 66 22.4 62 21.2 58 21.2 C 54 21.2 50.6 22.8 48 25.4 M 49.4 34.2 C 51.6 35.6 54 36.4 56.6 36.8 C 60 37.2 64 37 69.4 35.8" fill="none" stroke="#8EA4B8" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.7"/>
+        <!-- faint segment margins -->
+        <g fill="none" stroke="#8EA4B8" stroke-width="1.3" stroke-linecap="round" stroke-opacity="0.6">
+          <path d="M 64.4 19.2 C 62.4 25 62.4 32 64.2 39.6"/>
+          <path d="M 58.6 18.4 C 56.4 24.5 56.6 32 58.8 39.8"/>
+          <path d="M 52.8 19.4 C 50.6 25 51 32 54.4 38.9"/>
+        </g>
+        <!-- glassy top shine -->
+        <g fill="none" stroke="#E4E8EA" stroke-width="2" stroke-linecap="round" stroke-opacity="0.7">
+          <path d="M 68.8 22.1 C 67.6 21.8 66.6 21.5 65.8 21.3"/>
+          <path d="M 63.2 20.4 C 62 20.2 61 20.1 60 20.1"/>
+          <path d="M 57.2 20.2 C 56 20.3 55 20.5 54.2 20.9"/>
+          <path d="M 51.6 21.8 C 50.8 22.3 50 22.8 49.4 23.4"/>
+        </g>
+        <!-- a few red speckles near the colored edges -->
+        <g fill="#D63A44" fill-opacity="0.85">
+          <circle cx="67.4" cy="27.6" r="0.9"/>
+          <circle cx="66.6" cy="32.4" r="0.7"/>
+          <circle cx="51.2" cy="28.4" r="0.8"/>
+          <circle cx="52.4" cy="33" r="0.6"/>
+        </g>
+      </g>
+      <use href="#p-body" fill="none" stroke="#2A2745" stroke-width="2" stroke-linejoin="round" stroke-opacity="0.6"/>
+    </g>
+
+    <!-- eye on a short stalk -->
+    <circle cx="88.4" cy="26.2" r="2.8" fill="#1A1830"/>
+    <circle cx="87.6" cy="25.3" r="0.95" fill="#E4E8EA"/>
+  </g>
+
+  <g id="antennae" data-pivot="90 29" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- long antennae sweeping back over the body -->
+    <path d="M 90 29 C 94 24.6 95 17.6 89.4 13.2 C 83.4 8.6 68 8 54 9 C 38 10.2 23 13.6 9.5 19.2" stroke="url(#g-ant)" stroke-width="1.5"/>
+    <path d="M 89.6 29.6 C 93 25.6 93.4 20.2 88.4 16.8 C 82.4 12.8 68 12.6 55 13.6 C 41 14.6 28 17.6 15 23.2" stroke="url(#g-ant)" stroke-width="1.3"/>
+    <!-- antennules -->
+    <path d="M 89 28 L 93.4 26.6" stroke="#2A2745" stroke-width="2.5"/>
+    <path d="M 89 28 L 93.4 26.6" stroke="#D63A44" stroke-width="1"/>
+    <path d="M 93.4 26.6 C 97 25.2 100 24 103.4 23.6" stroke="#9A2840" stroke-width="1.3"/>
+    <path d="M 93.4 26.6 C 97 26.4 100 26.8 102.8 27.8" stroke="#9A2840" stroke-width="1.3"/>
+  </g>
+</svg>
