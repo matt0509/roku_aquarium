@@ -7,7 +7,7 @@
   -->
   <defs>
     <clipPath id="lidClip">
-      <path d="M0 0 L0 -16 C0 -41.4 20.6 -62 46 -62 L156 -62 C181.4 -62 202 -41.4 202 -16 L202 0 Z"/>
+      <path d="M0 0 L0 -18 C0 -45.6 22.4 -68 50 -68 L152 -68 C179.6 -68 202 -45.6 202 -18 L202 0 Z"/>
     </clipPath>
     <clipPath id="baseClip">
       <rect x="3" y="0" width="196" height="98" rx="2"/>
@@ -17,10 +17,10 @@
       <circle cx="-0.8" cy="-0.9" r="1.1" fill="#EBD27A"/>
     </g>
     <path id="capBottom" d="M3 70 L15 70 L15 86 L31 86 L31 98 L3 98 Z"/>
-    <path id="capTop" d="M0 -10 L0 -16 C0 -41.4 20.6 -62 46 -62 L50 -62 L50 -50 L46 -50 C27.2 -50 12 -34.8 12 -16 L12 -10 Z"/>
+    <path id="capTop" d="M0 -10 L0 -18 C0 -45.6 22.4 -68 50 -68 L54 -68 L54 -56 L50 -56 C29 -56 12 -39 12 -18 L12 -10 Z"/>
   </defs>
 
-  <g id="base" data-pivot="115 238">
+  <g id="base" data-pivot="112 236" stroke-linejoin="round" stroke-linecap="round">
     <g transform="translate(18 131) rotate(4)">
       <!-- wooden front: three planks -->
       <rect x="3" y="0" width="196" height="98" rx="2" fill="#8A5A3A"/>
@@ -81,33 +81,37 @@
       <path d="M88.5 7 V29" stroke="#EBD27A" stroke-width="2" stroke-linecap="round"/>
       <circle cx="101" cy="26" r="4.2" fill="#2A2745"/>
       <path d="M98.6 28 L97.2 36.5 H104.8 L103.4 28 Z" fill="#2A2745" stroke="#2A2745" stroke-width="1" stroke-linejoin="round"/>
+      <!-- lock staple (hidden under the hasp while closed) -->
+      <rect x="97.5" y="6" width="7" height="9" rx="3.5" fill="none" stroke="#2A2745" stroke-width="2.5"/>
     </g>
   </g>
 
-  <g id="lid" data-pivot="18 131">
+  <g id="lid" data-pivot="18 131" stroke-linejoin="round" stroke-linecap="round">
     <g transform="translate(18 131) rotate(4)">
       <!-- domed lid, three curved planks -->
-      <path d="M0 0 L0 -16 C0 -41.4 20.6 -62 46 -62 L156 -62 C181.4 -62 202 -41.4 202 -16 L202 0 Z" fill="#8A5A3A"/>
+      <path d="M0 0 L0 -18 C0 -45.6 22.4 -68 50 -68 L152 -68 C179.6 -68 202 -45.6 202 -18 L202 0 Z" fill="#8A5A3A"/>
       <g clip-path="url(#lidClip)">
-        <rect x="0" y="-62" width="202" height="17" fill="#A5704A"/>
-        <rect x="0" y="-49" width="202" height="4" fill="#8A5A3A"/>
-        <rect x="0" y="-44" width="202" height="3" fill="#A5704A"/>
-        <rect x="0" y="-32" width="202" height="4" fill="#66423A"/>
-        <rect x="0" y="-27" width="202" height="3" fill="#A5704A"/>
+        <rect x="0" y="-68" width="202" height="19" fill="#A5704A"/>
+        <rect x="0" y="-53" width="202" height="4" fill="#8A5A3A"/>
+        <rect x="0" y="-48" width="202" height="3" fill="#A5704A"/>
+        <rect x="0" y="-34" width="202" height="4" fill="#66423A"/>
+        <rect x="0" y="-29" width="202" height="3" fill="#A5704A"/>
         <rect x="0" y="-16" width="202" height="5" fill="#66423A"/>
-        <rect x="187" y="-62" width="15" height="62" fill="#3A2A4A" opacity="0.28"/>
-        <path d="M0 -45 H202 M0 -28 H202" stroke="#5A3826" stroke-width="2.5" fill="none"/>
-        <path d="M10 -36 C14 -50 26 -57 40 -58.5" stroke="#BE8A5E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <rect x="187" y="-68" width="15" height="68" fill="#3A2A4A" opacity="0.28"/>
+        <path d="M0 -49 H202 M0 -30 H202" stroke="#5A3826" stroke-width="2.5" fill="none"/>
+        <path d="M11 -40 C15 -55 28 -63 44 -64.5" stroke="#BE8A5E" stroke-width="3" fill="none" stroke-linecap="round"/>
         <g stroke="#6E472F" stroke-width="1.5" fill="none" stroke-linecap="round">
-          <path d="M70 -54 C76 -57 82 -53 88 -56"/>
-          <path d="M116 -52 C122 -55 128 -51 134 -54"/>
-          <path d="M20 -20 C26 -23 32 -19 38 -22"/>
-          <path d="M72 -37 C78 -40 84 -36 90 -39"/>
+          <path d="M70 -59 C76 -62 82 -58 88 -61"/>
+          <path d="M114 -57 C120 -60 126 -56 132 -59"/>
+          <path d="M20 -21 C26 -24 32 -20 38 -23"/>
+          <path d="M72 -40 C78 -43 84 -39 90 -42"/>
+          <path d="M112 -41 C117 -44 122 -40 127 -43"/>
           <path d="M164 -21 C170 -24 175 -20 180 -23"/>
           <path d="M116 -21 C121 -24 126 -20 131 -23"/>
+          <ellipse cx="170" cy="-40" rx="3.4" ry="2"/>
         </g>
       </g>
-      <path d="M0 0 L0 -16 C0 -41.4 20.6 -62 46 -62 L156 -62 C181.4 -62 202 -41.4 202 -16 L202 0 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M0 0 L0 -18 C0 -45.6 22.4 -68 50 -68 L152 -68 C179.6 -68 202 -45.6 202 -18 L202 0 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
 
       <!-- gold rim band along the lid's lower edge -->
       <rect x="0" y="-11" width="202" height="11" fill="#E0B23A" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
@@ -117,22 +121,23 @@
       <!-- top corner caps -->
       <use href="#capTop" fill="#E0B23A" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
       <use href="#capTop" transform="translate(202 0) scale(-1 1)" fill="#E0B23A" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M4 -18 C4 -37 18 -55 40 -57.5" stroke="#EBD27A" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <path d="M198 -18 C198 -34 188 -48 176 -54" stroke="#A87A1E" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M4 -20 C4 -42 20 -61 44 -63.5" stroke="#EBD27A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M198 -20 C198 -38 188 -54 172 -60" stroke="#A87A1E" stroke-width="2" fill="none" stroke-linecap="round"/>
 
       <!-- straps over the lid -->
-      <g stroke-linejoin="round">
-        <rect x="46" y="-62" width="16" height="51" fill="#E0B23A" stroke="#2A2745" stroke-width="3"/>
-        <rect x="47.5" y="-60.5" width="3" height="48" fill="#EBD27A"/>
-        <rect x="57.5" y="-60.5" width="3" height="48" fill="#A87A1E"/>
-        <rect x="140" y="-62" width="16" height="51" fill="#E0B23A" stroke="#2A2745" stroke-width="3"/>
-        <rect x="141.5" y="-60.5" width="3" height="48" fill="#EBD27A"/>
-        <rect x="151.5" y="-60.5" width="3" height="48" fill="#A87A1E"/>
+      <g clip-path="url(#lidClip)" stroke-linejoin="round">
+        <rect x="46" y="-70" width="16" height="59" fill="#E0B23A" stroke="#2A2745" stroke-width="3"/>
+        <rect x="47.5" y="-68" width="3" height="55.5" fill="#EBD27A"/>
+        <rect x="57.5" y="-68" width="3" height="55.5" fill="#A87A1E"/>
+        <rect x="140" y="-70" width="16" height="59" fill="#E0B23A" stroke="#2A2745" stroke-width="3"/>
+        <rect x="141.5" y="-68" width="3" height="55.5" fill="#EBD27A"/>
+        <rect x="151.5" y="-68" width="3" height="55.5" fill="#A87A1E"/>
       </g>
-      <use href="#rivet" x="54" y="-50"/>
-      <use href="#rivet" x="54" y="-25"/>
-      <use href="#rivet" x="148" y="-50"/>
-      <use href="#rivet" x="148" y="-25"/>
+      <path d="M0 0 L0 -18 C0 -45.6 22.4 -68 50 -68 L152 -68 C179.6 -68 202 -45.6 202 -18 L202 0" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <use href="#rivet" x="54" y="-55"/>
+      <use href="#rivet" x="54" y="-26"/>
+      <use href="#rivet" x="148" y="-55"/>
+      <use href="#rivet" x="148" y="-26"/>
       <use href="#rivet" x="22" y="-5.5"/>
       <use href="#rivet" x="78" y="-5.5"/>
       <use href="#rivet" x="124" y="-5.5"/>

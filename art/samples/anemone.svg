@@ -46,6 +46,14 @@
       <ellipse cx="-6.2" cy="1.5" rx="2.1" ry="3.8" transform="rotate(-8 -6.2 1.5)" fill="#D0C1EA"/>
       <circle cx="-3.6" cy="-8" r="2" fill="#EAB0CF"/>
     </g>
+    <!-- squat bulb, shaded tone for the underside / side away from the light -->
+    <g id="U3d">
+      <use href="#bulbS" fill="#AE96DA" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+      <use href="#neckShadeS" fill="#8A72C0"/>
+      <use href="#capS" fill="#DE58A0"/>
+      <ellipse cx="-6.2" cy="1.5" rx="2.1" ry="3.8" transform="rotate(-8 -6.2 1.5)" fill="#C6B4E6"/>
+      <circle cx="-3.6" cy="-8" r="2" fill="#E8A2C8"/>
+    </g>
     <!-- rows 4 and 5: front, lightest -->
     <g id="U4">
       <use href="#bulbS" fill="#C6B4E8" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
@@ -66,7 +74,7 @@
     </g>
   </defs>
 
-  <g id="base" data-pivot="140 212">
+  <g id="base" data-pivot="140 212" stroke-linejoin="round" stroke-linecap="round">
     <!-- rock peeking out behind, right -->
     <path d="M190 212 C192 196 206 184 226 183 C244 182 256 194 256 212 Z" fill="#5E687C"/>
     <path d="M200 194 C208 187 218 185 228 185.5 C240 186 249 192 252 200 C244 194 236 191 226 191 C216 191 207 192 200 194 Z" fill="#6F7A8C"/>
@@ -104,11 +112,13 @@
     <path d="M110 174 C116 162 118 148 116 134 C114 123 117 113 127 111 L153 111 C163 113 166 123 164 134 C162 148 164 162 170 174 C157 179 123 179 110 174 Z" fill="none" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
   </g>
 
-  <g id="tentacles" data-pivot="140 122">
+  <g id="tentacles" data-pivot="140 112" stroke-linejoin="round" stroke-linecap="round">
     <!-- dark core: gaps between bulbs read as depth -->
-    <path d="M38 130 C36 72 84 34 140 34 C196 34 244 72 242 132 C208 144 72 142 38 130 Z" fill="#5A4688" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M40 140 C30 76 84 34 140 34 C196 34 250 76 240 144 C222 150 200 142 176 132 C160 126 120 126 104 132 C80 142 58 146 40 140 Z" fill="#5A4688" stroke="#2A2745" stroke-width="3" stroke-linejoin="round"/>
 
     <!-- row 1 (outer rim) -->
+    <use href="#T1" transform="translate(46 163) rotate(-126) scale(-1 1)"/>
+    <use href="#T1" transform="translate(234 167) rotate(128)"/>
     <use href="#T1" transform="translate(114 23) rotate(-13) scale(-1 1)"/>
     <use href="#T1" transform="translate(126 26) rotate(-9) scale(-1 1)"/>
     <use href="#T1" transform="translate(155 29) rotate(6)"/>
@@ -128,6 +138,8 @@
     <use href="#T1" transform="translate(244 149) rotate(112)"/>
 
     <!-- row 2 -->
+    <use href="#T2" transform="translate(64 150) rotate(-116) scale(-1 1)"/>
+    <use href="#T1" transform="translate(216 154) rotate(118) scale(0.96)"/>
     <use href="#T2" transform="translate(139 45) rotate(-2) scale(-1.04 1.04)"/>
     <use href="#T2" transform="translate(118 49) rotate(-16) scale(-1 1)"/>
     <use href="#T2" transform="translate(163 48) rotate(12)"/>
@@ -138,13 +150,15 @@
     <use href="#T2" transform="translate(67 80) rotate(-58) scale(-0.94 0.94)"/>
     <use href="#T2" transform="translate(214 84) rotate(60)"/>
     <use href="#T2" transform="translate(55 96) rotate(-66) scale(-1 1)"/>
-    <use href="#T2" transform="translate(224 101) rotate(74) scale(1.04)"/>
+    <use href="#T1" transform="translate(224 101) rotate(74) scale(1.04)"/>
     <use href="#T2" transform="translate(50 114) rotate(-86) scale(-1 1)"/>
-    <use href="#T2" transform="translate(228 119) rotate(88)"/>
+    <use href="#T1" transform="translate(228 119) rotate(88)"/>
     <use href="#T2" transform="translate(53 132) rotate(-100) scale(-1 1)"/>
-    <use href="#T2" transform="translate(226 137) rotate(104)"/>
+    <use href="#T1" transform="translate(226 137) rotate(104)"/>
 
     <!-- row 3 -->
+    <use href="#U3d" transform="translate(86 141) rotate(-114) scale(-1 1)"/>
+    <use href="#U3d" transform="translate(194 146) rotate(114)"/>
     <use href="#U3" transform="translate(124 66) rotate(-8) scale(-1 1)"/>
     <use href="#U3" transform="translate(146 67) rotate(8)"/>
     <use href="#U3" transform="translate(107 74) rotate(-32) scale(-1 1)"/>
@@ -153,11 +167,11 @@
     <use href="#U3" transform="translate(92 84) rotate(-46) scale(-0.95 0.95)"/>
     <use href="#U3" transform="translate(195 92) rotate(56)"/>
     <use href="#U3" transform="translate(80 97) rotate(-62) scale(-1 1)"/>
-    <use href="#U3" transform="translate(203 106) rotate(72) scale(0.95)"/>
+    <use href="#U3d" transform="translate(203 106) rotate(72) scale(0.95)"/>
     <use href="#U3" transform="translate(74 111) rotate(-78) scale(-1 1)"/>
-    <use href="#U3" transform="translate(207 121) rotate(88)"/>
-    <use href="#U3" transform="translate(73 126) rotate(-96) scale(-1 1)"/>
-    <use href="#U3" transform="translate(204 136) rotate(104)"/>
+    <use href="#U3d" transform="translate(207 121) rotate(88)"/>
+    <use href="#U3d" transform="translate(73 126) rotate(-96) scale(-1 1)"/>
+    <use href="#U3d" transform="translate(204 136) rotate(104)"/>
 
     <!-- row 4 -->
     <use href="#U4" transform="translate(138 85) rotate(-4) scale(-1.05 1.05)"/>
@@ -166,9 +180,9 @@
     <use href="#U4" transform="translate(104 99) rotate(-50) scale(-1 1)"/>
     <use href="#U4" transform="translate(175 100) rotate(46) scale(0.95)"/>
     <use href="#U4" transform="translate(95 113) rotate(-70) scale(-1 1)"/>
-    <use href="#U4" transform="translate(186 114) rotate(76)"/>
-    <use href="#U4" transform="translate(95 128) rotate(-100) scale(-1 1)"/>
-    <use href="#U4" transform="translate(186 130) rotate(98)"/>
+    <use href="#U3" transform="translate(186 114) rotate(76)"/>
+    <use href="#U3" transform="translate(95 128) rotate(-100) scale(-1 1)"/>
+    <use href="#U3" transform="translate(186 130) rotate(98)"/>
 
     <!-- row 5: front-most, over the column top -->
     <use href="#U4" transform="translate(131 105) rotate(-24) scale(-1 1)"/>
